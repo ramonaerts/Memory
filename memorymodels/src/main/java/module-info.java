@@ -1,2 +1,3 @@
 module memorymodels {
+    exports models;
 }

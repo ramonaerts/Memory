@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="memorywebsocketserver" />
-        <module name="memorymodels" />
         <module name="memoryclient" />
+        <module name="memoryrestserver" />
+        <module name="memorymodels" />
+        <module name="memorywebsocketserver" />
         <module name="memorywebsocketclient" />
       </profile>
     </annotationProcessing>

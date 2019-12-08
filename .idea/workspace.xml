@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="" />
+    <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/05750d3b6cd71d071b017c1134becc98ad919a0a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f2b4f61f5611a3b1f08b8c66206198882817dc3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/325efffa157baaabd5204aa4b55a55c474eb2f4f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/352f187c5d3c1a163736842ae0517d657d9ecfce" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58d3e117ed5c6ae74ee623974927467ee9c0022a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5da43f1412b7217ababe9f8f6fe980008455578f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62ac5bec02c109ecde659eb978f430ed75bb3c83" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/766ca7d09a7b421b7575a0ebb1e1e462864fd261" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/873359feb0a0860ef22c45b5241de4133c6222c9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c62823aacd3127c4caf0a8b3bdf6791c0eb0e5c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a8cdabc78ecd255f48b954c2486e91f5e4b199b0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bcaf1525c9ac0c7c6861849da6d62ec6f13534c7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7c49f2cccb438a420e4ec03bdf3dc9805e4d3e0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8533e8538d5e64789da67b7e128d0f213021980" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdb9e0da30e73850e8cc97b394143b37271f0219" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e34a101a27e1256692677be1246bc541cd760bea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb65d2c40857725e941882a92d069f0ef79a9b75" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/IMemoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memoryclient/src/main/java/restserver/RestServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memoryrestserver/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memoryrestserver/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/IClientWebSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/Serializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/SocketMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/SocketMessageGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/IServerWebSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/MemorySocketServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/models/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,22 +58,27 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="module-info" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1USsaK9O7TyHBZI4hKhNTGhhlMw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zeeslag2" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FontysMultiPurposeLibrary-master" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -40,6 +92,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="MemorySocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="server.MemorySocketServer" />
+      <module name="memorywebsocketserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MemorySocketServer" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -50,11 +122,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575361392287</updated>
-      <workItem from="1575361395502" duration="4876000" />
+      <workItem from="1575361395502" duration="9915000" />
+      <workItem from="1575447884982" duration="3469000" />
+      <workItem from="1575640405645" duration="12356000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
