@@ -1,11 +1,12 @@
 package client;
 
-import messaging.*;
-
 import javax.websocket.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+
+import messages.*;
+import serialization.*;
 
 public class ClientWebSocket implements IClientWebSocket
 {
@@ -82,15 +83,16 @@ public class ClientWebSocket implements IClientWebSocket
     {
         Serializer ser = Serializer.getSerializer();
         SocketMessage msg = ser.deserialize(message, SocketMessage.class);
+        ClientMessageProcessor messageProcessor = new ClientMessageProcessor();
         messageProcessor.processMessage(sessionId, msg.getMessageType(), msg.getMessageData());
     }
 
-    private IMessageProcessor messageProcessor;
+/*    private IMessageProcessor messageProcessor;
 
     @Override
     public void setMessageProcessor(IMessageProcessor handler) {
         this.messageProcessor = handler;
-    }
+    }*/
 
     @OnError
     public void onWebSocketError(Session session, Throwable cause) {

@@ -1,3 +1,0 @@
-module memorymodels {
-    exports models;
-}

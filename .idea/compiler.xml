@@ -9,8 +9,9 @@
         <module name="memoryclient" />
         <module name="memoryrestserver" />
         <module name="memorymodels" />
-        <module name="memorywebsocketserver" />
+        <module name="messaging" />
         <module name="memorywebsocketclient" />
+        <module name="memorywebsocketserver" />
       </profile>
     </annotationProcessing>
   </component>

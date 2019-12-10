@@ -13,12 +13,8 @@
         <module>memorywebsocketclient</module>
         <module>memorywebsocketserver</module>
         <module>memorymodels</module>
-        <module>client</module>
         <module>memoryrestserver</module>
-        <module>memorymessaging</module>
-        <module>memorywebsocketclient</module>
-        <module>memorywebsocketclient</module>
-        <module>testmodule</module>
+        <module>messaging</module>
     </modules>
 
 

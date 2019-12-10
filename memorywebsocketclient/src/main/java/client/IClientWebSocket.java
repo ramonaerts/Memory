@@ -8,6 +8,4 @@ public interface IClientWebSocket {
     void send(Object object);
 
     void onWebSocketMessageReceived(String message, String sessionId);
-
-    void setMessageProcessor(IMessageProcessor processor);
 }

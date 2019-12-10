@@ -8,18 +8,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>6</source>
-                    <target>6</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
     <properties>
         <openfxVersion>11.0.2</openfxVersion>
@@ -27,7 +15,7 @@
         <logback-classic.version>1.2.3</logback-classic.version>
     </properties>
 
-    <artifactId>testmodule</artifactId>
+    <artifactId>memorywebsocketclient</artifactId>
 
     <dependencies>
     <!-- (open)Java FX -->
@@ -46,11 +34,17 @@
         <artifactId>javafx-graphics</artifactId>
         <version>${openfxVersion}</version>
     </dependency>
-    <dependency>
-        <groupId>org.eclipse.jetty.websocket</groupId>
-        <artifactId>javax-websocket-client-impl</artifactId>
-        <version>9.4.15.v20190215</version>
-    </dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-websocket -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-websocket</artifactId>
+            <version>8.2.0.v20160908</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty.websocket</groupId>
+            <artifactId>javax-websocket-client-impl</artifactId>
+            <version>9.4.15.v20190215</version>
+        </dependency>
 
     <!-- Logback -->
     <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
@@ -89,6 +83,12 @@
         <dependency>
             <groupId>Memory</groupId>
             <artifactId>memorywebsocketserver</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>Memory</groupId>
+            <artifactId>messaging</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
