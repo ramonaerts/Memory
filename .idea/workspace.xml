@@ -2,67 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/0/002281fc8f8b879a4f41da1d5bdebfda4530b76a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14c47ca12045392f47eeae285cbaf35d5a77756d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a4e2f505f0608fe8980862136b8a82f965f1018" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c9f35b2ebd24510a8195375d49b0b82cd6bbeb2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/687012f0b0c9a743cc859fb6a25550671234caf1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/765fdd5a4142e92d438d040e513948f963bab740" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80b7585a9152204f268c07ee7b6724c0aafe0d71" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82fd948b10d46305c0c5fcf79cf955739af12f4c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f743bc5267e53231c9b0e3928c1aca56d579b27" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/988a0ecc18a89345887f0d852e54b60fcc6267f2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a00d1a1db614d0f7ab30f8c6e26ed32d7f75394b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e39b28eec959150d90185b9d5bff61eb9229ba63" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f1a10ac7bd5ebb57235ca90ad026d9b4b69ff4db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fda3484edf8db0684440157ce0b110d784d42704" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/IGameClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/BaseClientMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/IClientMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/TestResultHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/BaseServerMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/IServerMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/TestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messaging/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/PlayerTestMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/05750d3b6cd71d071b017c1134becc98ad919a0a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/325efffa157baaabd5204aa4b55a55c474eb2f4f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/352f187c5d3c1a163736842ae0517d657d9ecfce" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5da43f1412b7217ababe9f8f6fe980008455578f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/873359feb0a0860ef22c45b5241de4133c6222c9" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0afc82a3f04913a74b8aa5793015ee3f9da93f7e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/154ad3d249d1864da79174d800f7745908dcd82e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/17a723ef459b389c21682964aaaacfb7a7629ebd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/19d5e01c779652d212353dc4963e20afbd8315a2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/29784b19c2ca184a680a56ff9e16198567281ce5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3b4ffa106a1723f85a3763874c6005b80133adb9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58c3353fa0414c8dc5a98770fa62b3047880799a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/623ad7f8dcd4a0902b42e43ad35c9209e99748aa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62812e8ed7bad3a1911cfc8562e6715158cbbb5b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/79c978a6d0149b27eafc81ca445b51bc9cb1443d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a87a79cf3a994328b66ef9990ac9c8e0f37cfff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/84f57d7d7bb052df4e32c7446b25255bd1f69cb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/957c74f8b39c238919c5349e8e3a880d22e8cec6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/baf30cbbda566a2ac636b374740067af13fa82b4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c93ac6bbcc4f6a13e628636a40d11d94790f6a7e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cfed21925ff836c7f211f13a50621fd2558b7e1a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/ef2cd8a9ab74f4b01fc7fbd31214dcdc7ad30b1c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f987447a5ff3bd1a7a0b46f3fb9643b92697e9cb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorylogic/memorylogic.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorylogic/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/PlayerTestResultMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c9f35b2ebd24510a8195375d49b0b82cd6bbeb2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c9f35b2ebd24510a8195375d49b0b82cd6bbeb2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/765fdd5a4142e92d438d040e513948f963bab740" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/765fdd5a4142e92d438d040e513948f963bab740" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82fd948b10d46305c0c5fcf79cf955739af12f4c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f743bc5267e53231c9b0e3928c1aca56d579b27" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a00d1a1db614d0f7ab30f8c6e26ed32d7f75394b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8533e8538d5e64789da67b7e128d0f213021980" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8533e8538d5e64789da67b7e128d0f213021980" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdb9e0da30e73850e8cc97b394143b37271f0219" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e34a101a27e1256692677be1246bc541cd760bea" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e39b28eec959150d90185b9d5bff61eb9229ba63" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f1a10ac7bd5ebb57235ca90ad026d9b4b69ff4db" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f1a10ac7bd5ebb57235ca90ad026d9b4b69ff4db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestserver/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/IClientWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/IClientWebSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/serialization/Serializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/SocketMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/SocketMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/SocketMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/SocketMessageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorylogic/src/main/java/logic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/models/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/enums/CardState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/enums/GameResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/enums/GameState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/models/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/models/Coordinate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/models/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/models/Stats.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/TestResultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/TestResultHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/BaseServerMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/BaseServerMessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/IServerMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/IServerMessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/TestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/TestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/IServerWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/IServerWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -77,8 +71,8 @@
       <list>
         <option value="Enum" />
         <option value="module-info" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -94,7 +88,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pokemonfrontend/frontend" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.5588235" />
+    <property name="project.structure.side.proportion" value="0.29246345" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -162,7 +156,8 @@
       <workItem from="1575447884982" duration="3469000" />
       <workItem from="1575640405645" duration="12356000" />
       <workItem from="1575879552220" duration="5017000" />
-      <workItem from="1575965971229" duration="16949000" />
+      <workItem from="1575965971229" duration="18275000" />
+      <workItem from="1576051914905" duration="5734000" />
     </task>
     <servers />
   </component>

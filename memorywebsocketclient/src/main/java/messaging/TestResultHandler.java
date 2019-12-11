@@ -1,8 +1,13 @@
 package messaging;
 
-public class TestResultHandler  extends BaseClientMessageHandler<TestHandler> {
+import messages.*;
+
+public class TestResultHandler extends BaseClientMessageHandler<PlayerTestResultMessage> {
+
+    //GameClient client
+
     @Override
-    public void handleMessageInternal(TestHandler message, String sessionId) {
+    public void handleMessageInternal(PlayerTestResultMessage message, String sessionId) {
 
     }
 }

@@ -1,5 +1,2 @@
 
-Ssquid:UselessImportCheck"*Remove this unused import 'models.Player'.(’§¬Ë8ÑÇÛ¯î-
-squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÿ„ê„8º²Ú·î-
-Tsquid:UselessImportCheck"+Remove this unused import 'gui.IMemoryGui'.(Ş‹’ö8ÜÙÕ·î-
-¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö÷´œşÿÿÿÿ8‚«Ì·î-
+Ssquid:UselessImportCheck"*Remove this unused import 'models.Player'.(’§¬Ë8‘ç·ÿî-

@@ -7,16 +7,16 @@ public class Player {
     private int playerID;
     private String username;
     private String password;
-    private int sessionID;
+    private String sessionID;
     private Stats stats;
     private int points;
     private GameState gameState;
 
-    public Player(String username, String password, int playerid)
+    public Player(String username, String password, String sessionid)
     {
         this.username = username;
         this.password = password;
-        this.playerID = playerid;
+        this.sessionID = sessionid;
     }
 
     public int getPlayerID() {
@@ -31,11 +31,11 @@ public class Player {
         return password;
     }
 
-    public int getSessionID() {
+    public String getSessionID() {
         return sessionID;
     }
 
-    public void setSessionID(int sessionID) {
+    public void setSessionID(String sessionID) {
         this.sessionID = sessionID;
     }
 
