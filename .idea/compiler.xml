@@ -8,10 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="memoryclient" />
         <module name="memoryrestserver" />
+        <module name="memorywebsocketshared" />
         <module name="memorymodels" />
         <module name="messaging" />
         <module name="memorywebsocketclient" />
         <module name="memorywebsocketserver" />
+        <module name="memoryfactory" />
       </profile>
     </annotationProcessing>
   </component>

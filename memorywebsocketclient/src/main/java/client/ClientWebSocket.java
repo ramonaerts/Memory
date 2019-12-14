@@ -5,9 +5,12 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import interfaces.IClientMessageProcessor;
+import interfaces.IClientWebSocket;
 import messages.*;
 import serialization.*;
 
+@ClientEndpoint
 public class ClientWebSocket implements IClientWebSocket
 {
     private String uri = "ws://localhost:8095/memory/";
@@ -61,7 +64,7 @@ public class ClientWebSocket implements IClientWebSocket
     private void stopClient(){
         System.out.println("[WebSocket Client stop]");
         try {
-            session.close();
+            if(session != null) session.close();
 
         } catch (IOException ex){
             // do something useful eventually
@@ -79,20 +82,19 @@ public class ClientWebSocket implements IClientWebSocket
         onWebSocketMessageReceived(message, session.getId());
     }
 
+    private IClientMessageProcessor messageProcessor;
+
+    @Override
+    public void setMessageProcessor(IClientMessageProcessor handler) {
+        this.messageProcessor = handler;
+    }
+
     public void onWebSocketMessageReceived(String message, String sessionId)
     {
         Serializer ser = Serializer.getSerializer();
         SocketMessage msg = ser.deserialize(message, SocketMessage.class);
-        ClientMessageProcessor messageProcessor = new ClientMessageProcessor();
         messageProcessor.processMessage(sessionId, msg.getMessageType(), msg.getMessageData());
     }
-
-/*    private IMessageProcessor messageProcessor;
-
-    @Override
-    public void setMessageProcessor(IMessageProcessor handler) {
-        this.messageProcessor = handler;
-    }*/
 
     @OnError
     public void onWebSocketError(Session session, Throwable cause) {
@@ -110,6 +112,7 @@ public class ClientWebSocket implements IClientWebSocket
     {
         try {
             session.getBasicRemote().sendText(message);
+            String test = "test";
         } catch (IOException ex) {
             System.out.print("[WebSocket Client couldn't send to server] " + session.getRequestURI());
         }

@@ -1,7 +1,5 @@
 package messages;
 
-import models.Player;
-
 public class PlayerTestMessage {
 
     private String username;

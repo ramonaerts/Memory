@@ -1,5 +1,8 @@
 package server;
 
+import interfaces.*;
+import logic.Game;
+import messaging.ServerHandlerFactory;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -19,6 +22,17 @@ public class MemorySocketServer {
 
     // Start the web socket server
     private static void startWebSocketServer() {
+
+        IServerHandlerFactory factory = new ServerHandlerFactory();
+        IServerMessageProcessor messageProcessor = new ServerMessageProcessor(factory);
+        final IServerWebSocket socket = new ServerWebSocket();
+        socket.setMessageProcessor(messageProcessor);
+
+        IServerMessageGenerator messageGenerator = new ServerMessageGenerator(socket);
+
+        IGame game = new Game(messageGenerator);
+        messageProcessor.registerGame(game);
+
 
         Server webSocketServer = new Server();
         ServerConnector connector = new ServerConnector(webSocketServer);

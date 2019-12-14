@@ -1,12 +1,17 @@
 package messaging;
 
-public class ServerHandlerFactory {
+import interfaces.IGame;
+import interfaces.IServerHandlerFactory;
+import interfaces.IServerMessageHandler;
 
-    public IServerMessageHandler getHandler(String classname){
+public class ServerHandlerFactory implements IServerHandlerFactory {
 
+    public IServerMessageHandler getHandler(String classname, Object game)
+    {
+        IGame igame = (IGame) game;
         switch (classname){
             case "PlayerTestMessage":
-                return new TestHandler();
+                return new TestHandler(igame);
             default:
                 return null;
         }

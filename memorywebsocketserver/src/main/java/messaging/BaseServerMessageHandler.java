@@ -1,11 +1,12 @@
 package messaging;
 
+import interfaces.IServerMessageHandler;
 import serialization.Serializer;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
-public abstract class BaseServerMessageHandler<T> implements IServerMessageHandler{
+public abstract class BaseServerMessageHandler<T> implements IServerMessageHandler {
 
     public void handleMessage(String data, String sessionId)
     {

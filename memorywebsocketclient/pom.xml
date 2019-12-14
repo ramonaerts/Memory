@@ -53,7 +53,12 @@
         <artifactId>logback-classic</artifactId>
         <version>${logback-classic.version}</version>
     </dependency>
-
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-client-api</artifactId>
+            <version>1.1</version>
+            <type>jar</type>
+        </dependency>
     <dependency>
         <groupId>com.google.code.gson</groupId>
         <artifactId>gson</artifactId>

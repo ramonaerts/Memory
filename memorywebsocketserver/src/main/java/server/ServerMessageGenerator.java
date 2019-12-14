@@ -1,10 +1,14 @@
 package server;
 
-import messages.PlayerTestMessage;
+import interfaces.*;
 import messages.PlayerTestResultMessage;
 
-public class ServerMessageGenerator {
-    private IServerWebSocket server = ServerWebSocket.getInstance();
+public class ServerMessageGenerator implements IServerMessageGenerator {
+    private IServerWebSocket server;
+
+    public ServerMessageGenerator(IServerWebSocket server) {
+        this.server = server;
+    }
 
     public void sendPlayer(String username){
         server.broadcast(new PlayerTestResultMessage(username));

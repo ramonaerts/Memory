@@ -1,11 +1,11 @@
 
-asquid:UselessImportCheck"3Remove this unused import 'javafx.geometry.Insets'.(›¨µğûÿÿÿÿ8Ğÿî-
-gsquid:UselessImportCheck"9Remove this unused import 'javafx.scene.layout.GridPane'.(ÖÀ¹¯ûÿÿÿÿ8Ğÿî-
-vsquid:S1450"ZRemove the "loginButton" field and declare it as a local variable in the relevant methods.(à…÷Ÿ8×²œÿî-
-rsquid:S00116"URename this field "BORDERSIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ ú‘8ßüÅşî-
-Jsquid:S1068".Remove this unused "BORDERSIZE" private field.(¼ ú‘8ÂòËşî-
-=squid:S1170"!Make this final field static too.(¼ ú‘8ßüÅşî-
-tsquid:S1450"SRemove the "main" field and declare it as a local variable in the relevant methods.(§ÈØØÿÿÿÿÿ8Ó³ÿî-
-nsquid:UselessImportCheck"ERemove this unused import 'org.eclipse.jetty.util.security.Password'.(‘ÜêÍ8ÍÿÎşî-
-=squid:S1170"!Make this final field static too.(Ã—»·8–§Âşî-
-rsquid:S00116"URename this field "INPUTWIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã—»·8–§Âşî-
+tsquid:S00116"URename this field "INPUTWIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã—»·8–§Âşî-
+psquid:UselessImportCheck"ERemove this unused import 'org.eclipse.jetty.util.security.Password'.(‘ÜêÍ8ÍÿÎşî-
+?squid:S1170"!Make this final field static too.(Ã—»·8–§Âşî-
+csquid:UselessImportCheck"3Remove this unused import 'javafx.geometry.Insets'.(›¨µğûÿÿÿÿ8Ğÿî-
+Lsquid:S1068".Remove this unused "BORDERSIZE" private field.(¼ ú‘8ÂòËşî-
+vsquid:S1450"SRemove the "main" field and declare it as a local variable in the relevant methods.(§ÈØØÿÿÿÿÿ8Ó³ÿî-
+xsquid:S1450"ZRemove the "loginButton" field and declare it as a local variable in the relevant methods.(à…÷Ÿ8×²œÿî-
+tsquid:S00116"URename this field "BORDERSIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ ú‘8ßüÅşî-
+isquid:UselessImportCheck"9Remove this unused import 'javafx.scene.layout.GridPane'.(ÖÀ¹¯ûÿÿÿÿ8Ğÿî-
+?squid:S1170"!Make this final field static too.(¼ ú‘8ßüÅşî-

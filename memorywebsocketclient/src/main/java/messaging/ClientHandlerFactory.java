@@ -1,8 +1,11 @@
 package messaging;
 
-public class ClientHandlerFactory {
+import interfaces.IClientHandlerFactory;
+import interfaces.IClientMessageHandler;
 
-    public IClientMessageHandler getHandler(String classname){
+public class ClientHandlerFactory implements IClientHandlerFactory {
+
+    public IClientMessageHandler getHandler(String classname, Object game){
 
         switch (classname){
             case "PlayerTestMessage":

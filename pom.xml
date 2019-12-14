@@ -15,7 +15,8 @@
         <module>memorymodels</module>
         <module>memoryrestserver</module>
         <module>messaging</module>
-        <module>memorylogic</module>
+        <module>memorywebsocketshared</module>
+        <module>memoryfactory</module>
     </modules>
 
 

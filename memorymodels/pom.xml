@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>Memory</groupId>
-            <artifactId>memorywebsocketserver</artifactId>
+            <artifactId>memorywebsocketshared</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

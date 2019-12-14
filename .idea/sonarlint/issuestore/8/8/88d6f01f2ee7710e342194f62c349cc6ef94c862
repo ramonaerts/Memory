@@ -1,0 +1,8 @@
+
+Ÿsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(’¼Ùî8²÷í¡ï-
+Lsquid:S1068")Remove this unused "round" private field.(Ó¶˜äÿÿÿÿÿ8²÷í¡ï-
+Ssquid:S1068"0Remove this unused "playerAmount" private field.(˜§–·ùÿÿÿÿ8²÷í¡ï-
+Hsquid:S1068	"*Remove this unused "gameID" private field.(úãƒØ8²÷í¡ï-
+Gsquid:S1068")Remove this unused "cards" private field.(Ş¤Ş8²÷í¡ï-
+Nsquid:S1068
+"+Remove this unused "players" private field.(ãÛÂ·úÿÿÿÿ8²÷í¡ï-
