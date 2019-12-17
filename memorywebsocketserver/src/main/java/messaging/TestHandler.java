@@ -1,13 +1,13 @@
 package messaging;
 
-import interfaces.IGame;
+import interfaces.IGameLogic;
 import messages.*;
 
 public class TestHandler extends BaseServerMessageHandler<PlayerTestMessage> {
 
-    private IGame game;
+    private IGameLogic game;
 
-    public TestHandler(IGame game) {this.game = game;}
+    public TestHandler(IGameLogic game) {this.game = game;}
 
     @Override
     public void handleMessageInternal(PlayerTestMessage message, String sessionId) {

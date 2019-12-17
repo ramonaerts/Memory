@@ -7,11 +7,13 @@ import messages.SocketMessageGenerator;
 import serialization.Serializer;
 
 import javax.websocket.*;
+import javax.inject.Singleton;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@ServerEndpoint(value="/memory/")
+@Singleton
+@ServerEndpoint(value="/memory")
 public class ServerWebSocket implements IServerWebSocket {
 
     private IServerMessageProcessor messageProcessor;
@@ -20,6 +22,11 @@ public class ServerWebSocket implements IServerWebSocket {
     {
         this.messageProcessor = processor;
     }
+
+    public IServerMessageProcessor getMessageProcessor() {
+        return messageProcessor;
+    }
+
     private static ServerWebSocket instance = null;
 
     public static ServerWebSocket getInstance(){
@@ -41,7 +48,7 @@ public class ServerWebSocket implements IServerWebSocket {
         String sessionId = session.getId();
         Serializer ser = Serializer.getSerializer();
         SocketMessage msg = ser.deserialize(message, SocketMessage.class);
-        messageProcessor.processMessage(sessionId, msg.getMessageType(), msg.getMessageData());
+        getMessageProcessor().processMessage(sessionId, msg.getMessageType(), msg.getMessageData());
     }
 
     @OnClose

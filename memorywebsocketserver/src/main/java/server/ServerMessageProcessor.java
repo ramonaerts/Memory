@@ -4,10 +4,10 @@ import interfaces.*;
 
 public class ServerMessageProcessor implements IServerMessageProcessor {
 
-    private IGame game;
+    private IGameLogic game;
     private IServerHandlerFactory factory;
 
-    public void registerGame(IGame game){
+    public void registerGame(IGameLogic game){
         this.game = game;
     }
 

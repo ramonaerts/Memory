@@ -7,14 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="memoryclient" />
-        <module name="memoryrestserver" />
         <module name="memorywebsocketshared" />
         <module name="memorymodels" />
         <module name="messaging" />
+        <module name="memoryrestserver" />
         <module name="memorywebsocketclient" />
         <module name="memorywebsocketserver" />
-        <module name="memoryfactory" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="memoryfactory" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

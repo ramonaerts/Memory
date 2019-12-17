@@ -11,6 +11,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/a/pom.xml" />
+        <option value="$PROJECT_DIR$/memoryfactory/pom.xml" />
         <option value="$PROJECT_DIR$/memorylogic/pom.xml" />
         <option value="$PROJECT_DIR$/memorymessaging/pom.xml" />
       </set>

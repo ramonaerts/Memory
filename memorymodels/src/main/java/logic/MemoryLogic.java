@@ -5,7 +5,7 @@ import models.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Game implements IGame {
+public class MemoryLogic implements IGameLogic {
     private int gameID;
     private List<Player> players = new ArrayList<>();
     private int playerAmount;
@@ -15,7 +15,7 @@ public class Game implements IGame {
 
     private IServerMessageGenerator generator;
 
-    public Game(IServerMessageGenerator generator) {
+    public MemoryLogic(IServerMessageGenerator generator) {
         this.generator = generator;
     }
 

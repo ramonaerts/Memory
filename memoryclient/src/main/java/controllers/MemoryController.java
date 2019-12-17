@@ -22,6 +22,7 @@ public class MemoryController implements IController {
 
     @Override
     public void ShowPlayer(String username){
+        String test = "oi";
         gui.showPlayer(username);
     }
 }

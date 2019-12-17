@@ -13,7 +13,7 @@ import serialization.*;
 @ClientEndpoint
 public class ClientWebSocket implements IClientWebSocket
 {
-    private String uri = "ws://localhost:8095/memory/";
+    private String uri = "ws://localhost:8095/memory";
 
     private Session session;
 
@@ -112,7 +112,6 @@ public class ClientWebSocket implements IClientWebSocket
     {
         try {
             session.getBasicRemote().sendText(message);
-            String test = "test";
         } catch (IOException ex) {
             System.out.print("[WebSocket Client couldn't send to server] " + session.getRequestURI());
         }
