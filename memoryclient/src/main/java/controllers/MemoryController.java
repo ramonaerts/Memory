@@ -1,9 +1,9 @@
 package controllers;
 
+import interfaces.IController;
 import interfaces.IGameClient;
 import gui.IMemoryGui;
 import gui.Memory;
-import socketcommunication.GameClient;
 
 public class MemoryController implements IController {
 
@@ -12,6 +12,7 @@ public class MemoryController implements IController {
 
     public MemoryController(Memory gui, IGameClient client){
         this.client = client;
+        client.registerController(this);
         this.gui = gui;
     }
 

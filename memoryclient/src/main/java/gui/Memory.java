@@ -3,7 +3,7 @@ package gui;
 import client.ClientMessageGenerator;
 import client.ClientMessageProcessor;
 import client.ClientWebSocket;
-import controllers.IController;
+import interfaces.IController;
 import controllers.MemoryController;
 import interfaces.*;
 import javafx.application.Application;

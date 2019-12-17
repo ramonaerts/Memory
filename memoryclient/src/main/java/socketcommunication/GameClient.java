@@ -1,9 +1,8 @@
 package socketcommunication;
 
-import client.ClientMessageGenerator;
 import interfaces.IClientMessageGenerator;
 import interfaces.IGameClient;
-import controllers.IController;
+import interfaces.IController;
 
 public class GameClient implements IGameClient {
 
@@ -13,6 +12,10 @@ public class GameClient implements IGameClient {
     public GameClient(IClientMessageGenerator messageGenerator)
     {
         this.messageGenerator = messageGenerator;
+    }
+
+    public void registerController(IController controller){
+        this.controller = controller;
     }
 
     @Override
