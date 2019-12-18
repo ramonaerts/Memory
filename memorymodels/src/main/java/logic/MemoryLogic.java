@@ -30,10 +30,10 @@ public class MemoryLogic implements IGameLogic {
             generator.sendPlayerResult(true);
         }
         else generator.sendPlayerResult(false);*/
-        generator.sendPlayerResult(true);
+        generator.sendPlayerResult(true, player.getSessionID());
         for (Player onlineplayer : onlinePlayers)
         {
-            generator.updateLobbyList(onlineplayer.getUsername(), onlineplayer.getSessionID());
+            generator.updateLobbyList(username, onlineplayer.getSessionID());
         }
 
 

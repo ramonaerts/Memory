@@ -135,9 +135,14 @@ public class Memory extends Application implements IMemoryGui {
         lobbyStage.show();
     }
 
-    public void UpdateLobby(List<String> players)
+    public void updateLobby(String username)
     {
-
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                onlinePlayers.getItems().add(username);
+            }
+        });
     }
 
     public static void main(String[] args) {

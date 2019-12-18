@@ -25,4 +25,9 @@ public class MemoryController implements IController {
     public void loginResult(boolean loginresult){
         gui.loginResult(loginresult);
     }
+
+    @Override
+    public void updateLobby(String username){
+        gui.updateLobby(username);
+    }
 }

@@ -27,4 +27,10 @@ public class GameClient implements IGameClient {
     public void loginResult(boolean loginresult) {
         controller.loginResult(loginresult);
     }
+
+    @Override
+    public void updateLobby(String username)
+    {
+        controller.updateLobby(username);
+    }
 }

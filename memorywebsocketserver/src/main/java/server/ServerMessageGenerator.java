@@ -10,8 +10,8 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
         this.server = server;
     }
 
-    public void sendPlayerResult(boolean loginResult){
-        server.broadcast(new PlayerLoginResultMessage(loginResult));
+    public void sendPlayerResult(boolean loginResult, String sessionId){
+        server.sendTo(sessionId, new PlayerLoginResultMessage(loginResult));
     }
 
     public void updateLobbyList(String username, String sessionId){

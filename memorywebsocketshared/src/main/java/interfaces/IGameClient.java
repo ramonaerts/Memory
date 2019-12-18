@@ -6,4 +6,5 @@ public interface IGameClient {
     void sendPlayer(String username, String password);
 
     void loginResult(boolean loginResult);
+    void updateLobby(String username);
 }
