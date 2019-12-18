@@ -10,8 +10,8 @@ public class ServerHandlerFactory implements IServerHandlerFactory {
     {
         IGameLogic igame = (IGameLogic) game;
         switch (classname){
-            case "PlayerTestMessage":
-                return new TestHandler(igame);
+            case "PlayerLoginMessage":
+                return new LoginHandler(igame);
             default:
                 return null;
         }

@@ -1,5 +1,5 @@
 package interfaces;
 
 public interface IClientMessageGenerator {
-    void sendPlayer(String username, String password);
+    void loginPlayer(String username, String password);
 }

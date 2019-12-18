@@ -17,13 +17,12 @@ public class MemoryController implements IController {
     }
 
     @Override
-    public void RegisterPlayer(String username, String password) {
+    public void loginPlayer(String username, String password) {
         client.sendPlayer(username, password);
     }
 
     @Override
-    public void ShowPlayer(String username){
-        String test = "oi";
-        gui.showPlayer(username);
+    public void loginResult(boolean loginresult){
+        gui.loginResult(loginresult);
     }
 }

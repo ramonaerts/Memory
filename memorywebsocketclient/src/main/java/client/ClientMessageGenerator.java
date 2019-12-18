@@ -1,7 +1,7 @@
 package client;
 
 import interfaces.*;
-import messages.PlayerTestMessage;
+import messages.PlayerLoginMessage;
 
 public class ClientMessageGenerator implements IClientMessageGenerator {
     private IClientWebSocket client;
@@ -10,7 +10,7 @@ public class ClientMessageGenerator implements IClientMessageGenerator {
         this.client = client;
     }
 
-    public void sendPlayer(String username, String password){
-        client.send(new PlayerTestMessage(username, password));
+    public void loginPlayer(String username, String password){
+        client.send(new PlayerLoginMessage(username, password));
     }
 }

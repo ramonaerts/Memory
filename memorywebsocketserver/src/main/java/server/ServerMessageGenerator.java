@@ -1,7 +1,7 @@
 package server;
 
 import interfaces.*;
-import messages.PlayerTestResultMessage;
+import messages.*;
 
 public class ServerMessageGenerator implements IServerMessageGenerator {
     private IServerWebSocket server;
@@ -10,7 +10,11 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
         this.server = server;
     }
 
-    public void sendPlayer(String username){
-        server.broadcast(new PlayerTestResultMessage(username));
+    public void sendPlayerResult(boolean loginResult){
+        server.broadcast(new PlayerLoginResultMessage(loginResult));
+    }
+
+    public void updateLobbyList(String username, String sessionId){
+        server.sendTo(sessionId, new UpdateLobbyPlayersMessage(username) );
     }
 }

@@ -1,11 +1,11 @@
 package messages;
 
-public class PlayerTestMessage {
+public class PlayerLoginMessage {
 
     private String username;
     private String password;
 
-    public PlayerTestMessage(String username, String password) {
+    public PlayerLoginMessage(String username, String password) {
         this.username = username;
         this.password = password;
     }

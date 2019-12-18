@@ -17,6 +17,7 @@ public class Player {
         this.username = username;
         this.password = password;
         this.sessionID = sessionid;
+        this.gameState = GameState.LOBBY;
     }
 
     public int getPlayerID() {

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class MemoryLogic implements IGameLogic {
     private int gameID;
-    private List<Player> players = new ArrayList<>();
+    private List<Player> onlinePlayers = new ArrayList<>();
     private int playerAmount;
     private Card[][] cards = new Card[6][3];
     private int round;
@@ -20,10 +20,22 @@ public class MemoryLogic implements IGameLogic {
     }
 
     @Override
-    public void registerPlayer(String username, String password, String sessionId)
+    public void loginPlayer(String username, String password, String sessionId)
     {
         Player player = new Player(username, password, sessionId);
+        onlinePlayers.add(player);
 
-        generator.sendPlayer(player.getUsername());
+/*        if(player.getUsername().equals("test") && player.getPassword().equals("aerts"))
+        {
+            generator.sendPlayerResult(true);
+        }
+        else generator.sendPlayerResult(false);*/
+        generator.sendPlayerResult(true);
+        for (Player onlineplayer : onlinePlayers)
+        {
+            generator.updateLobbyList(onlineplayer.getUsername(), onlineplayer.getSessionID());
+        }
+
+
     }
 }

@@ -20,11 +20,11 @@ public class GameClient implements IGameClient {
 
     @Override
     public void sendPlayer(String username, String password) {
-        messageGenerator.sendPlayer(username, password);
+        messageGenerator.loginPlayer(username, password);
     }
 
     @Override
-    public void receivePlayer(String username) {
-        controller.ShowPlayer(username);
+    public void loginResult(boolean loginresult) {
+        controller.loginResult(loginresult);
     }
 }

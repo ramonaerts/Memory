@@ -7,17 +7,21 @@ import interfaces.IController;
 import controllers.MemoryController;
 import interfaces.*;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import messaging.ClientHandlerFactory;
 import socketcommunication.GameClient;
+
+import java.util.List;
 
 public class Memory extends Application implements IMemoryGui {
 
@@ -26,10 +30,9 @@ public class Memory extends Application implements IMemoryGui {
 
     private IController controller;
 
-    private TextField textFieldPlayerName;
-    private PasswordField passwordFieldPlayerPassword;
-    private Button loginButton;
     private VBox main;
+    private Stage loginStage;
+    private Stage lobbyStage;
 
     @Override
     public void start(Stage primaryStage) {
@@ -52,44 +55,89 @@ public class Memory extends Application implements IMemoryGui {
         main = new VBox();
         main.setPrefHeight(500);
         main.setPrefWidth(300);
-        main.setAlignment(Pos.CENTER);
+        //main.setAlignment(Pos.CENTER);
 
-        textFieldPlayerName = new TextField();
+        TextField textFieldPlayerName = new TextField();
         textFieldPlayerName.setMinWidth(INPUTWIDTH);
+        textFieldPlayerName.setMinWidth(20.20);
         main.getChildren().add(textFieldPlayerName);
 
-        passwordFieldPlayerPassword = new PasswordField();
+        PasswordField passwordFieldPlayerPassword = new PasswordField();
         passwordFieldPlayerPassword.setMinWidth(INPUTWIDTH);
         main.getChildren().add(passwordFieldPlayerPassword);
 
-        loginButton = new Button();
+        Button loginButton = new Button();
         loginButton.setMinWidth(INPUTWIDTH);
         loginButton.setText("Login");
-        loginButton.setOnAction(
-            (EventHandler) event -> {
-                try {
-                    registerPlayer();
-                } catch (Exception e) {
-                    System.out.println("Register Player error: {}" + e.getMessage());
-                }
-            });
+        loginButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                loginPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
+            }
+        });
         main.getChildren().add(loginButton);
 
         root.getChildren().add(main);
 
         Scene scene1 = new Scene(root);
 
-        primaryStage.setTitle("Login memory");
-        primaryStage.setScene(scene1);
-        primaryStage.show();
+        this.loginStage = primaryStage;
+        loginStage.setTitle("Login memory");
+        loginStage.setScene(scene1);
+        loginStage.show();
     }
 
-    private void registerPlayer(){
-        controller.RegisterPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
+    private void loginPlayer(String username, String password){
+        controller.loginPlayer(username, password);
     }
 
-    public void showPlayer(String username){
-        String test = "ajksdfljasd";
+    public void loginResult(boolean loginresult){
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                if(loginresult) Lobby();
+                else showMessage("Wrong user credentials");
+            }
+        });
+
+    }
+
+    private void showMessage(final String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Memory");
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private ListView<String> onlinePlayers;
+
+    private void Lobby()
+    {
+        GridPane grid;
+        grid = new GridPane();
+        grid.setHgap(BORDERSIZE);
+        grid.setVgap(BORDERSIZE);
+        grid.setPadding(new Insets(BORDERSIZE,BORDERSIZE,BORDERSIZE,BORDERSIZE));
+
+        Group root = new Group();
+        Scene scene1 = new Scene(root, 500, 522);
+        root.getChildren().add(grid);
+
+        onlinePlayers = new ListView<>();
+        onlinePlayers.setPrefWidth(100);
+        onlinePlayers.setPrefHeight(500);
+        grid.add(onlinePlayers, 27,0,20,1);
+
+        loginStage.close();
+        this.lobbyStage = new Stage();
+        lobbyStage.setTitle("Lobby");
+        lobbyStage.setScene(scene1);
+        lobbyStage.show();
+    }
+
+    public void UpdateLobby(List<String> players)
+    {
+
     }
 
     public static void main(String[] args) {

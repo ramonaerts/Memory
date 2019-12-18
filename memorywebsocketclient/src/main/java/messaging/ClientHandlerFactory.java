@@ -10,8 +10,8 @@ public class ClientHandlerFactory implements IClientHandlerFactory {
     {
         IGameClient igameClient = (IGameClient) gameclient;
         switch (classname){
-            case "PlayerTestResultMessage":
-                return new TestResultHandler(igameClient);
+            case "PlayerLoginResultMessage":
+                return new LoginResultHandler(igameClient);
             default:
                 return null;
         }
