@@ -3,6 +3,8 @@ package server;
 import interfaces.*;
 import messages.*;
 
+import java.util.List;
+
 public class ServerMessageGenerator implements IServerMessageGenerator {
     private IServerWebSocket server;
 
@@ -14,7 +16,7 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
         server.sendTo(sessionId, new PlayerLoginResultMessage(loginResult));
     }
 
-    public void updateLobbyList(String username, String sessionId){
-        server.sendTo(sessionId, new UpdateLobbyPlayersMessage(username) );
+    public void updateLobbyList(List<String> players, String sessionId){
+        server.sendTo(sessionId, new UpdateLobbyPlayersMessage(players) );
     }
 }

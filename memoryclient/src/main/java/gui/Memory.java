@@ -91,7 +91,8 @@ public class Memory extends Application implements IMemoryGui {
         controller.loginPlayer(username, password);
     }
 
-    public void loginResult(boolean loginresult){
+    public void loginResult(boolean loginresult)
+    {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
@@ -99,7 +100,6 @@ public class Memory extends Application implements IMemoryGui {
                 else showMessage("Wrong user credentials");
             }
         });
-
     }
 
     private void showMessage(final String message) {
@@ -135,12 +135,16 @@ public class Memory extends Application implements IMemoryGui {
         lobbyStage.show();
     }
 
-    public void updateLobby(String username)
+    public void updateLobby(List<String> players)
     {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                onlinePlayers.getItems().add(username);
+                onlinePlayers.getItems().clear();
+                for (String player : players)
+                {
+                    onlinePlayers.getItems().add(player);
+                }
             }
         });
     }

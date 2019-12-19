@@ -14,6 +14,6 @@ public class UpdateLobbyResultHandler extends BaseClientMessageHandler<UpdateLob
 
     @Override
     public void handleMessageInternal(UpdateLobbyPlayersMessage message, String sessionId) {
-        client.updateLobby(message.getPlayerName());
+        client.updateLobby(message.getPlayerListName());
     }
 }

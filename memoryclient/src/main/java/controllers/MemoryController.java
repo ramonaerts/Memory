@@ -5,6 +5,8 @@ import interfaces.IGameClient;
 import gui.IMemoryGui;
 import gui.Memory;
 
+import java.util.List;
+
 public class MemoryController implements IController {
 
     private IMemoryGui gui;
@@ -27,7 +29,7 @@ public class MemoryController implements IController {
     }
 
     @Override
-    public void updateLobby(String username){
-        gui.updateLobby(username);
+    public void updateLobby(List<String> players){
+        gui.updateLobby(players);
     }
 }

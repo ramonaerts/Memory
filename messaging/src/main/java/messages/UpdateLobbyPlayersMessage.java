@@ -1,13 +1,15 @@
 package messages;
 
-public class UpdateLobbyPlayersMessage {
-    private String playername;
+import java.util.List;
 
-    public UpdateLobbyPlayersMessage(String playername) {
-        this.playername = playername;
+public class UpdateLobbyPlayersMessage {
+    private List<String> players;
+
+    public UpdateLobbyPlayersMessage(List<String> players) {
+        this.players = players;
     }
 
-    public String getPlayerName() {
-        return playername;
+    public List<String> getPlayerListName() {
+        return players;
     }
 }

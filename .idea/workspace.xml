@@ -2,29 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/UpdateLobbyResultHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/IMemoryGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/IMemoryGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/controllers/MemoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/controllers/MemoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/IMemoryGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/IMemoryGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/socketcommunication/GameClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/socketcommunication/GameClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/models/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/ClientHandlerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/ClientHandlerFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/UpdateLobbyResultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/UpdateLobbyResultHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerMessageGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerMessageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IController.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IServerMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IServerMessageGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/UpdateLobbyPlayersMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/UpdateLobbyPlayersMessage.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +44,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../RockPaperScissors-master" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29246345" />
@@ -203,11 +192,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="120" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java</url>
           <line>66</line>

@@ -1,8 +1,10 @@
 package logic;
 
+import enums.GameState;
 import interfaces.*;
 import models.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MemoryLogic implements IGameLogic {
@@ -30,12 +32,23 @@ public class MemoryLogic implements IGameLogic {
             generator.sendPlayerResult(true);
         }
         else generator.sendPlayerResult(false);*/
+
         generator.sendPlayerResult(true, player.getSessionID());
-        for (Player onlineplayer : onlinePlayers)
-        {
-            generator.updateLobbyList(username, onlineplayer.getSessionID());
+        updateLobby();
+
+    }
+
+    private void updateLobby()
+    {
+        List<String> playernames = new ArrayList<>();
+
+        for (Player player : onlinePlayers) {
+            playernames.add(player.getUsername());
         }
 
-
+        for (Player onlineplayer : onlinePlayers)
+        {
+            if (onlineplayer.getGameState() == GameState.LOBBY) generator.updateLobbyList(playernames, onlineplayer.getSessionID());
+        }
     }
 }

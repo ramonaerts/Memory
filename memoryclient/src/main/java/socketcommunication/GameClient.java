@@ -4,6 +4,8 @@ import interfaces.IClientMessageGenerator;
 import interfaces.IGameClient;
 import interfaces.IController;
 
+import java.util.List;
+
 public class GameClient implements IGameClient {
 
     private IClientMessageGenerator messageGenerator;
@@ -29,8 +31,8 @@ public class GameClient implements IGameClient {
     }
 
     @Override
-    public void updateLobby(String username)
+    public void updateLobby(List<String> players)
     {
-        controller.updateLobby(username);
+        controller.updateLobby(players);
     }
 }
