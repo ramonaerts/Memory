@@ -106,7 +106,7 @@ public class Memory extends Application implements IMemoryGui {
             }
         });
     }
-    
+
     private ListView<String> onlinePlayers;
 
     private void Lobby()
@@ -140,6 +140,14 @@ public class Memory extends Application implements IMemoryGui {
         startGameButton.setFont(lobbyFont);
         startGameButton.setPrefWidth(INPUTWIDTH);
         startGameButton.setPrefHeight(50);
+        startGameButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
+            try {
+                loginPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
+            }
+            catch (Exception e){
+                showMessage("No connection to server, try again later");
+            }
+        });
         grid.add(startGameButton, 6, 2, 1, 1);
 
         Button searchGameButton = new Button();

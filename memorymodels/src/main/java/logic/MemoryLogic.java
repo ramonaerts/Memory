@@ -10,8 +10,8 @@ import java.util.List;
 public class MemoryLogic implements IGameLogic {
     private int gameID;
     private List<Player> onlinePlayers = new ArrayList<>();
+    private List<Player> activeGames = new ArrayList<>();
     private int playerAmount;
-    private Card[][] cards = new Card[6][3];
     private int round;
     boolean singlePlayer;
 
@@ -38,6 +38,23 @@ public class MemoryLogic implements IGameLogic {
 
     }
 
+    public void startGame(String sessionId)
+    {
+        Player player = getPlayer(sessionId);
+        Game game = new Game();
+        game.playerStartsGame(player);
+        activeGames.add(player);
+    }
+
+    private Player getPlayer(String sessionId)
+    {
+        for (Player player : onlinePlayers)
+        {
+            if (player.getSessionID() == sessionId) return player;
+        }
+        return null;
+    }
+
     private void updateLobby()
     {
         List<String> playernames = new ArrayList<>();
@@ -46,9 +63,9 @@ public class MemoryLogic implements IGameLogic {
             playernames.add(player.getUsername());
         }
 
-        for (Player onlineplayer : onlinePlayers)
+        for (Player player : onlinePlayers)
         {
-            if (onlineplayer.getGameState() == GameState.LOBBY) generator.updateLobbyList(playernames, onlineplayer.getSessionID());
+            if (player.getGameState() == GameState.LOBBY) generator.updateLobbyList(playernames, player.getSessionID());
         }
     }
 }
