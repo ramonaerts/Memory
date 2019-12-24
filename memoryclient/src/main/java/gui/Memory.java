@@ -9,12 +9,16 @@ import interfaces.*;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import messaging.ClientHandlerFactory;
@@ -34,6 +38,7 @@ public class Memory extends Application implements IMemoryGui {
     private VBox main;
     private Stage loginStage;
     private Stage lobbyStage;
+    private Stage gameStage;
 
     @Override
     public void start(Stage primaryStage) {
@@ -98,7 +103,7 @@ public class Memory extends Application implements IMemoryGui {
     {
         Platform.runLater(() ->
         {
-            if(loginresult) Lobby();
+            if(loginresult) lobby();
             else
             {
                 showMessage("Wrong login credentials");
@@ -109,7 +114,7 @@ public class Memory extends Application implements IMemoryGui {
 
     private ListView<String> onlinePlayers;
 
-    private void Lobby()
+    private void lobby()
     {
         GridPane grid;
         grid = new GridPane();
@@ -142,7 +147,8 @@ public class Memory extends Application implements IMemoryGui {
         startGameButton.setPrefHeight(50);
         startGameButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
             try {
-                loginPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
+                //start game method
+                gameScreen();
             }
             catch (Exception e){
                 showMessage("No connection to server, try again later");
@@ -175,6 +181,57 @@ public class Memory extends Application implements IMemoryGui {
         });
     }
 
+    private void gameScreen()
+    {
+        GridPane grid = new GridPane();
+        grid.setHgap(BORDERSIZE);
+        grid.setVgap(BORDERSIZE);
+        grid.setPadding(new Insets(BORDERSIZE,BORDERSIZE,BORDERSIZE,BORDERSIZE));
+
+        Group root = new Group();
+        Scene scene1 = new Scene(root, 900, 750);
+        root.getChildren().add(grid);
+
+        Rectangle memoryField = new Rectangle(10, 75, 700,500);
+/*        Color boardColor = new Color(53, 101, 77, .99);
+        memoryField.setFill(boardColor);*/
+        memoryField.setFill(Color.SEAGREEN);
+        root.getChildren().add(memoryField);
+        Font cardFont = new Font(17);
+
+        Button[][] memoryCards = new Button[6][3];
+        for (int i = 0; i < 6; i++){
+            for (int j = 0; j < 3; j++){
+                double x = memoryField.getX() + i * (700/6) + 2;
+                double y = memoryField.getY() + j * (500/3) + 2;
+                Button card = new Button();
+                card.setLayoutX(x);
+                card.setLayoutY(y);
+                card.setPrefHeight(150);
+                card.setPrefWidth(100);
+                card.setStyle("-fx-background-color: #ffffff; ");
+                card.setText("?");
+                card.setFont(cardFont);
+                card.setVisible(true);
+                int xpos = i;
+                int ypos = j;
+                card.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent mouseEvent) {
+                        //send to server with x and y.
+                    }
+                });
+                memoryCards[i][j] = card;
+                root.getChildren().add(card);
+            }
+        }
+
+        lobbyStage.close();
+        this.gameStage = new Stage();
+        gameStage.setTitle("Memory game");
+        gameStage.setScene(scene1);
+        gameStage.show();
+    }
 
     private void showMessage(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
