@@ -15,10 +15,8 @@ public class ServerMessageProcessor implements IServerMessageProcessor {
         this.factory = factory;
     }
 
-    public void processMessage(String sessionId, String type, String data) {
-        String simpleType = type.split("\\.")[type.split("\\.").length - 1];
-
-        IServerMessageHandler handler = factory.getHandler(simpleType, game);
+    public void processMessage(String sessionId, Object operation, String data) {
+        IServerMessageHandler handler = factory.getHandler(operation, game);
         handler.handleMessage(data, sessionId);
     }
 }

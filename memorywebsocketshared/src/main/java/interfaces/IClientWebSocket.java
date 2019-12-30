@@ -5,7 +5,7 @@ public interface IClientWebSocket {
 
     void stop();
 
-    void send(Object object);
+    void send(Object object, Object operation);
 
     void onWebSocketMessageReceived(String message, String sessionId);
 

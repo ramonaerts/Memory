@@ -48,7 +48,7 @@ public class ServerWebSocket implements IServerWebSocket {
         String sessionId = session.getId();
         Serializer ser = Serializer.getSerializer();
         SocketMessage msg = ser.deserialize(message, SocketMessage.class);
-        getMessageProcessor().processMessage(sessionId, msg.getMessageType(), msg.getMessageData());
+        getMessageProcessor().processMessage(sessionId, msg.getMessageOperation(), msg.getMessageData());
     }
 
     @OnClose
@@ -62,10 +62,10 @@ public class ServerWebSocket implements IServerWebSocket {
         System.out.println(cause.getMessage());
     }
 
-    public void sendTo(String sessionId, Object object)
+    public void sendTo(String sessionId, Object object, Object operation)
     {
         SocketMessageGenerator generator = new SocketMessageGenerator();
-        String msg = generator.generateMessageString(object);
+        String msg = generator.generateMessageString(object, operation);
         sendToClient(getSessionFromId(sessionId), msg);
     }
 
@@ -79,19 +79,19 @@ public class ServerWebSocket implements IServerWebSocket {
         return null;
     }
 
-    public void broadcast(Object object)
+    public void broadcast(Object object, Object operation)
     {
         for(Session session : sessions) {
-            sendTo(session.getId(), object);
+            sendTo(session.getId(), object, operation);
         }
     }
 
-    public void sendToOthers(String sessionId, Object object)
+    public void sendToOthers(String sessionId, Object object, Object operation)
     {
         Session session = getSessionFromId(sessionId);
         for(Session ses : sessions) {
             if(!ses.getId().equals(session.getId()))
-                sendTo(ses.getId(), object);
+                sendTo(ses.getId(), object, operation);
         }
     }
 

@@ -3,16 +3,19 @@ package messaging;
 import interfaces.IClientHandlerFactory;
 import interfaces.IClientMessageHandler;
 import interfaces.IGameClient;
+import messages.MessageOperation;
 
 public class ClientHandlerFactory implements IClientHandlerFactory {
 
-    public IClientMessageHandler getHandler(String classname, Object gameclient)
+    public IClientMessageHandler getHandler(Object operation, Object gameclient)
     {
         IGameClient igameClient = (IGameClient) gameclient;
-        switch (classname){
-            case "PlayerLoginResultMessage":
+        MessageOperation messageOperation = (MessageOperation) operation;
+        
+        switch (messageOperation){
+            case PLAYERLOGINRESULT:
                 return new LoginResultHandler(igameClient);
-            case "UpdateLobbyPlayersMessage":
+            case UPDATELOBBY:
                 return new UpdateLobbyResultHandler(igameClient);
             default:
                 return null;

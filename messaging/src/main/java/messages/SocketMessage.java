@@ -1,19 +1,19 @@
 package messages;
 
 public class SocketMessage {
-    private String messageType;
+    private MessageOperation messageOperation;
 
     private String messageData;
 
-    public SocketMessage(String type, String data)
+    public SocketMessage(MessageOperation operation, String data)
     {
-        this.messageType = type;
+        this.messageOperation = operation;
         this.messageData = data;
     }
 
-    public String getMessageType()
+    public MessageOperation getMessageOperation()
     {
-        return messageType;
+        return messageOperation;
     }
 
     public String getMessageData(){

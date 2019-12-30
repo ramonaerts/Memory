@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/models/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/models/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/models/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/models/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerMessageProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/SocketMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/SocketMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/SocketMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/SocketMessageGenerator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +30,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="module-info" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -182,41 +195,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>153</line>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>152</line>
-          <option name="timeStamp" value="177" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>151</line>
-          <option name="timeStamp" value="178" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>150</line>
-          <option name="timeStamp" value="179" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>148</line>
-          <option name="timeStamp" value="180" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>149</line>
-          <option name="timeStamp" value="181" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

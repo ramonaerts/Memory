@@ -3,14 +3,17 @@ package messaging;
 import interfaces.IGameLogic;
 import interfaces.IServerHandlerFactory;
 import interfaces.IServerMessageHandler;
+import messages.MessageOperation;
 
 public class ServerHandlerFactory implements IServerHandlerFactory {
 
-    public IServerMessageHandler getHandler(String classname, Object game)
+    public IServerMessageHandler getHandler(Object operation, Object game)
     {
         IGameLogic igame = (IGameLogic) game;
-        switch (classname){
-            case "PlayerLoginMessage":
+        MessageOperation messageOperation = (MessageOperation) operation;
+
+        switch (messageOperation){
+            case PLAYERLOGIN:
                 return new LoginHandler(igame);
             default:
                 return null;

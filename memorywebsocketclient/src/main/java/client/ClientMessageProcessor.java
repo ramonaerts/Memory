@@ -18,10 +18,8 @@ public class ClientMessageProcessor implements IClientMessageProcessor {
         this.gameClient = gameClient;
     }
 
-    public void processMessage(String sessionId, String type, String data) {
-        String simpleType = type.split("\\.")[type.split("\\.").length - 1];
-
-        IClientMessageHandler handler = factory.getHandler(simpleType, gameClient);
+    public void processMessage(String sessionId, Object operation, String data) {
+        IClientMessageHandler handler = factory.getHandler(operation, gameClient);
         handler.handleMessage(data, sessionId);
     }
 

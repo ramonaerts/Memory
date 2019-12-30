@@ -93,7 +93,7 @@ public class ClientWebSocket implements IClientWebSocket
     {
         Serializer ser = Serializer.getSerializer();
         SocketMessage msg = ser.deserialize(message, SocketMessage.class);
-        messageProcessor.processMessage(sessionId, msg.getMessageType(), msg.getMessageData());
+        messageProcessor.processMessage(sessionId, msg.getMessageOperation(), msg.getMessageData());
     }
 
     @OnError
@@ -117,10 +117,10 @@ public class ClientWebSocket implements IClientWebSocket
         }
     }
 
-    public void send(Object object)
+    public void send(Object object, Object operation)
     {
         SocketMessageGenerator generator = new SocketMessageGenerator();
-        String msg = generator.generateMessageString(object);
+        String msg = generator.generateMessageString(object, operation);
         sendMessageToServer(msg);
     }
 }
