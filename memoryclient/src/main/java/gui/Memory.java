@@ -147,7 +147,7 @@ public class Memory extends Application implements IMemoryGui {
         startGameButton.setPrefHeight(50);
         startGameButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
             try {
-                //start game method
+                //TODO: implement start game
                 gameScreen();
             }
             catch (Exception e){
@@ -193,8 +193,6 @@ public class Memory extends Application implements IMemoryGui {
         root.getChildren().add(grid);
 
         Rectangle memoryField = new Rectangle(10, 75, 700,500);
-/*        Color boardColor = new Color(53, 101, 77, .99);
-        memoryField.setFill(boardColor);*/
         memoryField.setFill(Color.SEAGREEN);
         root.getChildren().add(memoryField);
         Font cardFont = new Font(17);
@@ -218,7 +216,7 @@ public class Memory extends Application implements IMemoryGui {
                 card.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent mouseEvent) {
-                        //send to server with x and y.
+                        //TODO: send to server with xpos and ypos.
                     }
                 });
                 memoryCards[i][j] = card;

@@ -3,7 +3,6 @@ package client;
 import interfaces.IClientHandlerFactory;
 import interfaces.IClientMessageProcessor;
 import interfaces.IGameClient;
-import messaging.ClientHandlerFactory;
 import interfaces.IClientMessageHandler;
 
 public class ClientMessageProcessor implements IClientMessageProcessor {
