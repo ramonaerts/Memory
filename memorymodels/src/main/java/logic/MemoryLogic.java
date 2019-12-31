@@ -10,7 +10,7 @@ import java.util.List;
 public class MemoryLogic implements IGameLogic {
     private int gameID;
     private List<Player> onlinePlayers = new ArrayList<>();
-    private List<Player> activeGames = new ArrayList<>();
+    private List<Game> activeGames = new ArrayList<>();
     private int playerAmount;
     private int round;
     boolean singlePlayer;
@@ -27,23 +27,37 @@ public class MemoryLogic implements IGameLogic {
         Player player = new Player(username, password, sessionId);
         onlinePlayers.add(player);
 
-/*        if(player.getUsername().equals("test") && player.getPassword().equals("aerts"))
-        {
-            generator.sendPlayerResult(true);
-        }
-        else generator.sendPlayerResult(false);*/
-
         generator.sendPlayerResult(true, player.getSessionID());
         updateLobby();
-
     }
 
     public void startGame(String sessionId)
     {
         Player player = getPlayer(sessionId);
+
         Game game = new Game();
         game.playerStartsGame(player);
-        activeGames.add(player);
+        activeGames.add(game);
+
+        if (player != null)
+        {
+            updatePlayerGameState(player, GameState.PLAYING);
+            generator.sendGameStartResult(true, sessionId);
+        }
+    }
+
+    public void joinGame(String sessionId)
+    {
+        Player player = getPlayer(sessionId);
+
+        for (Game game : activeGames) {
+            if (game.getPlayeramount() == 1)
+            {
+                game.playerJoinsGame(player);
+                //TODO: Player joins game message
+            }
+            else game.playerJoinsGame(player);//TODO: Handle joinable game not found.
+        }
     }
 
     private Player getPlayer(String sessionId)
@@ -55,12 +69,22 @@ public class MemoryLogic implements IGameLogic {
         return null;
     }
 
+    private void updatePlayerGameState(Player player, GameState gameState)
+    {
+        for (Player onlineplayer : onlinePlayers)
+        {
+            if (onlineplayer.getSessionID().equals(player.getSessionID())) onlineplayer.setGameState(gameState);
+        }
+        updateLobby();
+    }
+
     private void updateLobby()
     {
         List<String> playernames = new ArrayList<>();
 
-        for (Player player : onlinePlayers) {
-            playernames.add(player.getUsername());
+        for (Player player : onlinePlayers)
+        {
+            if (player.getGameState() == GameState.LOBBY) playernames.add(player.getUsername());
         }
 
         for (Player player : onlinePlayers)

@@ -147,8 +147,7 @@ public class Memory extends Application implements IMemoryGui {
         startGameButton.setPrefHeight(50);
         startGameButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
             try {
-                //TODO: implement start game
-                gameScreen();
+                controller.startGame();
             }
             catch (Exception e){
                 showMessage("No connection to server, try again later");
@@ -179,6 +178,15 @@ public class Memory extends Application implements IMemoryGui {
                 onlinePlayers.getItems().add(player);
             }
         });
+    }
+
+    public void startGameResult(boolean startResult){
+        Platform.runLater(() ->
+        {
+            if(startResult)gameScreen();
+            else showMessage("Game cant be started, try again later.");
+        });
+
     }
 
     private void gameScreen()
@@ -224,11 +232,11 @@ public class Memory extends Application implements IMemoryGui {
             }
         }
 
-        lobbyStage.close();
         this.gameStage = new Stage();
         gameStage.setTitle("Memory game");
         gameStage.setScene(scene1);
         gameStage.show();
+        lobbyStage.close();
     }
 
     private void showMessage(String message) {

@@ -32,4 +32,15 @@ public class MemoryController implements IController {
     public void updateLobby(List<String> players){
         gui.updateLobby(players);
     }
+
+    @Override
+    public void startGame()
+    {
+        client.startGame();
+    }
+
+    @Override
+    public void startGameResult(boolean startResult) {
+        gui.startGameResult(startResult);
+    }
 }

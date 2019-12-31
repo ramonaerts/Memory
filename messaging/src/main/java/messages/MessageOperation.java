@@ -1,11 +1,16 @@
 package messages;
 
 public enum MessageOperation {
-    //server
-    PLAYERLOGIN,
 
-    //client
+    //to server
+    PLAYERLOGIN,
+    PLAYERSTARTGAME,
+    PLAYERJOINGAME,
+
+    //to client
     PLAYERLOGINRESULT,
-    UPDATELOBBY
+    UPDATELOBBY,
+    STARTGAMERESULT,
+    JOINGAMERESULT,
 
 }

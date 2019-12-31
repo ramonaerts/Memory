@@ -15,6 +15,8 @@ public class ServerHandlerFactory implements IServerHandlerFactory {
         switch (messageOperation){
             case PLAYERLOGIN:
                 return new LoginHandler(igame);
+            case PLAYERSTARTGAME:
+                return new StartGameHandler(igame);
             default:
                 return null;
         }

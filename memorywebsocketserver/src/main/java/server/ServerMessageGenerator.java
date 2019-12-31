@@ -19,4 +19,8 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
     public void updateLobbyList(List<String> players, String sessionId){
         server.sendTo(sessionId, new UpdateLobbyPlayersMessage(players), MessageOperation.UPDATELOBBY);
     }
+
+    public void sendGameStartResult(boolean startResult, String sessionId){
+        server.sendTo(sessionId, new StartGameResultMessage(startResult), MessageOperation.STARTGAMERESULT);
+    }
 }

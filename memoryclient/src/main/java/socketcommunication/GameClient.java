@@ -35,4 +35,14 @@ public class GameClient implements IGameClient {
     {
         controller.updateLobby(players);
     }
+
+    @Override
+    public void startGame(){
+        messageGenerator.startGame();
+    }
+
+    @Override
+    public void startGameResult(boolean startResult){
+        controller.startGameResult(startResult);
+    }
 }

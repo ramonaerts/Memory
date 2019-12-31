@@ -9,4 +9,7 @@ public interface IGameClient {
 
     void loginResult(boolean loginResult);
     void updateLobby(List<String> players);
+
+    void startGame();
+    void startGameResult(boolean startResult);
 }

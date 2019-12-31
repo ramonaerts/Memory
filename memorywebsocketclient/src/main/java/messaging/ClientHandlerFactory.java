@@ -11,12 +11,14 @@ public class ClientHandlerFactory implements IClientHandlerFactory {
     {
         IGameClient igameClient = (IGameClient) gameclient;
         MessageOperation messageOperation = (MessageOperation) operation;
-        
+
         switch (messageOperation){
             case PLAYERLOGINRESULT:
                 return new LoginResultHandler(igameClient);
             case UPDATELOBBY:
                 return new UpdateLobbyResultHandler(igameClient);
+            case STARTGAMERESULT:
+                return new StartGameResultHandler(igameClient);
             default:
                 return null;
         }

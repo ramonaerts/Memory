@@ -8,16 +8,23 @@ public class Game {
     private Card[][] cards = new Card[6][3];
     private Player player1;
     private Player player2;
+    private int playeramount = 0;
+
+    public int getPlayeramount() {
+        return playeramount;
+    }
 
     public void playerStartsGame(Player player)
     {
         this.player1 = player;
+        playeramount++;
         generateCards();
     }
 
     public void playerJoinsGame(Player player)
     {
         this.player2 = player;
+        playeramount++;
     }
 
     private void generateCards()
@@ -39,7 +46,6 @@ public class Game {
                 num.remove(0);
             }
         }
-
         shuffleCards();
     }
 
