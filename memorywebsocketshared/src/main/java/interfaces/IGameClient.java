@@ -12,4 +12,7 @@ public interface IGameClient {
 
     void startGame();
     void startGameResult(boolean startResult);
+
+    void joinGame();
+    void joinGameResult(boolean joinResult, String opponentName);
 }

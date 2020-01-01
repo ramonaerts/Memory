@@ -1,6 +1,7 @@
 package client;
 
 import interfaces.*;
+import messages.JoinGameMessage;
 import messages.MessageOperation;
 import messages.PlayerLoginMessage;
 import messages.StartGameMessage;
@@ -19,5 +20,9 @@ public class ClientMessageGenerator implements IClientMessageGenerator {
     @Override
     public void startGame() {
         client.send(new StartGameMessage(), MessageOperation.PLAYERSTARTGAME);
+    }
+
+    public void joinGame(){
+        client.send(new JoinGameMessage(), MessageOperation.PLAYERJOINGAME);
     }
 }

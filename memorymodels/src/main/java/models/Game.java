@@ -9,15 +9,24 @@ public class Game {
     private Player player1;
     private Player player2;
     private int playeramount = 0;
+    private boolean gamestarted;
 
     public int getPlayeramount() {
         return playeramount;
+    }
+
+    public Player getPlayer1() {
+        return player1;
+    }
+    public Player getPlayer2() {
+        return player2;
     }
 
     public void playerStartsGame(Player player)
     {
         this.player1 = player;
         playeramount++;
+        gamestarted = false;
         generateCards();
     }
 
@@ -25,6 +34,17 @@ public class Game {
     {
         this.player2 = player;
         playeramount++;
+        gamestarted = true;
+    }
+
+    public void playerTurnsCard(Player player, int xPos, int yPos)
+    {
+        if (gamestarted){
+
+        }
+        else{
+            //TODO: Send message to user that the game hasnt started yet.
+        }
     }
 
     private void generateCards()

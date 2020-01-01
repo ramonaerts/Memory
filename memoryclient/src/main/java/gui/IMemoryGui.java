@@ -7,4 +7,5 @@ public interface IMemoryGui {
     void loginResult(boolean loginresult);
     void updateLobby(List<String> players);
     void startGameResult(boolean startResult);
+    void joinGameResult(boolean joinResult, String opponentName);
 }

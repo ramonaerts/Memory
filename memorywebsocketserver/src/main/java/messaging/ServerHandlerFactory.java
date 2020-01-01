@@ -17,6 +17,8 @@ public class ServerHandlerFactory implements IServerHandlerFactory {
                 return new LoginHandler(igame);
             case PLAYERSTARTGAME:
                 return new StartGameHandler(igame);
+            case PLAYERJOINGAME:
+                return new JoinGameHandler(igame);
             default:
                 return null;
         }

@@ -43,4 +43,12 @@ public class MemoryController implements IController {
     public void startGameResult(boolean startResult) {
         gui.startGameResult(startResult);
     }
+
+    public void joinGame(){
+        client.joinGame();
+    }
+
+    public void joinGameResult(boolean joinResult, String opponentName){
+        gui.joinGameResult(joinResult, opponentName);
+    }
 }

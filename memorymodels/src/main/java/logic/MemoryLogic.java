@@ -54,10 +54,12 @@ public class MemoryLogic implements IGameLogic {
             if (game.getPlayeramount() == 1)
             {
                 game.playerJoinsGame(player);
-                //TODO: Player joins game message
+                generator.sendGameJoinResult(true, game.getPlayer1().getUsername(), sessionId);
+                //TODO: Player joins game message to other client
+                return;
             }
-            else game.playerJoinsGame(player);//TODO: Handle joinable game not found.
         }
+        generator.sendGameJoinResult(false, null, sessionId);
     }
 
     private Player getPlayer(String sessionId)

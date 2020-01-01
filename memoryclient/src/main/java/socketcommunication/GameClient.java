@@ -45,4 +45,16 @@ public class GameClient implements IGameClient {
     public void startGameResult(boolean startResult){
         controller.startGameResult(startResult);
     }
+
+    @Override
+    public void joinGame()
+    {
+        messageGenerator.joinGame();
+    }
+
+    @Override
+    public void joinGameResult(boolean joinResult, String opponentName)
+    {
+        controller.joinGameResult(joinResult, opponentName);
+    }
 }

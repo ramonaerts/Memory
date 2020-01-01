@@ -34,6 +34,7 @@ public class Memory extends Application implements IMemoryGui {
     private IController controller;
 
     private String clientPlayer;
+    private String clientOpponent;
 
     private VBox main;
     private Stage loginStage;
@@ -160,6 +161,14 @@ public class Memory extends Application implements IMemoryGui {
         searchGameButton.setFont(lobbyFont);
         searchGameButton.setPrefWidth(INPUTWIDTH);
         searchGameButton.setPrefHeight(50);
+        searchGameButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
+            try {
+                controller.joinGame();
+            }
+            catch (Exception e){
+                showMessage("No connection to server, try again later");
+            }
+        });
         grid.add(searchGameButton, 6, 7, 1, 1);
 
         loginStage.close();
@@ -186,7 +195,18 @@ public class Memory extends Application implements IMemoryGui {
             if(startResult)gameScreen();
             else showMessage("Game cant be started, try again later.");
         });
+    }
 
+    public void joinGameResult(boolean joinResult, String opponentName){
+        Platform.runLater(() ->
+        {
+            if(joinResult)
+            {
+                clientOpponent = opponentName;
+                gameScreen();
+            }
+            else showMessage("Could not find an available game to join, try again later, or start a game yourself.");
+        });
     }
 
     private void gameScreen()
