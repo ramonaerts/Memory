@@ -15,4 +15,5 @@ public interface IGameClient {
 
     void joinGame();
     void joinGameResult(boolean joinResult, String opponentName);
+    void playerJoinsGame(String opponentName);
 }

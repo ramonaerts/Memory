@@ -55,7 +55,7 @@ public class MemoryLogic implements IGameLogic {
             {
                 game.playerJoinsGame(player);
                 generator.sendGameJoinResult(true, game.getPlayer1().getUsername(), sessionId);
-                //TODO: Player joins game message to other client
+                if (player != null) generator.playerJoinsGame(player.getUsername(), game.getPlayer1().getSessionID());
                 return;
             }
         }

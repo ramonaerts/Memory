@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/JoinGameResultHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/JoinGameHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/JoinGameMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/JoinGameResultMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/PlayerJoinsMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/PlayerJoinsHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/IMemoryGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/IMemoryGui.java" afterDir="false" />
@@ -18,31 +14,22 @@
       <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/socketcommunication/GameClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/socketcommunication/GameClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/models/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/models/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/models/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/models/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/client/ClientMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/client/ClientMessageGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/ClientHandlerFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/ClientHandlerFactory$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/ClientHandlerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/ClientHandlerFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerMessageGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerMessageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IClientMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IClientMessageGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IClientMessageProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IClientMessageProcessor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IController.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameLogic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IServerMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IServerMessageGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/PlayerJoinsMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/PlayerJoinsMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/target/classes/messages/MessageOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/classes/messages/MessageOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/target/classes/messages/PlayerJoinsMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/classes/messages/PlayerJoinsMessage.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -223,194 +210,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>200</line>
-          <option name="timeStamp" value="225" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>201</line>
-          <option name="timeStamp" value="226" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>202</line>
-          <option name="timeStamp" value="227" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>203</line>
-          <option name="timeStamp" value="228" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>204</line>
-          <option name="timeStamp" value="229" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>205</line>
-          <option name="timeStamp" value="230" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>206</line>
-          <option name="timeStamp" value="232" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>207</line>
-          <option name="timeStamp" value="233" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java</url>
-          <line>208</line>
-          <option name="timeStamp" value="234" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="239" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="240" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="242" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="243" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="244" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="245" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="246" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="247" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="248" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="249" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="250" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/JoinGameResultHandler.java</url>
           <line>16</line>
           <option name="timeStamp" value="251" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="252" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java</url>
-          <line>51</line>
+          <line>45</line>
           <option name="timeStamp" value="253" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java</url>
-          <line>121</line>
-          <option name="timeStamp" value="254" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java</url>
-          <line>122</line>
-          <option name="timeStamp" value="255" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java</url>
-          <line>123</line>
-          <option name="timeStamp" value="256" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="257" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="258" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="259" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="260" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="261" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="262" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="263" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="264" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="266" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="267" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="270" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="271" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

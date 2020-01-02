@@ -12,5 +12,6 @@ public enum MessageOperation {
     UPDATELOBBY,
     STARTGAMERESULT,
     JOINGAMERESULT,
+    PLAYERJOINSGAME,
 
 }

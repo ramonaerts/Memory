@@ -3,7 +3,7 @@ package messages;
 public class PlayerJoinsMessage {
     private String opponentname;
 
-    public PlayerJoinsMessage(boolean joinresult, String opponentname) {
+    public PlayerJoinsMessage(String opponentname) {
         this.opponentname = opponentname;
     }
 

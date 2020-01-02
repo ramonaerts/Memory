@@ -21,6 +21,8 @@ public class ClientHandlerFactory implements IClientHandlerFactory {
                 return new StartGameResultHandler(igameClient);
             case JOINGAMERESULT:
                 return new JoinGameResultHandler(igameClient);
+            case PLAYERJOINSGAME:
+                return new PlayerJoinsHandler(igameClient);
             default:
                 return null;
         }

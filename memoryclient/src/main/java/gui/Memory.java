@@ -204,8 +204,18 @@ public class Memory extends Application implements IMemoryGui {
             {
                 clientOpponent = opponentName;
                 gameScreen();
+                showMessage("You are playing against: " + opponentName + ", you can start playing now.");
             }
             else showMessage("Could not find an available game to join, try again later, or start a game yourself.");
+        });
+    }
+
+    public void playerJoinsGame(String opponentName)
+    {
+        Platform.runLater(() ->
+        {
+            clientOpponent = opponentName;
+            showMessage(opponentName + " has joined your game, you can start playing now.");
         });
     }
 

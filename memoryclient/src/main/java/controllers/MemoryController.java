@@ -18,28 +18,22 @@ public class MemoryController implements IController {
         this.gui = gui;
     }
 
-    @Override
     public void loginPlayer(String username, String password) {
         client.sendPlayer(username, password);
     }
 
-    @Override
     public void loginResult(boolean loginresult){
         gui.loginResult(loginresult);
     }
 
-    @Override
     public void updateLobby(List<String> players){
         gui.updateLobby(players);
     }
 
-    @Override
-    public void startGame()
-    {
+    public void startGame() {
         client.startGame();
     }
 
-    @Override
     public void startGameResult(boolean startResult) {
         gui.startGameResult(startResult);
     }
@@ -50,5 +44,9 @@ public class MemoryController implements IController {
 
     public void joinGameResult(boolean joinResult, String opponentName){
         gui.joinGameResult(joinResult, opponentName);
+    }
+
+    public void playerJoinsGame(String opponentName){
+        gui.playerJoinsGame(opponentName);
     }
 }

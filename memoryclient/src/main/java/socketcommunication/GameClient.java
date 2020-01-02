@@ -20,41 +20,35 @@ public class GameClient implements IGameClient {
         this.controller = controller;
     }
 
-    @Override
     public void sendPlayer(String username, String password) {
         messageGenerator.loginPlayer(username, password);
     }
 
-    @Override
     public void loginResult(boolean loginresult) {
         controller.loginResult(loginresult);
     }
 
-    @Override
-    public void updateLobby(List<String> players)
-    {
+    public void updateLobby(List<String> players) {
         controller.updateLobby(players);
     }
 
-    @Override
     public void startGame(){
         messageGenerator.startGame();
     }
 
-    @Override
     public void startGameResult(boolean startResult){
         controller.startGameResult(startResult);
     }
 
-    @Override
-    public void joinGame()
-    {
+    public void joinGame() {
         messageGenerator.joinGame();
     }
 
-    @Override
-    public void joinGameResult(boolean joinResult, String opponentName)
-    {
+    public void joinGameResult(boolean joinResult, String opponentName) {
         controller.joinGameResult(joinResult, opponentName);
+    }
+
+    public void playerJoinsGame(String opponentName) {
+        controller.playerJoinsGame(opponentName);
     }
 }
