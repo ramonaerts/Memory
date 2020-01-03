@@ -10,6 +10,7 @@ public class Player {
     private String sessionID;
     private Stats stats;
     private int points;
+    private int turnAmount;
     private GameState gameState;
 
     public Player(String username, String password, String sessionid)
@@ -54,6 +55,14 @@ public class Player {
 
     public void setPoints(int points) {
         this.points = points;
+    }
+
+    public int getTurnAmount() {
+        return turnAmount;
+    }
+
+    public void setTurnAmount(int turnAmount) {
+        this.turnAmount = turnAmount;
     }
 
     public GameState getGameState() {

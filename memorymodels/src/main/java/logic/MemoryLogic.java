@@ -4,7 +4,6 @@ import enums.GameState;
 import interfaces.*;
 import models.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MemoryLogic implements IGameLogic {
@@ -66,7 +65,7 @@ public class MemoryLogic implements IGameLogic {
     {
         for (Player player : onlinePlayers)
         {
-            if (player.getSessionID() == sessionId) return player;
+            if (player.getSessionID().equals(sessionId)) return player;
         }
         return null;
     }

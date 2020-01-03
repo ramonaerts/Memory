@@ -40,7 +40,7 @@ public class Game {
     public void playerTurnsCard(Player player, int xPos, int yPos)
     {
         if (gamestarted){
-
+            Card card = cards[xPos][yPos];
         }
         else{
             //TODO: Send message to user that the game hasnt started yet.

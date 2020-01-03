@@ -194,6 +194,12 @@ public class Memory extends Application implements IMemoryGui {
 
     private Player player1;
     private Player player2;
+    private Button[][] memoryCards;
+
+    private Label playerName = new Label();
+    private Label playerScore = new Label();
+    private Label opponentName = new Label();
+    private Label opponentScore = new Label();
 
     private void gameScreen()
     {
@@ -203,15 +209,34 @@ public class Memory extends Application implements IMemoryGui {
         grid.setPadding(new Insets(BORDERSIZE,BORDERSIZE,BORDERSIZE,BORDERSIZE));
 
         Group root = new Group();
-        Scene scene1 = new Scene(root, 900, 750);
+        Scene scene1 = new Scene(root, 750, 750);
         root.getChildren().add(grid);
 
-        Rectangle memoryField = new Rectangle(10, 75, 700,500);
+        Font statsFont = new Font(15);
+
+        Rectangle playerRectangle = new Rectangle(35, 10, 325, 70);
+        playerRectangle.setStrokeWidth(5);
+        playerRectangle.setStroke(Color.LIGHTBLUE);
+
+        Rectangle opponentRectangle = new Rectangle(385, 10, 325, 70);
+        opponentRectangle.setStrokeWidth(5);
+        opponentRectangle.setStroke(Color.SALMON);
+
+        setStandardLabels(root, statsFont, playerRectangle, 50, 20);
+        setStandardLabels(root, statsFont, opponentRectangle, 400, 20);
+
+        setVariableLabels(root, statsFont, playerName, "null", 100, 20);
+        setVariableLabels(root, statsFont, playerScore, "0", 100, 45);
+        setVariableLabels(root, statsFont, opponentName, "Waiting for player", 450, 20);
+        setVariableLabels(root, statsFont, opponentScore, "0", 450, 45);
+
+
+        Rectangle memoryField = new Rectangle(25, 90, 700,500);
         memoryField.setFill(Color.SEAGREEN);
         root.getChildren().add(memoryField);
-        Font cardFont = new Font(17);
+        Font cardFont = new Font(20);
 
-        Button[][] memoryCards = new Button[6][3];
+        memoryCards = new Button[6][3];
         for (int i = 0; i < 6; i++){
             for (int j = 0; j < 3; j++){
                 double x = memoryField.getX() + i * (700/6) + 2;
@@ -245,6 +270,31 @@ public class Memory extends Application implements IMemoryGui {
         lobbyStage.close();
     }
 
+    private void setVariableLabels(Group root, Font statsFont, Label label, String text, int x, int y) {
+        label.setText(text);
+        label.setLayoutX(x);
+        label.setLayoutY(y);
+        label.setFont(statsFont);
+        root.getChildren().add(label);
+    }
+
+    private void setStandardLabels(Group root, Font statsFont, Rectangle opponentRectangle, int x, int y) {
+        opponentRectangle.setFill(Color.WHITE);
+        root.getChildren().add(opponentRectangle);
+
+        Label opponentLabel = new Label("Player: ");
+        opponentLabel.setLayoutX(x);
+        opponentLabel.setLayoutY(y);
+        opponentLabel.setFont(statsFont);
+        root.getChildren().add(opponentLabel);
+
+        Label opponentScoreLabel = new Label("Points: ");
+        opponentScoreLabel.setLayoutX(x);
+        opponentScoreLabel.setLayoutY(y + 25);
+        opponentScoreLabel.setFont(statsFont);
+        root.getChildren().add(opponentScoreLabel);
+    }
+
     public void startGameResult(boolean startResult){
         Platform.runLater(() ->
         {
@@ -252,6 +302,8 @@ public class Memory extends Application implements IMemoryGui {
             {
                 player1 = currentPlayer;
                 gameScreen();
+                playerName.setText(player1.getUsername());
+                String test = "hoi";
             }
             else showMessage("Game cant be started, try again later.");
         });
@@ -265,6 +317,8 @@ public class Memory extends Application implements IMemoryGui {
                 player2 = currentPlayer;
                 player1 = (Player) opponent;
                 gameScreen();
+                playerName.setText(player1.getUsername());
+                opponentName.setText(player2.getUsername());
                 showMessage("You are playing against: " + player1.getUsername() + ", you can start playing now.");
             }
             else showMessage("Could not find an available game to join, try again later, or start a game yourself.");
@@ -276,6 +330,7 @@ public class Memory extends Application implements IMemoryGui {
         Platform.runLater(() ->
         {
             player2 = (Player) opponent;
+            opponentName.setText(player2.getUsername());
             showMessage(player2.getUsername() + " has joined your game, you can start playing now.");
         });
     }
