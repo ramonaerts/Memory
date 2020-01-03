@@ -1,13 +1,15 @@
 package messages;
 
-public class PlayerJoinsMessage {
-    private String opponentname;
+import models.Player;
 
-    public PlayerJoinsMessage(String opponentname) {
-        this.opponentname = opponentname;
+public class PlayerJoinsMessage {
+    private Player opponent;
+
+    public PlayerJoinsMessage(Object opponent) {
+        this.opponent = (Player) opponent;
     }
 
-    public String getOpponentname() {
-        return opponentname;
+    public Player getOpponent() {
+        return opponent;
     }
 }

@@ -22,8 +22,8 @@ public class MemoryController implements IController {
         client.sendPlayer(username, password);
     }
 
-    public void loginResult(boolean loginresult){
-        gui.loginResult(loginresult);
+    public void loginResult(boolean loginresult, Object player){
+        gui.loginResult(loginresult, player);
     }
 
     public void updateLobby(List<String> players){
@@ -42,11 +42,11 @@ public class MemoryController implements IController {
         client.joinGame();
     }
 
-    public void joinGameResult(boolean joinResult, String opponentName){
-        gui.joinGameResult(joinResult, opponentName);
+    public void joinGameResult(boolean joinResult, Object opponent){
+        gui.joinGameResult(joinResult, opponent);
     }
 
-    public void playerJoinsGame(String opponentName){
-        gui.playerJoinsGame(opponentName);
+    public void playerJoinsGame(Object opponent){
+        gui.playerJoinsGame(opponent);
     }
 }

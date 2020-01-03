@@ -12,8 +12,8 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
         this.server = server;
     }
 
-    public void sendPlayerResult(boolean loginResult, String sessionId){
-        server.sendTo(sessionId, new PlayerLoginResultMessage(loginResult), MessageOperation.PLAYERLOGINRESULT);
+    public void sendPlayerResult(boolean loginResult, Object player, String sessionId){
+        server.sendTo(sessionId, new PlayerLoginResultMessage(loginResult, player), MessageOperation.PLAYERLOGINRESULT);
     }
 
     public void updateLobbyList(List<String> players, String sessionId){
@@ -24,11 +24,11 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
         server.sendTo(sessionId, new StartGameResultMessage(startResult), MessageOperation.STARTGAMERESULT);
     }
 
-    public void sendGameJoinResult(boolean joinResult, String opponentName, String sessionId){
-        server.sendTo(sessionId, new JoinGameResultMessage(joinResult, opponentName), MessageOperation.JOINGAMERESULT);
+    public void sendGameJoinResult(boolean joinResult, Object opponent, String sessionId){
+        server.sendTo(sessionId, new JoinGameResultMessage(joinResult, opponent), MessageOperation.JOINGAMERESULT);
     }
 
-    public void playerJoinsGame(String opponentName, String sessionId) {
-        server.sendTo(sessionId, new PlayerJoinsMessage(opponentName), MessageOperation.PLAYERJOINSGAME);
+    public void playerJoinsGame(Object opponent, String sessionId) {
+        server.sendTo(sessionId, new PlayerJoinsMessage(opponent), MessageOperation.PLAYERJOINSGAME);
     }
 }

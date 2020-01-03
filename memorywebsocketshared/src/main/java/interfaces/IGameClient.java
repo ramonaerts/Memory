@@ -7,13 +7,13 @@ public interface IGameClient {
 
     void sendPlayer(String username, String password);
 
-    void loginResult(boolean loginResult);
+    void loginResult(boolean loginResult, Object player);
     void updateLobby(List<String> players);
 
     void startGame();
     void startGameResult(boolean startResult);
 
     void joinGame();
-    void joinGameResult(boolean joinResult, String opponentName);
-    void playerJoinsGame(String opponentName);
+    void joinGameResult(boolean joinResult, Object opponent);
+    void playerJoinsGame(Object opponent);
 }

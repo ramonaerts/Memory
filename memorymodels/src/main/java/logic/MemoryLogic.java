@@ -27,7 +27,7 @@ public class MemoryLogic implements IGameLogic {
         Player player = new Player(username, password, sessionId);
         onlinePlayers.add(player);
 
-        generator.sendPlayerResult(true, player.getSessionID());
+        generator.sendPlayerResult(true, player, player.getSessionID());
         updateLobby();
     }
 
@@ -54,8 +54,8 @@ public class MemoryLogic implements IGameLogic {
             if (game.getPlayeramount() == 1)
             {
                 game.playerJoinsGame(player);
-                generator.sendGameJoinResult(true, game.getPlayer1().getUsername(), sessionId);
-                if (player != null) generator.playerJoinsGame(player.getUsername(), game.getPlayer1().getSessionID());
+                generator.sendGameJoinResult(true, game.getPlayer1(), sessionId);
+                if (player != null) generator.playerJoinsGame(player, game.getPlayer1().getSessionID());
                 return;
             }
         }

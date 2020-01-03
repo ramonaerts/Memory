@@ -24,8 +24,8 @@ public class GameClient implements IGameClient {
         messageGenerator.loginPlayer(username, password);
     }
 
-    public void loginResult(boolean loginresult) {
-        controller.loginResult(loginresult);
+    public void loginResult(boolean loginresult, Object player) {
+        controller.loginResult(loginresult, player);
     }
 
     public void updateLobby(List<String> players) {
@@ -44,11 +44,11 @@ public class GameClient implements IGameClient {
         messageGenerator.joinGame();
     }
 
-    public void joinGameResult(boolean joinResult, String opponentName) {
-        controller.joinGameResult(joinResult, opponentName);
+    public void joinGameResult(boolean joinResult, Object opponent) {
+        controller.joinGameResult(joinResult, opponent);
     }
 
-    public void playerJoinsGame(String opponentName) {
-        controller.playerJoinsGame(opponentName);
+    public void playerJoinsGame(Object opponent) {
+        controller.playerJoinsGame(opponent);
     }
 }

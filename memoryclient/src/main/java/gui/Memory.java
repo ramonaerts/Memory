@@ -22,6 +22,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import messaging.ClientHandlerFactory;
+import models.Player;
 import socketcommunication.GameClient;
 
 import java.util.List;
@@ -33,8 +34,7 @@ public class Memory extends Application implements IMemoryGui {
 
     private IController controller;
 
-    private String clientPlayer;
-    private String clientOpponent;
+    private Player currentPlayer;
 
     private VBox main;
     private Stage loginStage;
@@ -96,19 +96,22 @@ public class Memory extends Application implements IMemoryGui {
     }
 
     private void loginPlayer(String username, String password){
-        clientPlayer = username;
         controller.loginPlayer(username, password);
     }
 
-    public void loginResult(boolean loginresult)
+    public void loginResult(boolean loginresult, Object player)
     {
         Platform.runLater(() ->
         {
-            if(loginresult) lobby();
+            if(loginresult)
+            {
+                currentPlayer = (Player) player;
+                lobby();
+            }
             else
             {
                 showMessage("Wrong login credentials");
-                clientPlayer = "";
+                currentPlayer = null;
             }
         });
     }
@@ -189,35 +192,8 @@ public class Memory extends Application implements IMemoryGui {
         });
     }
 
-    public void startGameResult(boolean startResult){
-        Platform.runLater(() ->
-        {
-            if(startResult)gameScreen();
-            else showMessage("Game cant be started, try again later.");
-        });
-    }
-
-    public void joinGameResult(boolean joinResult, String opponentName){
-        Platform.runLater(() ->
-        {
-            if(joinResult)
-            {
-                clientOpponent = opponentName;
-                gameScreen();
-                showMessage("You are playing against: " + opponentName + ", you can start playing now.");
-            }
-            else showMessage("Could not find an available game to join, try again later, or start a game yourself.");
-        });
-    }
-
-    public void playerJoinsGame(String opponentName)
-    {
-        Platform.runLater(() ->
-        {
-            clientOpponent = opponentName;
-            showMessage(opponentName + " has joined your game, you can start playing now.");
-        });
-    }
+    private Player player1;
+    private Player player2;
 
     private void gameScreen()
     {
@@ -267,6 +243,41 @@ public class Memory extends Application implements IMemoryGui {
         gameStage.setScene(scene1);
         gameStage.show();
         lobbyStage.close();
+    }
+
+    public void startGameResult(boolean startResult){
+        Platform.runLater(() ->
+        {
+            if(startResult)
+            {
+                player1 = currentPlayer;
+                gameScreen();
+            }
+            else showMessage("Game cant be started, try again later.");
+        });
+    }
+
+    public void joinGameResult(boolean joinResult, Object opponent){
+        Platform.runLater(() ->
+        {
+            if(joinResult)
+            {
+                player2 = currentPlayer;
+                player1 = (Player) opponent;
+                gameScreen();
+                showMessage("You are playing against: " + player1.getUsername() + ", you can start playing now.");
+            }
+            else showMessage("Could not find an available game to join, try again later, or start a game yourself.");
+        });
+    }
+
+    public void playerJoinsGame(Object opponent)
+    {
+        Platform.runLater(() ->
+        {
+            player2 = (Player) opponent;
+            showMessage(player2.getUsername() + " has joined your game, you can start playing now.");
+        });
     }
 
     private void showMessage(String message) {

@@ -14,6 +14,6 @@ public class JoinGameResultHandler extends BaseClientMessageHandler<JoinGameResu
 
     @Override
     public void handleMessageInternal(JoinGameResultMessage message, String sessionId) {
-        client.joinGameResult(message.getResult(), message.getOpponentname());
+        client.joinGameResult(message.getResult(), message.getOpponent());
     }
 }

@@ -15,6 +15,6 @@ public class PlayerJoinsHandler extends BaseClientMessageHandler<PlayerJoinsMess
 
     @Override
     public void handleMessageInternal(PlayerJoinsMessage message, String sessionId) {
-        client.playerJoinsGame(message.getOpponentname());
+        client.playerJoinsGame(message.getOpponent());
     }
 }

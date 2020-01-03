@@ -14,6 +14,6 @@ public class LoginResultHandler extends BaseClientMessageHandler<PlayerLoginResu
 
     @Override
     public void handleMessageInternal(PlayerLoginResultMessage message, String sessionId) {
-        client.loginResult(message.getResult());
+        client.loginResult(message.getResult(), message.getPlayer());
     }
 }

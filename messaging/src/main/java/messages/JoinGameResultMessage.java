@@ -1,20 +1,22 @@
 package messages;
 
+import models.Player;
+
 public class JoinGameResultMessage {
 
     private boolean joinresult;
-    private String opponentname;
+    private Player opponent;
 
-    public JoinGameResultMessage(boolean joinresult, String opponentname) {
+    public JoinGameResultMessage(boolean joinresult, Object opponent) {
         this.joinresult = joinresult;
-        this.opponentname = opponentname;
+        this.opponent = (Player)opponent;
     }
 
     public boolean getResult() {
         return joinresult;
     }
 
-    public String getOpponentname() {
-        return opponentname;
+    public Player getOpponent() {
+        return opponent;
     }
 }
