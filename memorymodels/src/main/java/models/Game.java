@@ -1,67 +1,123 @@
 package models;
 
+import enums.CardState;
+import interfaces.IServerMessageGenerator;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class Game {
     private Card[][] cards = new Card[6][3];
-    private Player player1;
-    private Player player2;
+    private List<Player> playersInGame = new ArrayList<>();
     private int playeramount = 0;
     private boolean gamestarted;
+
+    private IServerMessageGenerator generator;
+
+    public Game (IServerMessageGenerator generator) {
+        this.generator = generator;
+    }
 
     public int getPlayeramount() {
         return playeramount;
     }
 
-    public Player getPlayer1() {
-        return player1;
+    public List<Player> getPlayersInGame() {
+        return playersInGame;
     }
-    public Player getPlayer2() {
-        return player2;
+
+    public Player getOpponent(String sessionId)
+    {
+        for (Player player : playersInGame)
+        {
+            if (!player.getSessionID().equals(sessionId)) return player;
+        }
+        return null;
     }
 
     public void playerStartsGame(Player player)
     {
-        this.player1 = player;
-        playeramount++;
+        player.setPlayerID(1); //hardcoded, remove if login is implemented
+        playersInGame.add(player);
         gamestarted = false;
         generateCards();
+        String test = "hoit";
     }
 
     public void playerJoinsGame(Player player)
     {
-        this.player2 = player;
-        playeramount++;
+        player.setPlayerID(2); //hardcoded, remove if login is implemented
+        playersInGame.add(player);
         gamestarted = true;
     }
 
     public void playerTurnsCard(Player player, int xPos, int yPos)
     {
         if (gamestarted){
-            Card card = cards[xPos][yPos];
+            player.setTurnAmount(+1);
+            for (Card[] xCard : cards) {
+                for (Card card : xCard) {
+
+                    card.setCardState(CardState.TURNED);
+                    card.setTurnedBy(player.getPlayerID());
+
+                    if (checkIfTwoCardsTurned(player)) {
+                        if(checkIfCardsMatch(card)){
+                            //TODO: send message to client that player has guessed a card set.
+                        }
+                        else{
+                            turnCardsBack(card);
+                        }
+                    }
+                }
+            }
+            //TODO: else Send message with card information to users
         }
-        else{
-            //TODO: Send message to user that the game hasnt started yet.
+        //TODO: else Send message to user that the game has not started yet.
+
+    }
+
+    private boolean checkIfTwoCardsTurned(Player player) {
+        return player.getTurnAmount() == 2;
+    }
+
+    private boolean checkIfCardsMatch(Card turnedCard) {
+        for (Card[] xCard : cards) {
+            for (Card card : xCard) {
+                if (card.getTurnedBy() == 0) continue;
+                if (card.getTurnedBy() == turnedCard.getTurnedBy() && card.getValue() == turnedCard.getValue())
+                {
+                    turnedCard.setCardState(CardState.GUESSED);
+                    turnedCard.setTurnedBy(0);
+                    card.setCardState(CardState.GUESSED);
+                    card.setTurnedBy(0);
+                    return true;
+                }
+            }
         }
+        return false;
+    }
+
+    private void turnCardsBack(Card card){
+
     }
 
     private void generateCards()
     {
         List<Integer> num = new ArrayList<>();
         int id = 1;
-        for (int t=0; t <= 1; t++)
+        for (int i=0; i <= 1; i++)
         {
-            for (int x=1; x <= 9; x++) num.add(x);
+            for (int j=1; j <= 9; j++) num.add(j);
         }
 
-        for(int i=0; i < cards.length; i++)
+        for(int x=0; x < cards.length; x++)
         {
-            for(int j=0; j < cards[i].length; j++)
+            for(int y=0; y < cards[x].length; y++)
             {
-                Card card = new Card(num.get(0), new Coordinate(i, j), id);
-                cards[i][j] = card;
+                Card card = new Card(num.get(0), new Coordinate(x, y), id);
+                cards[x][y] = card;
                 id++;
                 num.remove(0);
             }

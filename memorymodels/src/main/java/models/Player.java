@@ -11,6 +11,7 @@ public class Player {
     private Stats stats;
     private int points;
     private int turnAmount;
+    private boolean firstPlayer;
     private GameState gameState;
 
     public Player(String username, String password, String sessionid)
@@ -19,6 +20,10 @@ public class Player {
         this.password = password;
         this.sessionID = sessionid;
         this.gameState = GameState.LOBBY;
+    }
+
+    public void setPlayerID(int playerID) {
+        this.playerID = playerID;
     }
 
     public int getPlayerID() {
@@ -63,6 +68,16 @@ public class Player {
 
     public void setTurnAmount(int turnAmount) {
         this.turnAmount = turnAmount;
+    }
+
+    public boolean getFirstPlayer()
+    {
+        return firstPlayer;
+    }
+
+    public void setFirstPlayer(boolean firstPlayer)
+    {
+        this.firstPlayer = firstPlayer;
     }
 
     public GameState getGameState() {
