@@ -25,6 +25,7 @@ import messaging.ClientHandlerFactory;
 import models.Player;
 import socketcommunication.GameClient;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Memory extends Application implements IMemoryGui {
@@ -192,14 +193,15 @@ public class Memory extends Application implements IMemoryGui {
         });
     }
 
-    private Player player1;
-    private Player player2;
+    private List<Player> inGamePlayers = new ArrayList<>();
     private Button[][] memoryCards;
 
     private Label playerName = new Label();
     private Label playerScore = new Label();
     private Label opponentName = new Label();
     private Label opponentScore = new Label();
+
+    private ListView<String> gameChat = new ListView<>();
 
     private void gameScreen()
     {
@@ -263,6 +265,12 @@ public class Memory extends Application implements IMemoryGui {
             }
         }
 
+        gameChat.setPrefWidth(700);
+        gameChat.setPrefHeight(125);
+        gameChat.setLayoutX(25);
+        gameChat.setLayoutY(600);
+        root.getChildren().add(gameChat);
+
         this.gameStage = new Stage();
         gameStage.setTitle("Memory game");
         gameStage.setScene(scene1);
@@ -300,10 +308,9 @@ public class Memory extends Application implements IMemoryGui {
         {
             if(startResult)
             {
-                player1 = currentPlayer;
+                inGamePlayers.add(currentPlayer);
                 gameScreen();
-                playerName.setText(player1.getUsername());
-                String test = "hoi";
+                playerName.setText(currentPlayer.getUsername());
             }
             else showMessage("Game cant be started, try again later.");
         });
@@ -314,12 +321,13 @@ public class Memory extends Application implements IMemoryGui {
         {
             if(joinResult)
             {
-                player2 = currentPlayer;
-                player1 = (Player) opponent;
+                Player opponentPlayer = (Player) opponent;
+                inGamePlayers.add(opponentPlayer);
+                inGamePlayers.add(currentPlayer);
                 gameScreen();
-                playerName.setText(player1.getUsername());
-                opponentName.setText(player2.getUsername());
-                showMessage("You are playing against: " + player1.getUsername() + ", you can start playing now.");
+                playerName.setText(opponentPlayer.getUsername());
+                opponentName.setText(currentPlayer.getUsername());
+                messageToGameChat("You are playing against: " + opponentPlayer.getUsername() + ", you can start playing now.");
             }
             else showMessage("Could not find an available game to join, try again later, or start a game yourself.");
         });
@@ -329,10 +337,16 @@ public class Memory extends Application implements IMemoryGui {
     {
         Platform.runLater(() ->
         {
-            player2 = (Player) opponent;
-            opponentName.setText(player2.getUsername());
-            showMessage(player2.getUsername() + " has joined your game, you can start playing now.");
+            Player opponentPlayer = (Player) opponent;
+            inGamePlayers.add(opponentPlayer);
+            opponentName.setText(opponentPlayer.getUsername());
+            messageToGameChat(opponentPlayer.getUsername() + " has joined your game, you can start playing now.");
         });
+    }
+
+    private void messageToGameChat(String message)
+    {
+        gameChat.getItems().add(message);
     }
 
     private void showMessage(String message) {
