@@ -16,6 +16,7 @@ public class Game {
     private boolean gamestarted;
 
     private ExecutorService pool;
+    private Random rand = new Random();
 
     private IServerMessageGenerator generator;
 
@@ -29,6 +30,15 @@ public class Game {
 
     public List<Player> getPlayersInGame() {
         return playersInGame;
+    }
+
+    private Player getPlayer(String sessionId)
+    {
+        for (Player player : playersInGame)
+        {
+            if (player.getSessionID().equals(sessionId)) return player;
+        }
+        return null;
     }
 
     public Player getOpponent(String sessionId)
@@ -55,21 +65,21 @@ public class Game {
         gamestarted = true;
     }
 
-    public void playerTurnsCard(Player player, int xPos, int yPos)
+    public void playerTurnsCard(String sessionId, int xPos, int yPos)
     {
+        Player player = getPlayer(sessionId);
         if (gamestarted) {
+            assert player != null;
             player.setTurnAmount(+1);
             for (Card card : cards) {
                 if (card.getCoordinate().getX() == xPos && card.getCoordinate().getY() == yPos) {
 
                     card.setTurnedBy(player.getPlayerID());
                     card.setCardState(CardState.TURNED);
+                    //TODO: Send message with card information to users
 
-                    if (checkIfTwoCardsTurned(player)) checkIfCardsMatch(card);
-                    else {
-                        //TODO: else Send message with card information to users
-                        return;
-                    }
+                    if (checkIfTwoCardsTurned(player)) checkIfCardsMatch(card, player);
+                    else return;
                 }
             }
         }
@@ -80,7 +90,8 @@ public class Game {
         return player.getTurnAmount() == 2;
     }
 
-    private void checkIfCardsMatch(Card turnedCard) {
+    private void checkIfCardsMatch(Card turnedCard, Player player) {
+        player.setTurnAmount(0);
         for (Card card : cards) {
             if (card.getTurnedBy() == 0) continue;
             if (card.getTurnedBy() == turnedCard.getTurnedBy() && card.getCardID() != turnedCard.getCardID()) {
@@ -90,16 +101,24 @@ public class Game {
                     turnedCard.setTurnedBy(0);
                     card.setCardState(CardState.GUESSED);
                     card.setTurnedBy(0);
-                    //TODO: Send message with card information to users + gain point for user
+                    player.setPoints(+1);
+                    //TODO: send message for correct match + point.
                     return;
                 }
-                else turnCardsBack(card, turnedCard);
+                else turnCardsBack(player);
             }
         }
     }
 
-    private void turnCardsBack(Card cardOne, Card cardTwo){
-
+    private void turnCardsBack(Player player){
+        for (Card card : cards)
+        {
+            if (card.getTurnedBy() == player.getPlayerID()){
+                card.setCardState(CardState.HIDDEN);
+                card.setTurnedBy(0);
+                //TODO send message to turn back card
+            }
+        }
     }
 
     private void generateCards()
@@ -122,10 +141,10 @@ public class Game {
     private void shuffleCards(List<Card> unsortedCards)
     {
         Collections.shuffle(unsortedCards);
-        Random rand = new Random();
 
         for (int x=1; x < 4; x++) {
             for (int y=1; y < 7; y++) {
+
                 int randomIndex = rand.nextInt(unsortedCards.size());
                 Card randomCard = unsortedCards.get(randomIndex);
                 randomCard.setCoordinate(new Coordinate(x, y));
