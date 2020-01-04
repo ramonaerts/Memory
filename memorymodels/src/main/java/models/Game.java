@@ -4,14 +4,18 @@ import enums.CardState;
 import interfaces.IServerMessageGenerator;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.ExecutorService;
 
 public class Game {
-    private Card[][] cards = new Card[6][3];
+    private List<Card> cards = new ArrayList<>();
     private List<Player> playersInGame = new ArrayList<>();
     private int playeramount = 0;
     private boolean gamestarted;
+
+    private ExecutorService pool;
 
     private IServerMessageGenerator generator;
 
@@ -42,7 +46,6 @@ public class Game {
         playersInGame.add(player);
         gamestarted = false;
         generateCards();
-        String test = "hoit";
     }
 
     public void playerJoinsGame(Player player)
@@ -54,89 +57,80 @@ public class Game {
 
     public void playerTurnsCard(Player player, int xPos, int yPos)
     {
-        if (gamestarted){
+        if (gamestarted) {
             player.setTurnAmount(+1);
-            for (Card[] xCard : cards) {
-                for (Card card : xCard) {
+            for (Card card : cards) {
+                if (card.getCoordinate().getX() == xPos && card.getCoordinate().getY() == yPos) {
 
-                    card.setCardState(CardState.TURNED);
                     card.setTurnedBy(player.getPlayerID());
+                    card.setCardState(CardState.TURNED);
 
-                    if (checkIfTwoCardsTurned(player)) {
-                        if(checkIfCardsMatch(card)){
-                            //TODO: send message to client that player has guessed a card set.
-                        }
-                        else{
-                            turnCardsBack(card);
-                        }
+                    if (checkIfTwoCardsTurned(player)) checkIfCardsMatch(card);
+                    else {
+                        //TODO: else Send message with card information to users
+                        return;
                     }
                 }
             }
-            //TODO: else Send message with card information to users
         }
         //TODO: else Send message to user that the game has not started yet.
-
     }
 
     private boolean checkIfTwoCardsTurned(Player player) {
         return player.getTurnAmount() == 2;
     }
 
-    private boolean checkIfCardsMatch(Card turnedCard) {
-        for (Card[] xCard : cards) {
-            for (Card card : xCard) {
-                if (card.getTurnedBy() == 0) continue;
-                if (card.getTurnedBy() == turnedCard.getTurnedBy() && card.getValue() == turnedCard.getValue())
+    private void checkIfCardsMatch(Card turnedCard) {
+        for (Card card : cards) {
+            if (card.getTurnedBy() == 0) continue;
+            if (card.getTurnedBy() == turnedCard.getTurnedBy() && card.getCardID() != turnedCard.getCardID()) {
+                if(card.getValue() == turnedCard.getValue())
                 {
                     turnedCard.setCardState(CardState.GUESSED);
                     turnedCard.setTurnedBy(0);
                     card.setCardState(CardState.GUESSED);
                     card.setTurnedBy(0);
-                    return true;
+                    //TODO: Send message with card information to users + gain point for user
+                    return;
                 }
+                else turnCardsBack(card, turnedCard);
             }
         }
-        return false;
     }
 
-    private void turnCardsBack(Card card){
+    private void turnCardsBack(Card cardOne, Card cardTwo){
 
     }
 
     private void generateCards()
     {
-        List<Integer> num = new ArrayList<>();
+        List<Card> unstortedCards = new ArrayList<>();
         int id = 1;
+
         for (int i=0; i <= 1; i++)
         {
-            for (int j=1; j <= 9; j++) num.add(j);
-        }
-
-        for(int x=0; x < cards.length; x++)
-        {
-            for(int y=0; y < cards[x].length; y++)
+            for (int j=1; j <= 9; j++)
             {
-                Card card = new Card(num.get(0), new Coordinate(x, y), id);
-                cards[x][y] = card;
+                Card card = new Card(j, id);
+                unstortedCards.add(card);
                 id++;
-                num.remove(0);
             }
         }
-        shuffleCards();
+        shuffleCards(unstortedCards);
     }
 
-    private void shuffleCards()
+    private void shuffleCards(List<Card> unsortedCards)
     {
-        Random random = new Random();
+        Collections.shuffle(unsortedCards);
+        Random rand = new Random();
 
-        for (int i = cards.length - 1; i > 0; i--) {
-            for (int j = cards[i].length - 1; j > 0; j--) {
-                int m = random.nextInt(i + 1);
-                int n = random.nextInt(j + 1);
-
-                Card tempcard = cards[i][j];
-                cards[i][j] = cards[m][n];
-                cards[m][n] = tempcard;
+        for (int x=1; x < 4; x++) {
+            for (int y=1; y < 7; y++) {
+                int randomIndex = rand.nextInt(unsortedCards.size());
+                Card randomCard = unsortedCards.get(randomIndex);
+                randomCard.setCoordinate(new Coordinate(x, y));
+                unsortedCards.remove(randomCard);
+                cards.add(randomCard);
             }
         }
     }

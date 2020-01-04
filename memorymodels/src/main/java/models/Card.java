@@ -10,13 +10,16 @@ public class Card {
     private Coordinate coordinate;
     private int turnedBy;
 
-    public Card(int value, Coordinate coordinate, int id){
+    public Card(int value, int id){
         this.value = value;
-        this.coordinate = coordinate;
         this.cardID = id;
         this.cardState = CardState.HIDDEN;
         this.turnAmount = 0;
         this.turnedBy = 0;
+    }
+
+    public int getCardID() {
+        return cardID;
     }
 
     public int getValue() {
@@ -37,5 +40,13 @@ public class Card {
 
     public void setTurnedBy(int turnedBy) {
         this.turnedBy = turnedBy;
+    }
+
+    public Coordinate getCoordinate() {
+        return coordinate;
+    }
+
+    public void setCoordinate(Coordinate coordinate) {
+        this.coordinate = coordinate;
     }
 }
