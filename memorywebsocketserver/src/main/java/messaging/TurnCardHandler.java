@@ -11,6 +11,6 @@ public class TurnCardHandler extends BaseServerMessageHandler<TurnCardMessage> {
 
     @Override
     public void handleMessageInternal(TurnCardMessage message, String sessionId) {
-        game.turnCard(message.getY(), message.getX(), sessionId);
+        game.turnCard(message.getY(), message.getX(), message.getGameId(), sessionId);
     }
 }

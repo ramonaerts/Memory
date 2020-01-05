@@ -50,7 +50,7 @@ public class MemoryController implements IController {
         gui.playerJoinsGame(opponent);
     }
 
-    public void turnCard(int x, int y){
-        client.turnCard(x, y);
+    public void turnCard(int x, int y, int gameId){
+        client.turnCard(x, y, gameId);
     }
 }

@@ -100,8 +100,11 @@ public class MemoryLogic implements IGameLogic {
         }
     }
 
-    public void turnCard(int x, int y, String sessionId)
+    public void turnCard(int x, int y, int gameId, String sessionId)
     {
-
+        for (Game game : activeGames)
+        {
+            if (game.getGameID() == gameId) game.playerTurnsCard(sessionId, x, y);
+        }
     }
 }

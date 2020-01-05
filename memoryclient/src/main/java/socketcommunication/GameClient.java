@@ -52,7 +52,7 @@ public class GameClient implements IGameClient {
         controller.playerJoinsGame(opponent);
     }
 
-    public void turnCard(int x, int y){
-        messageGenerator.turnCard(x, y);
+    public void turnCard(int x, int y, int gameId){
+        messageGenerator.turnCard(x, y, gameId);
     }
 }

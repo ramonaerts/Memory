@@ -253,14 +253,9 @@ public class Memory extends Application implements IMemoryGui {
                 card.setText("?");
                 card.setFont(cardFont);
                 card.setVisible(true);
-                int xpos = i;
-                int ypos = j;
-                card.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent mouseEvent) {
-                        controller.turnCard(xpos, ypos);
-                    }
-                });
+                int xpos = i + 1;
+                int ypos = j + 1;
+                card.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> controller.turnCard(xpos, ypos, gameId));
                 memoryCards[i][j] = card;
                 root.getChildren().add(card);
             }

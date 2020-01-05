@@ -15,5 +15,5 @@ public interface IController {
     void joinGameResult(boolean joinResult, int gameId, Object opponent);
     void playerJoinsGame(Object opponent);
 
-    void turnCard(int x, int y);
+    void turnCard(int x, int y, int gameId);
 }

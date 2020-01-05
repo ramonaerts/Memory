@@ -22,7 +22,7 @@ public class ClientMessageGenerator implements IClientMessageGenerator {
         client.send(new JoinGameMessage(), MessageOperation.PLAYERJOINGAME);
     }
 
-    public void turnCard(int x, int y){
-        client.send(new TurnCardMessage(x, y),MessageOperation.TURNCARD);
+    public void turnCard(int x, int y, int gameId){
+        client.send(new TurnCardMessage(x, y, gameId),MessageOperation.TURNCARD);
     }
 }
