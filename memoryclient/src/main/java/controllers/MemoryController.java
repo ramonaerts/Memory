@@ -58,6 +58,10 @@ public class MemoryController implements IController {
         gui.showCardInfo(cardValue, coordinate, playerNr);
     }
 
+    public void turnCardBack(Object coordinate){
+        gui.turnCardBack(coordinate);
+    }
+
     public void feedback(String message){
         gui.messageToGameChat(message);
     }

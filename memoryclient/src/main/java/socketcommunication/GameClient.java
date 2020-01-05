@@ -60,6 +60,10 @@ public class GameClient implements IGameClient {
         controller.showCardInfo(cardValue, coordinate, playerNr);
     }
 
+    public void turnCardBack(Object coordinate){
+        controller.turnCardBack(coordinate);
+    }
+
     public void feedback(String message){
         controller.feedback(message);
     }

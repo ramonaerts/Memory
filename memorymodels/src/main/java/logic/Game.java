@@ -1,7 +1,10 @@
-package models;
+package logic;
 
 import enums.CardState;
 import interfaces.IServerMessageGenerator;
+import models.Card;
+import models.Coordinate;
+import models.Player;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,7 +16,6 @@ public class Game {
     private int gameId;
     private List<Card> cards = new ArrayList<>();
     private List<Player> playersInGame = new ArrayList<>();
-    private int playeramount = 0;
     private boolean gamestarted;
 
     private ExecutorService pool;
@@ -31,10 +33,6 @@ public class Game {
 
     public void setGameID(int gameId) {
         this.gameId = gameId;
-    }
-
-    public int getPlayeramount() {
-        return playeramount;
     }
 
     public List<Player> getPlayersInGame() {
@@ -79,7 +77,7 @@ public class Game {
         Player player = getPlayer(sessionId);
         if (gamestarted) {
             assert player != null;
-            player.setTurnAmount(+1);
+            player.setTurnAmount(player.getTurnAmount() + 1);
             for (Card card : cards) {
                 if (card.getCoordinate().getX() == xPos && card.getCoordinate().getY() == yPos) {
                     if (card.getCardState().equals(CardState.TURNED) || card.getCardState().equals(CardState.GUESSED)) {
@@ -96,7 +94,7 @@ public class Game {
                 }
             }
         }
-        generator.sendGameFeedback("The game will not start until a second player has joined", sessionId);
+        else generator.sendGameFeedback("The game will not start until a second player has joined", sessionId);
     }
 
     private void sendMessageToPlayers(String message){
@@ -133,7 +131,7 @@ public class Game {
             if (card.getTurnedBy() == player.getPlayerID()){
                 card.setCardState(CardState.HIDDEN);
                 card.setTurnedBy(0);
-                //TODO send message to turn back card
+                for (Player inGamePlayer : playersInGame) generator.turnCardBack(card.getCoordinate(), inGamePlayer.getSessionID());
             }
         }
     }

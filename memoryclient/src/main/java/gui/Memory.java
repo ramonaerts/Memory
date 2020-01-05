@@ -316,6 +316,16 @@ public class Memory extends Application implements IMemoryGui {
         //Add multiple if the game will be increased for more players
     }
 
+    public void turnCardBack(Object coordinate) {
+        Platform.runLater(() ->
+        {
+            Coordinate coor = (Coordinate) coordinate;
+            Button currentButton = memoryCards[coor.getX()][coor.getY()];
+            currentButton.setText("?");
+            currentButton.setStyle("-fx-background-color: #ffffff;");
+        });
+    }
+
     public void startGameResult(boolean startResult, int gameId){
         Platform.runLater(() ->
         {

@@ -27,6 +27,8 @@ public class ClientHandlerFactory implements IClientHandlerFactory {
                 return new FeedbackMessageHandler(igameClient);
             case SENDCARDINFO:
                 return new CardInfoHandler(igameClient);
+            case TURNCARDBACK:
+                return new TurnCardBackHandler(igameClient);
             default:
                 return null;
         }

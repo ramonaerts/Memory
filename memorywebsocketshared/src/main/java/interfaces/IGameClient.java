@@ -19,6 +19,7 @@ public interface IGameClient {
 
     void turnCard(int x, int y, int gameId);
     void showCardInfo(int cardValue, Object coordinate, int playerNr);
+    void turnCardBack(Object coordinate);
 
     void feedback(String message);
 }
