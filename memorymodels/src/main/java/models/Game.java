@@ -85,7 +85,8 @@ public class Game {
 
                     card.setTurnedBy(player.getPlayerID());
                     card.setCardState(CardState.TURNED);
-                    //TODO: Send message with card information to users
+
+                    for (Player inGamePlayer : playersInGame) generator.sendCardInfo(card.getValue(), card.getCoordinate(), player.getFirstPlayer(), inGamePlayer.getSessionID());
 
                     if (checkIfTwoCardsTurned(player)) checkIfCardsMatch(card, player);
                     else return;

@@ -22,6 +22,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import messaging.ClientHandlerFactory;
+import models.Coordinate;
 import models.Player;
 import socketcommunication.GameClient;
 
@@ -297,6 +298,17 @@ public class Memory extends Application implements IMemoryGui {
         opponentScoreLabel.setLayoutY(y + 25);
         opponentScoreLabel.setFont(statsFont);
         root.getChildren().add(opponentScoreLabel);
+    }
+
+    public void showCardInfo(int cardValue, Object coordinate, boolean firstPlayer){
+        Platform.runLater(() ->
+        {
+            Coordinate coor = (Coordinate) coordinate;
+            Button currentButton = memoryCards[coor.getX()][coor.getY()];
+            currentButton.setText(Integer.toString(cardValue));
+            if (firstPlayer) currentButton.setStyle("-fx-border-color: #ADD8E6; -fx-border-width: 3; -fx-background-color: #ffffff;");
+            else currentButton.setStyle("-fx-border-color: #FA8072; -fx-border-width: 3; -fx-background-color: #ffffff;");
+        });
     }
 
     public void startGameResult(boolean startResult, int gameId){

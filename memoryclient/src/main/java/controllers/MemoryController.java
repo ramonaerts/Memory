@@ -54,6 +54,10 @@ public class MemoryController implements IController {
         client.turnCard(x, y, gameId);
     }
 
+    public void showCardInfo(int cardValue, Object coordinate, boolean firstPlayer){
+        gui.showCardInfo(cardValue, coordinate, firstPlayer);
+    }
+
     public void feedback(String message){
         gui.messageToGameChat(message);
     }

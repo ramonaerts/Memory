@@ -56,6 +56,10 @@ public class GameClient implements IGameClient {
         messageGenerator.turnCard(x, y, gameId);
     }
 
+    public void showCardInfo(int cardValue, Object coordinate, boolean firstPlayer){
+        controller.showCardInfo(cardValue, coordinate, firstPlayer);
+    }
+
     public void feedback(String message){
         controller.feedback(message);
     }
