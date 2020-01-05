@@ -53,4 +53,8 @@ public class MemoryController implements IController {
     public void turnCard(int x, int y, int gameId){
         client.turnCard(x, y, gameId);
     }
+
+    public void feedback(String message){
+        gui.messageToGameChat(message);
+    }
 }

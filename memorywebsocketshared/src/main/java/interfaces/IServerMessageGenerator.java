@@ -8,4 +8,5 @@ public interface IServerMessageGenerator {
     void sendGameStartResult(boolean startResult, int gameId, String sessionId);
     void sendGameJoinResult(boolean joinResult, int gameId, Object opponent, String sessionId);
     void playerJoinsGame(Object opponent, String sessionId);
+    void sendGameFeedback(String message, String sessionId);
 }

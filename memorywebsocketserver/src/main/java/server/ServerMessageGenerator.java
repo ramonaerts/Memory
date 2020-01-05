@@ -31,4 +31,8 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
     public void playerJoinsGame(Object opponent, String sessionId) {
         server.sendTo(sessionId, new PlayerJoinsMessage(opponent), MessageOperation.PLAYERJOINSGAME);
     }
+
+    public void sendGameFeedback(String message, String sessionId) {
+        server.sendTo(sessionId, new GameFeedbackMessage(message), MessageOperation.FEEDBACK);
+    }
 }

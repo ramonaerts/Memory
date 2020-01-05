@@ -92,7 +92,7 @@ public class Game {
                 }
             }
         }
-        //TODO: else Send message to user that the game has not started yet.
+        generator.sendGameFeedback("The game will not start until a second player has joined", sessionId);
     }
 
     private boolean checkIfTwoCardsTurned(Player player) {
@@ -151,8 +151,8 @@ public class Game {
     {
         Collections.shuffle(unsortedCards);
 
-        for (int x=1; x < 4; x++) {
-            for (int y=1; y < 7; y++) {
+        for (int x=0; x < 3; x++) {
+            for (int y=0; y < 6; y++) {
 
                 int randomIndex = rand.nextInt(unsortedCards.size());
                 Card randomCard = unsortedCards.get(randomIndex);

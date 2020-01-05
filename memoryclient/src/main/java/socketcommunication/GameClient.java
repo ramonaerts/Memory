@@ -55,4 +55,8 @@ public class GameClient implements IGameClient {
     public void turnCard(int x, int y, int gameId){
         messageGenerator.turnCard(x, y, gameId);
     }
+
+    public void feedback(String message){
+        controller.feedback(message);
+    }
 }

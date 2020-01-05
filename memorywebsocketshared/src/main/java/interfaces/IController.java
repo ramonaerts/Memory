@@ -16,4 +16,6 @@ public interface IController {
     void playerJoinsGame(Object opponent);
 
     void turnCard(int x, int y, int gameId);
+
+    void feedback(String message);
 }

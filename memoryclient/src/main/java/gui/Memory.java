@@ -253,8 +253,8 @@ public class Memory extends Application implements IMemoryGui {
                 card.setText("?");
                 card.setFont(cardFont);
                 card.setVisible(true);
-                int xpos = i + 1;
-                int ypos = j + 1;
+                int xpos = i;
+                int ypos = j;
                 card.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> controller.turnCard(xpos, ypos, gameId));
                 memoryCards[i][j] = card;
                 root.getChildren().add(card);
@@ -343,7 +343,7 @@ public class Memory extends Application implements IMemoryGui {
         });
     }
 
-    private void messageToGameChat(String message)
+    public void messageToGameChat(String message)
     {
         gameChat.getItems().add(message);
     }
