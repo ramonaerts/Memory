@@ -11,7 +11,7 @@ public class Player {
     private Stats stats;
     private int points;
     private int turnAmount;
-    private boolean firstPlayer;
+    private int inGameNr;
     private GameState gameState;
 
     public Player(String username, String password, String sessionid)
@@ -70,14 +70,14 @@ public class Player {
         this.turnAmount = turnAmount;
     }
 
-    public boolean getFirstPlayer()
+    public int getInGameNr()
     {
-        return firstPlayer;
+        return inGameNr;
     }
 
-    public void setFirstPlayer(boolean firstPlayer)
+    public void setInGameNr(int inGameNr)
     {
-        this.firstPlayer = firstPlayer;
+        this.inGameNr = inGameNr;
     }
 
     public GameState getGameState() {

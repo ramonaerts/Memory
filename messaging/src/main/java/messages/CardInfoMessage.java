@@ -5,12 +5,12 @@ import models.Coordinate;
 public class CardInfoMessage {
     private int cardValue;
     private Coordinate coordinate;
-    private boolean firstPlayer;
+    private int playerNr;
 
-    public CardInfoMessage(int cardValue, Object coordinate, boolean firstPlayer) {
+    public CardInfoMessage(int cardValue, Object coordinate, int playerNr) {
         this.cardValue = cardValue;
         this.coordinate = (Coordinate) coordinate;
-        this.firstPlayer = firstPlayer;
+        this.playerNr = playerNr;
     }
 
     public int getCardValue() {
@@ -21,7 +21,7 @@ public class CardInfoMessage {
         return coordinate;
     }
 
-    public boolean getFirstPlayer() {
-        return firstPlayer;
+    public int getPlayerNr() {
+        return playerNr;
     }
 }

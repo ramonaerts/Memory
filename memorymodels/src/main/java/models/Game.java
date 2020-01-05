@@ -89,7 +89,7 @@ public class Game {
                     card.setTurnedBy(player.getPlayerID());
                     card.setCardState(CardState.TURNED);
 
-                    for (Player inGamePlayer : playersInGame) generator.sendCardInfo(card.getValue(), card.getCoordinate(), player.getFirstPlayer(), inGamePlayer.getSessionID());
+                    for (Player inGamePlayer : playersInGame) generator.sendCardInfo(card.getValue(), card.getCoordinate(), player.getInGameNr(), inGamePlayer.getSessionID());
 
                     if (checkIfTwoCardsTurned(player)) checkIfCardsMatch(card, player);
                     else return;
@@ -159,8 +159,8 @@ public class Game {
     {
         Collections.shuffle(unsortedCards);
 
-        for (int x=0; x < 3; x++) {
-            for (int y=0; y < 6; y++) {
+        for (int y=0; y < 3; y++) {
+            for (int x=0; x < 6; x++) {
 
                 int randomIndex = rand.nextInt(unsortedCards.size());
                 Card randomCard = unsortedCards.get(randomIndex);

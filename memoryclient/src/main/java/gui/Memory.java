@@ -300,15 +300,20 @@ public class Memory extends Application implements IMemoryGui {
         root.getChildren().add(opponentScoreLabel);
     }
 
-    public void showCardInfo(int cardValue, Object coordinate, boolean firstPlayer){
+    public void showCardInfo(int cardValue, Object coordinate, int playerNr){
         Platform.runLater(() ->
         {
             Coordinate coor = (Coordinate) coordinate;
-            Button currentButton = memoryCards[coor.getY()][coor.getX()];
+            Button currentButton = memoryCards[coor.getX()][coor.getY()];
             currentButton.setText(Integer.toString(cardValue));
-            if (firstPlayer) currentButton.setStyle("-fx-border-color: #ADD8E6; -fx-border-width: 3; -fx-background-color: #ffffff;");
-            else currentButton.setStyle("-fx-border-color: #FA8072; -fx-border-width: 3; -fx-background-color: #ffffff;");
+            setColorBasedOnPlayerNumber(currentButton, playerNr);
         });
+    }
+
+    private void setColorBasedOnPlayerNumber(Button cardButton, int playerNr){
+        if (playerNr == 1) cardButton.setStyle("-fx-border-color: #ADD8E6; -fx-border-width: 3; -fx-background-color: #ffffff;");
+        if (playerNr == 2) cardButton.setStyle("-fx-border-color: #FA8072; -fx-border-width: 3; -fx-background-color: #ffffff;");
+        //Add multiple if the game will be increased for more players
     }
 
     public void startGameResult(boolean startResult, int gameId){

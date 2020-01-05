@@ -36,7 +36,7 @@ public class MemoryLogic implements IGameLogic {
 
         Game game = new Game(this.generator);
         game.setGameID(createGameID());
-        player.setFirstPlayer(true);
+        player.setInGameNr(1);
         game.playerStartsGame(player);
         activeGames.add(game);
 
@@ -54,10 +54,10 @@ public class MemoryLogic implements IGameLogic {
         Player player = getPlayer(sessionId);
         assert player != null;
 
-        player.setFirstPlayer(false);
         for (Game game : activeGames) {
             if (game.getPlayersInGame().size() != 2)
             {
+                player.setInGameNr(game.getPlayersInGame().size() + 1);
                 game.playerJoinsGame(player);
                 generator.sendGameJoinResult(true, game.getGameID(),  game.getOpponent(sessionId), sessionId);
                 generator.playerJoinsGame(player, game.getOpponent(sessionId).getSessionID());
