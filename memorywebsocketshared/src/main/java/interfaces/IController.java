@@ -18,6 +18,7 @@ public interface IController {
     void turnCard(int x, int y, int gameId);
     void showCardInfo(int cardValue, Object coordinate, int playerNr);
     void turnCardBack(Object coordinate);
+    void sendPoint(int playerNr);
 
     void feedback(String message);
 }

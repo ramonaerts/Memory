@@ -197,6 +197,8 @@ public class Memory extends Application implements IMemoryGui {
     private List<Player> inGamePlayers = new ArrayList<>();
     private Button[][] memoryCards;
     private int gameId;
+    private int firstPlayerScore = 0;
+    private int secondPlayerScore = 0;
 
     private Label playerName = new Label();
     private Label playerScore = new Label();
@@ -304,7 +306,7 @@ public class Memory extends Application implements IMemoryGui {
         Platform.runLater(() ->
         {
             Coordinate coor = (Coordinate) coordinate;
-            Button currentButton = memoryCards[coor.getX()][coor.getY()];
+            Button currentButton = memoryCards[coor.getY()][coor.getX()];
             currentButton.setText(Integer.toString(cardValue));
             setColorBasedOnPlayerNumber(currentButton, playerNr);
         });
@@ -320,9 +322,23 @@ public class Memory extends Application implements IMemoryGui {
         Platform.runLater(() ->
         {
             Coordinate coor = (Coordinate) coordinate;
-            Button currentButton = memoryCards[coor.getX()][coor.getY()];
+            Button currentButton = memoryCards[coor.getY()][coor.getX()];
             currentButton.setText("?");
             currentButton.setStyle("-fx-background-color: #ffffff;");
+        });
+    }
+
+    public void sendPoint(int playerNr){
+        Platform.runLater(() ->
+        {
+            if (playerNr == 1){
+                firstPlayerScore++;
+                playerScore.setText(Integer.toString(firstPlayerScore));
+            }
+            if (playerNr == 2){
+                secondPlayerScore++;
+                opponentScore.setText(Integer.toString(secondPlayerScore));
+            }
         });
     }
 

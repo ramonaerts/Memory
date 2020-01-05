@@ -15,7 +15,7 @@ public enum MessageOperation {
     JOINGAMERESULT,
     PLAYERJOINSGAME,
     SENDCARDINFO,
-    CARDMATCH,
+    PLAYERPOINT,
     TURNCARDBACK,
     FEEDBACK
 

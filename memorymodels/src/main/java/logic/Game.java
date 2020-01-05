@@ -117,7 +117,7 @@ public class Game {
                     card.setCardState(CardState.GUESSED);
                     card.setTurnedBy(0);
                     player.setPoints(+1);
-                    //TODO: send message for correct match + point.
+                    for (Player inGamePlayer : playersInGame) generator.sendPointMessage(player.getInGameNr(), inGamePlayer.getSessionID());
                     return;
                 }
                 else turnCardsBack(player);

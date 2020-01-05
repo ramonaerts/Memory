@@ -11,5 +11,6 @@ public interface IMemoryGui {
     void playerJoinsGame(Object opponent);
     void showCardInfo(int cardValue, Object coordinate, int playerNr);
     void turnCardBack(Object coordinate);
+    void sendPoint(int playerNr);
     void messageToGameChat(String message);
 }

@@ -40,6 +40,10 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
         server.sendTo(sessionId, new TurnCardBackMessage(coordinate), MessageOperation.TURNCARDBACK);
     }
 
+    public void sendPointMessage(int playerNr, String sessionId) {
+        server.sendTo(sessionId, new SendPointMessage(playerNr), MessageOperation.PLAYERPOINT);
+    }
+
     public void sendCardInfo(int cardValue, Object coordinate, int playerNr, String sessionId) {
         server.sendTo(sessionId, new CardInfoMessage(cardValue, coordinate, playerNr), MessageOperation.SENDCARDINFO);
     }

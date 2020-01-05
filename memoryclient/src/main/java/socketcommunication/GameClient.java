@@ -64,6 +64,10 @@ public class GameClient implements IGameClient {
         controller.turnCardBack(coordinate);
     }
 
+    public void sendPoint(int playerNr){
+        controller.sendPoint(playerNr);
+    }
+
     public void feedback(String message){
         controller.feedback(message);
     }

@@ -62,6 +62,10 @@ public class MemoryController implements IController {
         gui.turnCardBack(coordinate);
     }
 
+    public void sendPoint(int playerNr){
+        gui.sendPoint(playerNr);
+    }
+
     public void feedback(String message){
         gui.messageToGameChat(message);
     }
