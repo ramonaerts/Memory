@@ -9,9 +9,11 @@ public interface IController {
     void updateLobby(List<String> players);
 
     void startGame();
-    void startGameResult(boolean startResult);
+    void startGameResult(boolean startResult, int gameId);
 
     void joinGame();
-    void joinGameResult(boolean joinResult, Object opponent);
+    void joinGameResult(boolean joinResult, int gameId, Object opponent);
     void playerJoinsGame(Object opponent);
+
+    void turnCard(int x, int y);
 }

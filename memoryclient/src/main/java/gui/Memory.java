@@ -195,6 +195,7 @@ public class Memory extends Application implements IMemoryGui {
 
     private List<Player> inGamePlayers = new ArrayList<>();
     private Button[][] memoryCards;
+    private int gameId;
 
     private Label playerName = new Label();
     private Label playerScore = new Label();
@@ -257,7 +258,7 @@ public class Memory extends Application implements IMemoryGui {
                 card.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent mouseEvent) {
-                        //TODO: send to server with xpos and ypos.
+                        controller.turnCard(xpos, ypos);
                     }
                 });
                 memoryCards[i][j] = card;
@@ -303,11 +304,12 @@ public class Memory extends Application implements IMemoryGui {
         root.getChildren().add(opponentScoreLabel);
     }
 
-    public void startGameResult(boolean startResult){
+    public void startGameResult(boolean startResult, int gameId){
         Platform.runLater(() ->
         {
             if(startResult)
             {
+                this.gameId = gameId;
                 inGamePlayers.add(currentPlayer);
                 gameScreen();
                 playerName.setText(currentPlayer.getUsername());
@@ -316,7 +318,7 @@ public class Memory extends Application implements IMemoryGui {
         });
     }
 
-    public void joinGameResult(boolean joinResult, Object opponent){
+    public void joinGameResult(boolean joinResult, int gameId, Object opponent){
         Platform.runLater(() ->
         {
             if(joinResult)
@@ -324,6 +326,8 @@ public class Memory extends Application implements IMemoryGui {
                 Player opponentPlayer = (Player) opponent;
                 inGamePlayers.add(opponentPlayer);
                 inGamePlayers.add(currentPlayer);
+                this.gameId = gameId;
+
                 gameScreen();
                 playerName.setText(opponentPlayer.getUsername());
                 opponentName.setText(currentPlayer.getUsername());

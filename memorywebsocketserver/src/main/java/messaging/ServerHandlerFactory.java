@@ -19,6 +19,8 @@ public class ServerHandlerFactory implements IServerHandlerFactory {
                 return new StartGameHandler(igame);
             case PLAYERJOINGAME:
                 return new JoinGameHandler(igame);
+            case TURNCARD:
+                return new TurnCardHandler(igame);
             default:
                 return null;
         }

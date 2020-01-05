@@ -36,19 +36,23 @@ public class GameClient implements IGameClient {
         messageGenerator.startGame();
     }
 
-    public void startGameResult(boolean startResult){
-        controller.startGameResult(startResult);
+    public void startGameResult(boolean startResult, int gameId){
+        controller.startGameResult(startResult, gameId);
     }
 
     public void joinGame() {
         messageGenerator.joinGame();
     }
 
-    public void joinGameResult(boolean joinResult, Object opponent) {
-        controller.joinGameResult(joinResult, opponent);
+    public void joinGameResult(boolean joinResult, int gameId, Object opponent) {
+        controller.joinGameResult(joinResult, gameId, opponent);
     }
 
     public void playerJoinsGame(Object opponent) {
         controller.playerJoinsGame(opponent);
+    }
+
+    public void turnCard(int x, int y){
+        messageGenerator.turnCard(x, y);
     }
 }

@@ -6,6 +6,7 @@ public enum MessageOperation {
     PLAYERLOGIN,
     PLAYERSTARTGAME,
     PLAYERJOINGAME,
+    TURNCARD,
 
     //to client
     PLAYERLOGINRESULT,

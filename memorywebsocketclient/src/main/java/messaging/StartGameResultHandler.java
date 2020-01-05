@@ -14,6 +14,6 @@ public class StartGameResultHandler extends BaseClientMessageHandler<StartGameRe
 
     @Override
     public void handleMessageInternal(StartGameResultMessage message, String sessionId) {
-        client.startGameResult(message.getResult());
+        client.startGameResult(message.getResult(), message.getGameId());
     }
 }

@@ -20,12 +20,12 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
         server.sendTo(sessionId, new UpdateLobbyPlayersMessage(players), MessageOperation.UPDATELOBBY);
     }
 
-    public void sendGameStartResult(boolean startResult, String sessionId){
-        server.sendTo(sessionId, new StartGameResultMessage(startResult), MessageOperation.STARTGAMERESULT);
+    public void sendGameStartResult(boolean startResult, int gameId, String sessionId){
+        server.sendTo(sessionId, new StartGameResultMessage(startResult, gameId), MessageOperation.STARTGAMERESULT);
     }
 
-    public void sendGameJoinResult(boolean joinResult, Object opponent, String sessionId){
-        server.sendTo(sessionId, new JoinGameResultMessage(joinResult, opponent), MessageOperation.JOINGAMERESULT);
+    public void sendGameJoinResult(boolean joinResult, int gameId, Object opponent, String sessionId){
+        server.sendTo(sessionId, new JoinGameResultMessage(joinResult, gameId, opponent), MessageOperation.JOINGAMERESULT);
     }
 
     public void playerJoinsGame(Object opponent, String sessionId) {

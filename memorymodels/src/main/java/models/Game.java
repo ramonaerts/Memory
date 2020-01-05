@@ -10,6 +10,7 @@ import java.util.Random;
 import java.util.concurrent.ExecutorService;
 
 public class Game {
+    private int GameID;
     private List<Card> cards = new ArrayList<>();
     private List<Player> playersInGame = new ArrayList<>();
     private int playeramount = 0;
@@ -22,6 +23,14 @@ public class Game {
 
     public Game (IServerMessageGenerator generator) {
         this.generator = generator;
+    }
+
+    public int getGameID() {
+        return GameID;
+    }
+
+    public void setGameID(int gameID) {
+        GameID = gameID;
     }
 
     public int getPlayeramount() {

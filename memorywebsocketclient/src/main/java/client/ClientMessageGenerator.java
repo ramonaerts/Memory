@@ -1,10 +1,7 @@
 package client;
 
 import interfaces.*;
-import messages.JoinGameMessage;
-import messages.MessageOperation;
-import messages.PlayerLoginMessage;
-import messages.StartGameMessage;
+import messages.*;
 
 public class ClientMessageGenerator implements IClientMessageGenerator {
     private IClientWebSocket client;
@@ -17,12 +14,15 @@ public class ClientMessageGenerator implements IClientMessageGenerator {
         client.send(new PlayerLoginMessage(username, password), MessageOperation.PLAYERLOGIN);
     }
 
-    @Override
     public void startGame() {
         client.send(new StartGameMessage(), MessageOperation.PLAYERSTARTGAME);
     }
 
     public void joinGame(){
         client.send(new JoinGameMessage(), MessageOperation.PLAYERJOINGAME);
+    }
+
+    public void turnCard(int x, int y){
+        client.send(new TurnCardMessage(x, y),MessageOperation.TURNCARD);
     }
 }

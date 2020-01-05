@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MemoryLogic implements IGameLogic {
-    private int gameID;
     private List<Player> onlinePlayers = new ArrayList<>();
     private List<Game> activeGames = new ArrayList<>();
     private int playerAmount;
@@ -36,13 +35,18 @@ public class MemoryLogic implements IGameLogic {
         assert player != null;
 
         Game game = new Game(this.generator);
+        game.setGameID(createGameID());
         player.setFirstPlayer(true);
         game.playerStartsGame(player);
         activeGames.add(game);
 
         updatePlayerGameState(player, GameState.PLAYING);
-        generator.sendGameStartResult(true, sessionId);
+        generator.sendGameStartResult(true, game.getGameID(), sessionId);
 
+    }
+
+    private int createGameID(){
+        return activeGames.size() + 1;
     }
 
     public void joinGame(String sessionId)
@@ -55,12 +59,12 @@ public class MemoryLogic implements IGameLogic {
             if (game.getPlayersInGame().size() != 2)
             {
                 game.playerJoinsGame(player);
-                generator.sendGameJoinResult(true, game.getOpponent(sessionId), sessionId);
+                generator.sendGameJoinResult(true, game.getGameID(),  game.getOpponent(sessionId), sessionId);
                 generator.playerJoinsGame(player, game.getOpponent(sessionId).getSessionID());
                 return;
             }
         }
-        generator.sendGameJoinResult(false, null, sessionId);
+        generator.sendGameJoinResult(false, 0, null, sessionId);
     }
 
     private Player getPlayer(String sessionId)
@@ -94,5 +98,10 @@ public class MemoryLogic implements IGameLogic {
         {
             if (player.getGameState() == GameState.LOBBY) generator.updateLobbyList(playernames, player.getSessionID());
         }
+    }
+
+    public void turnCard(int x, int y, String sessionId)
+    {
+
     }
 }

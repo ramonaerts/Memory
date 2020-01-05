@@ -34,19 +34,23 @@ public class MemoryController implements IController {
         client.startGame();
     }
 
-    public void startGameResult(boolean startResult) {
-        gui.startGameResult(startResult);
+    public void startGameResult(boolean startResult, int gameId) {
+        gui.startGameResult(startResult, gameId);
     }
 
     public void joinGame(){
         client.joinGame();
     }
 
-    public void joinGameResult(boolean joinResult, Object opponent){
-        gui.joinGameResult(joinResult, opponent);
+    public void joinGameResult(boolean joinResult, int gameId, Object opponent){
+        gui.joinGameResult(joinResult, gameId, opponent);
     }
 
     public void playerJoinsGame(Object opponent){
         gui.playerJoinsGame(opponent);
+    }
+
+    public void turnCard(int x, int y){
+        client.turnCard(x, y);
     }
 }
