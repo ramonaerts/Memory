@@ -304,7 +304,7 @@ public class Memory extends Application implements IMemoryGui {
         Platform.runLater(() ->
         {
             Coordinate coor = (Coordinate) coordinate;
-            Button currentButton = memoryCards[coor.getX()][coor.getY()];
+            Button currentButton = memoryCards[coor.getY()][coor.getX()];
             currentButton.setText(Integer.toString(cardValue));
             if (firstPlayer) currentButton.setStyle("-fx-border-color: #ADD8E6; -fx-border-width: 3; -fx-background-color: #ffffff;");
             else currentButton.setStyle("-fx-border-color: #FA8072; -fx-border-width: 3; -fx-background-color: #ffffff;");
@@ -357,7 +357,7 @@ public class Memory extends Application implements IMemoryGui {
 
     public void messageToGameChat(String message)
     {
-        gameChat.getItems().add(message);
+        Platform.runLater(() -> gameChat.getItems().add(message));
     }
 
     private void showMessage(String message) {

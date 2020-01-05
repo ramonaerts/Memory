@@ -82,7 +82,10 @@ public class Game {
             player.setTurnAmount(+1);
             for (Card card : cards) {
                 if (card.getCoordinate().getX() == xPos && card.getCoordinate().getY() == yPos) {
-
+                    if (card.getCardState().equals(CardState.TURNED) || card.getCardState().equals(CardState.GUESSED)) {
+                        sendMessageToPlayers("This card has already been turned, choose another one");
+                        return;
+                    }
                     card.setTurnedBy(player.getPlayerID());
                     card.setCardState(CardState.TURNED);
 
@@ -94,6 +97,10 @@ public class Game {
             }
         }
         generator.sendGameFeedback("The game will not start until a second player has joined", sessionId);
+    }
+
+    private void sendMessageToPlayers(String message){
+        for (Player player : playersInGame) generator.sendGameFeedback(message, player.getSessionID());
     }
 
     private boolean checkIfTwoCardsTurned(Player player) {
