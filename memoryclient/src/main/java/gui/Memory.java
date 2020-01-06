@@ -9,7 +9,6 @@ import interfaces.*;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -256,8 +255,8 @@ public class Memory extends Application implements IMemoryGui {
                 card.setText("?");
                 card.setFont(cardFont);
                 card.setVisible(true);
-                int xpos = i;
-                int ypos = j;
+                int xpos = j;
+                int ypos = i;
                 card.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> controller.turnCard(xpos, ypos, gameId));
                 memoryCards[i][j] = card;
                 root.getChildren().add(card);
@@ -306,7 +305,7 @@ public class Memory extends Application implements IMemoryGui {
         Platform.runLater(() ->
         {
             Coordinate coor = (Coordinate) coordinate;
-            Button currentButton = memoryCards[coor.getY()][coor.getX()];
+            Button currentButton = memoryCards[coor.getX()][coor.getY()];
             currentButton.setText(Integer.toString(cardValue));
             setColorBasedOnPlayerNumber(currentButton, playerNr);
         });
@@ -322,7 +321,7 @@ public class Memory extends Application implements IMemoryGui {
         Platform.runLater(() ->
         {
             Coordinate coor = (Coordinate) coordinate;
-            Button currentButton = memoryCards[coor.getY()][coor.getX()];
+            Button currentButton = memoryCards[coor.getX()][coor.getY()];
             currentButton.setText("?");
             currentButton.setStyle("-fx-background-color: #ffffff;");
         });

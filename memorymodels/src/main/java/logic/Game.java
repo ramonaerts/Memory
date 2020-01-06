@@ -39,7 +39,7 @@ public class Game {
         return playersInGame;
     }
 
-    private Player getPlayer(String sessionId)
+    private Player getPlayerBySession(String sessionId)
     {
         for (Player player : playersInGame)
         {
@@ -63,6 +63,7 @@ public class Game {
         playersInGame.add(player);
         gamestarted = false;
         generateCards();
+        String test = "test";
     }
 
     public void playerJoinsGame(Player player)
@@ -74,7 +75,7 @@ public class Game {
 
     public void playerTurnsCard(String sessionId, int xPos, int yPos)
     {
-        Player player = getPlayer(sessionId);
+        Player player = getPlayerBySession(sessionId);
         if (gamestarted) {
             assert player != null;
             player.setTurnAmount(player.getTurnAmount() + 1);
@@ -138,7 +139,7 @@ public class Game {
 
     private void generateCards()
     {
-        List<Card> unstortedCards = new ArrayList<>();
+        List<Card> unsortedCards = new ArrayList<>();
         int id = 1;
 
         for (int i=0; i <= 1; i++)
@@ -146,11 +147,11 @@ public class Game {
             for (int j=1; j <= 9; j++)
             {
                 Card card = new Card(j, id);
-                unstortedCards.add(card);
+                unsortedCards.add(card);
                 id++;
             }
         }
-        shuffleCards(unstortedCards);
+        shuffleCards(unsortedCards);
     }
 
     private void shuffleCards(List<Card> unsortedCards)

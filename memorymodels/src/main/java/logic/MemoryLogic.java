@@ -9,9 +9,6 @@ import java.util.List;
 public class MemoryLogic implements IGameLogic {
     private List<Player> onlinePlayers = new ArrayList<>();
     private List<Game> activeGames = new ArrayList<>();
-    private int playerAmount;
-    private int round;
-    boolean singlePlayer;
 
     private IServerMessageGenerator generator;
 
@@ -57,6 +54,7 @@ public class MemoryLogic implements IGameLogic {
         for (Game game : activeGames) {
             if (game.getPlayersInGame().size() != 2)
             {
+                updatePlayerGameState(player, GameState.PLAYING);
                 player.setInGameNr(game.getPlayersInGame().size() + 1);
                 game.playerJoinsGame(player);
                 generator.sendGameJoinResult(true, game.getGameID(),  game.getOpponent(sessionId), sessionId);
@@ -87,16 +85,16 @@ public class MemoryLogic implements IGameLogic {
 
     private void updateLobby()
     {
-        List<String> playernames = new ArrayList<>();
+        List<String> playerNames = new ArrayList<>();
 
         for (Player player : onlinePlayers)
         {
-            if (player.getGameState() == GameState.LOBBY) playernames.add(player.getUsername());
+            if (player.getGameState() == GameState.LOBBY) playerNames.add(player.getUsername());
         }
 
         for (Player player : onlinePlayers)
         {
-            if (player.getGameState() == GameState.LOBBY) generator.updateLobbyList(playernames, player.getSessionID());
+            if (player.getGameState() == GameState.LOBBY) generator.updateLobbyList(playerNames, player.getSessionID());
         }
     }
 

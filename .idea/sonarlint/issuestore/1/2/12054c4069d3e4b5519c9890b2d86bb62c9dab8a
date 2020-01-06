@@ -1,11 +1,12 @@
 
-tsquid:S00116"URename this field "INPUTWIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã—»·8–§Âşî-
-psquid:UselessImportCheck"ERemove this unused import 'org.eclipse.jetty.util.security.Password'.(‘ÜêÍ8ÍÿÎşî-
-?squid:S1170"!Make this final field static too.(Ã—»·8–§Âşî-
-csquid:UselessImportCheck"3Remove this unused import 'javafx.geometry.Insets'.(›¨µğûÿÿÿÿ8Ğÿî-
-Lsquid:S1068".Remove this unused "BORDERSIZE" private field.(¼ ú‘8ÂòËşî-
-vsquid:S1450"SRemove the "main" field and declare it as a local variable in the relevant methods.(§ÈØØÿÿÿÿÿ8Ó³ÿî-
-xsquid:S1450"ZRemove the "loginButton" field and declare it as a local variable in the relevant methods.(à…÷Ÿ8×²œÿî-
-tsquid:S00116"URename this field "BORDERSIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ ú‘8ßüÅşî-
-isquid:UselessImportCheck"9Remove this unused import 'javafx.scene.layout.GridPane'.(ÖÀ¹¯ûÿÿÿÿ8Ğÿî-
-?squid:S1170"!Make this final field static too.(¼ ú‘8ßüÅşî-
+{squid:S1450,"XRemove the "gameStage" field and declare it as a local variable in the relevant methods.(İÄÈ³ıÿÿÿÿ8–ùéàö-
+asquid:UselessImportCheck"6Remove this unused import 'javafx.event.EventHandler'.(º»û˜8Å¿™÷-
+dsquid:S2184ø"@Cast one of the operands of this integer division to a "double".(¾†Øûÿÿÿÿ8–ùéàö-
+asquid:S2184¬"BCast one of the operands of this addition operation to a "double".(ğÆ€8’×òäö-
+?squid:S1170#"!Make this final field static too.(¼ ú‘8çÊçˆ÷-
+tsquid:S00116#"URename this field "BORDERSIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ ú‘8çÊçˆ÷-
+vsquid:S1450)"SRemove the "main" field and declare it as a local variable in the relevant methods.(§ÈØØÿÿÿÿÿ8–ùéàö-
+Œsquid:S1192U"iDefine a constant instead of duplicating this literal "No connection to server, try again later" 3 times.(ˆ×Ş×øÿÿÿÿ8–ùéàö-
+dsquid:S2184ù"@Cast one of the operands of this integer division to a "double".(Óıèşÿÿÿÿ8ô§èäö-
+tsquid:S00116""URename this field "INPUTWIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã—»·8¶ŒÅàö-
+?squid:S1170""!Make this final field static too.(Ã—»·8¶ŒÅàö-
