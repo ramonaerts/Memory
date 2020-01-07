@@ -31,6 +31,8 @@ public class ClientHandlerFactory implements IClientHandlerFactory {
                 return new TurnCardBackHandler(igameClient);
             case PLAYERPOINT:
                 return new PlayerPointHandler(igameClient);
+            case GAMERESULT:
+                return new GameResultHandler(igameClient);
             default:
                 return null;
         }

@@ -68,6 +68,10 @@ public class GameClient implements IGameClient {
         controller.sendPoint(playerNr);
     }
 
+    public void gameResult(Object result) {
+        controller.gameResult(result);
+    }
+
     public void feedback(String message){
         controller.feedback(message);
     }

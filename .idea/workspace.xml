@@ -2,16 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/acd7106acd6fe913e9cd178fd79415cff38df272" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/acd7106acd6fe913e9cd178fd79415cff38df272" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/GameResultHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/GameResultMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/IMemoryGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/IMemoryGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/controllers/MemoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/controllers/MemoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/IMemoryGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/IMemoryGui.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/socketcommunication/GameClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/socketcommunication/GameClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/models/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/models/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/ClientHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/ClientHandlerFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/ClientHandlerFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/ClientHandlerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/ClientHandlerFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerMessageGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IServerMessageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IController.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IServerMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IServerMessageGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/target/classes/messages/MessageOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/classes/messages/MessageOperation.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +186,7 @@
       <workItem from="1576140059681" duration="6794000" />
       <workItem from="1576327449375" duration="12676000" />
       <workItem from="1578299307315" duration="12648000" />
-      <workItem from="1578385185322" duration="5535000" />
+      <workItem from="1578385185322" duration="10298000" />
     </task>
     <servers />
   </component>

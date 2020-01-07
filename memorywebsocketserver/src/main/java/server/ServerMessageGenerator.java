@@ -47,4 +47,8 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
     public void sendCardInfo(int cardValue, Object coordinate, int playerNr, String sessionId) {
         server.sendTo(sessionId, new CardInfoMessage(cardValue, coordinate, playerNr), MessageOperation.SENDCARDINFO);
     }
+
+    public void sendGameResult(Object result, String sessionId) {
+        server.sendTo(sessionId, new GameResultMessage(result), MessageOperation.GAMERESULT);
+    }
 }

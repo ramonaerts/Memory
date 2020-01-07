@@ -22,5 +22,7 @@ public interface IGameClient {
     void turnCardBack(Object coordinate);
     void sendPoint(int playerNr);
 
+    void gameResult(Object result);
+
     void feedback(String message);
 }

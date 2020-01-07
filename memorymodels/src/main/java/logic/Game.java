@@ -124,18 +124,20 @@ public class Game {
     }
 
     private void checkForEndGame(){
-        if (checkIfSpecificCardsTurned(0)) return;
-        if (checkForDraw()) return;
-        Player winner = Collections.max(playersInGame, Comparator.comparing(Player::getPoints));
-        for (Player player : playersInGame) {
-            if(player.getPlayerID() == winner.getPlayerID()) player.setGameResult(GameResult.WIN);
-            else player.setGameResult(GameResult.LOSE);
+        if (!checkIfSpecificCardsTurned(0)) return;
+        if (!checkForDraw()){
+            Player winner = Collections.max(playersInGame, Comparator.comparing(Player::getPoints));
+            for (Player player : playersInGame) {
+                if(player.getPlayerID() == winner.getPlayerID()) player.setGameResult(GameResult.WIN);
+                else player.setGameResult(GameResult.LOSE);
+            }
         }
+        for (Player inGamePlayer : playersInGame) generator.sendGameResult(inGamePlayer.getGameResult(), inGamePlayer.getSessionID());
     }
 
     private boolean checkForDraw(){
         for (Player player : playersInGame) {
-            if(player.getPoints() == playersInGame.get(0).getPoints()) continue;
+            if(player.getPoints() == playersInGame.get(0).getPoints()) player.setGameResult(GameResult.DRAW);
             else return false;
         }
         return true;

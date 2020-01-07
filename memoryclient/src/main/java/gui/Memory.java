@@ -3,6 +3,7 @@ package gui;
 import client.ClientMessageGenerator;
 import client.ClientMessageProcessor;
 import client.ClientWebSocket;
+import enums.GameResult;
 import interfaces.IController;
 import controllers.MemoryController;
 import interfaces.*;
@@ -359,6 +360,16 @@ public class Memory extends Application implements IMemoryGui {
                 secondPlayerScore++;
                 opponentScore.setText(Integer.toString(secondPlayerScore));
             }
+        });
+    }
+
+    public void gameResult(Object result) {
+        Platform.runLater(() ->
+        {
+            GameResult gameResult = (GameResult) result;
+            if (gameResult == GameResult.WIN) messageToGameChat("You have won the game");
+            if (gameResult == GameResult.DRAW) messageToGameChat("You have draw the game");
+            if (gameResult == GameResult.LOSE) messageToGameChat("You have lost the game");
         });
     }
 

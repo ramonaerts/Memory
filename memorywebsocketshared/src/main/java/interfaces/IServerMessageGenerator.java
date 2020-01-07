@@ -12,4 +12,5 @@ public interface IServerMessageGenerator {
     void turnCardBack(Object coordinate, String sessionId);
     void sendPointMessage(int playerNr, String sessionId);
     void sendGameFeedback(String message, String sessionId);
+    void sendGameResult(Object result, String sessionId);
 }

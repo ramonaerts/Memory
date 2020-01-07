@@ -66,6 +66,10 @@ public class MemoryController implements IController {
         gui.sendPoint(playerNr);
     }
 
+    public void gameResult(Object result) {
+        gui.gameResult(result);
+    }
+
     public void feedback(String message){
         gui.messageToGameChat(message);
     }

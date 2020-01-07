@@ -18,6 +18,6 @@ public enum MessageOperation {
     SENDCARDINFO,
     PLAYERPOINT,
     TURNCARDBACK,
+    GAMERESULT,
     FEEDBACK
-
 }
