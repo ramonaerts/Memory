@@ -1,12 +1,11 @@
 
-{squid:S1450,"XRemove the "gameStage" field and declare it as a local variable in the relevant methods.(İÄÈ³ıÿÿÿÿ8–ùéàö-
-asquid:UselessImportCheck"6Remove this unused import 'javafx.event.EventHandler'.(º»û˜8Å¿™÷-
-dsquid:S2184ø"@Cast one of the operands of this integer division to a "double".(¾†Øûÿÿÿÿ8–ùéàö-
-asquid:S2184¬"BCast one of the operands of this addition operation to a "double".(ğÆ€8’×òäö-
-?squid:S1170#"!Make this final field static too.(¼ ú‘8çÊçˆ÷-
-tsquid:S00116#"URename this field "BORDERSIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ ú‘8çÊçˆ÷-
-vsquid:S1450)"SRemove the "main" field and declare it as a local variable in the relevant methods.(§ÈØØÿÿÿÿÿ8–ùéàö-
-Œsquid:S1192U"iDefine a constant instead of duplicating this literal "No connection to server, try again later" 3 times.(ˆ×Ş×øÿÿÿÿ8–ùéàö-
-dsquid:S2184ù"@Cast one of the operands of this integer division to a "double".(Óıèşÿÿÿÿ8ô§èäö-
-tsquid:S00116""URename this field "INPUTWIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã—»·8¶ŒÅàö-
-?squid:S1170""!Make this final field static too.(Ã—»·8¶ŒÅàö-
+tsquid:S00116!"URename this field "INPUTWIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã—»·8¶ŒÅàö-
+dsquid:S2184÷"@Cast one of the operands of this integer division to a "double".(¾†Øûÿÿÿÿ8–ùéàö-
+?squid:S1170""!Make this final field static too.(¼ ú‘8çÊçˆ÷-
+dsquid:S2184ø"@Cast one of the operands of this integer division to a "double".(Óıèşÿÿÿÿ8ô§èäö-
+Œsquid:S1192T"iDefine a constant instead of duplicating this literal "No connection to server, try again later" 3 times.(ˆ×Ş×øÿÿÿÿ8–ùéàö-
+asquid:S2184«"BCast one of the operands of this addition operation to a "double".(ğÆ€8’×òäö-
+{squid:S1450+"XRemove the "gameStage" field and declare it as a local variable in the relevant methods.(İÄÈ³ıÿÿÿÿ8–ùéàö-
+?squid:S1170!"!Make this final field static too.(Ã—»·8¶ŒÅàö-
+vsquid:S1450("SRemove the "main" field and declare it as a local variable in the relevant methods.(§ÈØØÿÿÿÿÿ8–ùéàö-
+tsquid:S00116""URename this field "BORDERSIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ ú‘8çÊçˆ÷-

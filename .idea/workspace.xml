@@ -2,37 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0afc82a3f04913a74b8aa5793015ee3f9da93f7e" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14c47ca12045392f47eeae285cbaf35d5a77756d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14c47ca12045392f47eeae285cbaf35d5a77756d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/154ad3d249d1864da79174d800f7745908dcd82e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/154ad3d249d1864da79174d800f7745908dcd82e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/17a723ef459b389c21682964aaaacfb7a7629ebd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/194e93dd38bee38f69886137a5bc5d50acfe85df" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/2961ebe52c76ef8b39cf183da8f0d96d4ec2d855" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/29784b19c2ca184a680a56ff9e16198567281ce5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a4e2f505f0608fe8980862136b8a82f965f1018" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c9f35b2ebd24510a8195375d49b0b82cd6bbeb2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c9f35b2ebd24510a8195375d49b0b82cd6bbeb2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62812e8ed7bad3a1911cfc8562e6715158cbbb5b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/765fdd5a4142e92d438d040e513948f963bab740" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80b7585a9152204f268c07ee7b6724c0aafe0d71" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/84f57d7d7bb052df4e32c7446b25255bd1f69cb2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/84f57d7d7bb052df4e32c7446b25255bd1f69cb2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88d6f01f2ee7710e342194f62c349cc6ef94c862" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/957c74f8b39c238919c5349e8e3a880d22e8cec6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/baf30cbbda566a2ac636b374740067af13fa82b4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/baf30cbbda566a2ac636b374740067af13fa82b4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8533e8538d5e64789da67b7e128d0f213021980" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8533e8538d5e64789da67b7e128d0f213021980" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c93ac6bbcc4f6a13e628636a40d11d94790f6a7e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cfed21925ff836c7f211f13a50621fd2558b7e1a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cfed21925ff836c7f211f13a50621fd2558b7e1a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/ef2cd8a9ab74f4b01fc7fbd31214dcdc7ad30b1c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/ef2cd8a9ab74f4b01fc7fbd31214dcdc7ad30b1c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f1a10ac7bd5ebb57235ca90ad026d9b4b69ff4db" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f1a10ac7bd5ebb57235ca90ad026d9b4b69ff4db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f987447a5ff3bd1a7a0b46f3fb9643b92697e9cb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f987447a5ff3bd1a7a0b46f3fb9643b92697e9cb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/acd7106acd6fe913e9cd178fd79415cff38df272" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/acd7106acd6fe913e9cd178fd79415cff38df272" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/models/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/models/Player.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +44,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pokemonfrontend/frontend" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29246345" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -190,7 +169,8 @@
       <workItem from="1576051914905" duration="17062000" />
       <workItem from="1576140059681" duration="6794000" />
       <workItem from="1576327449375" duration="12676000" />
-      <workItem from="1578299307315" duration="3736000" />
+      <workItem from="1578299307315" duration="12648000" />
+      <workItem from="1578385185322" duration="5535000" />
     </task>
     <servers />
   </component>
@@ -209,21 +189,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -1,15 +1,13 @@
 package logic;
 
 import enums.CardState;
+import enums.GameResult;
 import interfaces.IServerMessageGenerator;
 import models.Card;
 import models.Coordinate;
 import models.Player;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 
 public class Game {
@@ -60,15 +58,16 @@ public class Game {
     public void playerStartsGame(Player player)
     {
         player.setPlayerID(1); //hardcoded, remove if login is implemented
+        player.setAbleToPlay(true);
         playersInGame.add(player);
         gamestarted = false;
         generateCards();
-        String test = "test";
     }
 
     public void playerJoinsGame(Player player)
     {
         player.setPlayerID(2); //hardcoded, remove if login is implemented
+        player.setAbleToPlay(true);
         playersInGame.add(player);
         gamestarted = true;
     }
@@ -76,8 +75,9 @@ public class Game {
     public void playerTurnsCard(String sessionId, int xPos, int yPos)
     {
         Player player = getPlayerBySession(sessionId);
-        if (gamestarted) {
-            assert player != null;
+        assert player != null;
+        if (gamestarted && player.getIsAbleToPlay()) {
+            if (checkIfSpecificCardsTurned(2)) getOpponent(sessionId).setAbleToPlay(false);
             player.setTurnAmount(player.getTurnAmount() + 1);
             for (Card card : cards) {
                 if (card.getCoordinate().getX() == xPos && card.getCoordinate().getY() == yPos) {
@@ -98,10 +98,6 @@ public class Game {
         else generator.sendGameFeedback("The game will not start until a second player has joined", sessionId);
     }
 
-    private void sendMessageToPlayers(String message){
-        for (Player player : playersInGame) generator.sendGameFeedback(message, player.getSessionID());
-    }
-
     private boolean checkIfTwoCardsTurned(Player player) {
         return player.getTurnAmount() == 2;
     }
@@ -119,11 +115,40 @@ public class Game {
                     card.setTurnedBy(0);
                     player.setPoints(+1);
                     for (Player inGamePlayer : playersInGame) generator.sendPointMessage(player.getInGameNr(), inGamePlayer.getSessionID());
+                    checkForEndGame();
                     return;
                 }
                 else turnCardsBack(player);
             }
         }
+    }
+
+    private void checkForEndGame(){
+        if (checkIfSpecificCardsTurned(0)) return;
+        if (checkForDraw()) return;
+        Player winner = Collections.max(playersInGame, Comparator.comparing(Player::getPoints));
+        for (Player player : playersInGame) {
+            if(player.getPlayerID() == winner.getPlayerID()) player.setGameResult(GameResult.WIN);
+            else player.setGameResult(GameResult.LOSE);
+        }
+    }
+
+    private boolean checkForDraw(){
+        for (Player player : playersInGame) {
+            if(player.getPoints() == playersInGame.get(0).getPoints()) continue;
+            else return false;
+        }
+        return true;
+    }
+
+    private boolean checkIfSpecificCardsTurned(int amount){
+        int cardAmount = 0;
+
+        for (Card card : cards) {
+            if(card.getCardState() == CardState.GUESSED) cardAmount++;
+        }
+
+        return cardAmount == cards.size() - amount;
     }
 
     private void turnCardsBack(Player player){
@@ -135,6 +160,10 @@ public class Game {
                 for (Player inGamePlayer : playersInGame) generator.turnCardBack(card.getCoordinate(), inGamePlayer.getSessionID());
             }
         }
+    }
+
+    private void sendMessageToPlayers(String message){
+        for (Player player : playersInGame) generator.sendGameFeedback(message, player.getSessionID());
     }
 
     private void generateCards()

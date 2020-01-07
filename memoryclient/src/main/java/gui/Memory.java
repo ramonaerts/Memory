@@ -61,21 +61,26 @@ public class Memory extends Application implements IMemoryGui {
 
         Group root = new Group();
         main = new VBox();
-        main.setPrefHeight(500);
+        main.setPrefHeight(300);
         main.setPrefWidth(300);
 
         TextField textFieldPlayerName = new TextField();
-        textFieldPlayerName.setMinWidth(INPUTWIDTH);
-        textFieldPlayerName.setMinWidth(20.20);
-        main.getChildren().add(textFieldPlayerName);
+        textFieldPlayerName.setMinWidth(200);
+        textFieldPlayerName.setLayoutX(50);
+        textFieldPlayerName.setLayoutY(50);
+        root.getChildren().add(textFieldPlayerName);
 
         PasswordField passwordFieldPlayerPassword = new PasswordField();
-        passwordFieldPlayerPassword.setMinWidth(INPUTWIDTH);
-        main.getChildren().add(passwordFieldPlayerPassword);
+        passwordFieldPlayerPassword.setMinWidth(200);
+        passwordFieldPlayerPassword.setLayoutX(50);
+        passwordFieldPlayerPassword.setLayoutY(100);
+        root.getChildren().add(passwordFieldPlayerPassword);
 
         Button loginButton = new Button();
-        loginButton.setMinWidth(INPUTWIDTH);
+        loginButton.setMinWidth(200);
         loginButton.setText("Login");
+        loginButton.setLayoutX(50);
+        loginButton.setLayoutY(150);
         loginButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
             try {
                 loginPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
@@ -84,15 +89,31 @@ public class Memory extends Application implements IMemoryGui {
                 showMessage("No connection to server, try again later");
             }
         });
-        main.getChildren().add(loginButton);
+        root.getChildren().add(loginButton);
+
+        Button registerButton = new Button();
+        registerButton.setMinWidth(200);
+        registerButton.setText("Register");
+        registerButton.setLayoutX(50);
+        registerButton.setLayoutY(200);
+        registerButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
+            try {
+                //TODO send register info.
+                //loginPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
+            }
+            catch (Exception e){
+                showMessage("No connection to server, try again later");
+            }
+        });
+        root.getChildren().add(registerButton);
 
         root.getChildren().add(main);
 
-        Scene scene1 = new Scene(root);
+        Scene scene = new Scene(root);
 
         this.loginStage = primaryStage;
         loginStage.setTitle("Login memory");
-        loginStage.setScene(scene1);
+        loginStage.setScene(scene);
         loginStage.show();
     }
 

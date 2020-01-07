@@ -1,5 +1,6 @@
 package models;
 
+import enums.GameResult;
 import enums.GameState;
 
 public class Player {
@@ -13,6 +14,8 @@ public class Player {
     private int turnAmount;
     private int inGameNr;
     private GameState gameState;
+    private GameResult gameResult;
+    private boolean isAbleToPlay;
 
     public Player(String username, String password, String sessionid)
     {
@@ -86,5 +89,21 @@ public class Player {
 
     public void setGameState(GameState gameState) {
         this.gameState = gameState;
+    }
+
+    public GameResult getGameResult() {
+        return gameResult;
+    }
+
+    public void setGameResult(GameResult gameResult) {
+        this.gameResult = gameResult;
+    }
+
+    public boolean getIsAbleToPlay() {
+        return isAbleToPlay;
+    }
+
+    public void setAbleToPlay(boolean ableToPlay) {
+        isAbleToPlay = ableToPlay;
     }
 }
