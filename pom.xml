@@ -32,9 +32,9 @@
         <module>memorywebsocketclient</module>
         <module>memorywebsocketserver</module>
         <module>memorymodels</module>
-        <module>memoryrestserver</module>
         <module>messaging</module>
         <module>memorywebsocketshared</module>
+        <module>memoryrest</module>
     </modules>
 
 
