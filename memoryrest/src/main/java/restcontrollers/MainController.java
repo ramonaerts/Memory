@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import rest.Entities.User;
-import rest.Repository.UserRepository;
+import rest.entities.User;
+import rest.repository.UserRepository;
 
 @Controller
 @RequestMapping(path="/memory")

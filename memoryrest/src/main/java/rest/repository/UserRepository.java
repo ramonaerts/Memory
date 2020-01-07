@@ -1,8 +1,8 @@
-package rest.Repository;
+package rest.repository;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import rest.Entities.User;
+import rest.entities.User;
 
 public interface UserRepository extends CrudRepository<User, Integer> {
 

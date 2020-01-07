@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memoryrest/memoryrest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memoryrest/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memoryrest/src/main/java/rest/Entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memoryrest/src/main/java/rest/MemoryRestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memoryrest/src/main/java/rest/Repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memoryrest/src/main/java/restcontrollers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memoryrest/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestserver/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/BaseClientMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/BaseClientMessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/BaseServerMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/BaseServerMessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryrest/src/main/java/rest/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/src/main/java/rest/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryrest/src/main/java/rest/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/src/main/java/rest/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryrest/src/main/java/restcontrollers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/src/main/java/restcontrollers/MainController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +186,7 @@
       <workItem from="1576140059681" duration="6794000" />
       <workItem from="1576327449375" duration="12676000" />
       <workItem from="1578299307315" duration="12648000" />
-      <workItem from="1578385185322" duration="14322000" />
+      <workItem from="1578385185322" duration="14865000" />
     </task>
     <servers />
   </component>
