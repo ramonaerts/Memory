@@ -1,0 +1,15 @@
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\client\ClientWebSocket.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\LoginResultHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\FeedbackMessageHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\StartGameResultHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\PlayerJoinsHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\ClientHandlerFactory.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\UpdateLobbyResultHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\client\ClientMessageGenerator.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\GameResultHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\TurnCardBackHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\PlayerPointHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\CardInfoHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\JoinGameResultHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\client\ClientMessageProcessor.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketclient\src\main\java\messaging\BaseClientMessageHandler.java

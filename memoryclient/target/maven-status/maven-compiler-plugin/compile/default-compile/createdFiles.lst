@@ -1,0 +1,5 @@
+gui\Memory.class
+controllers\MemoryController.class
+gui\IMemoryGui.class
+restserver\RestServer.class
+socketcommunication\GameClient.class

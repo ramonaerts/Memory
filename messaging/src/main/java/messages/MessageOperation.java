@@ -4,6 +4,7 @@ public enum MessageOperation {
 
     //to server
     PLAYERLOGIN,
+    PLAYERREGISTER,
     PLAYERSTARTGAME,
     PLAYERJOINGAME,
     TURNCARD,
@@ -11,6 +12,7 @@ public enum MessageOperation {
 
     //to client
     PLAYERLOGINRESULT,
+    PLAYERREGISTERRESULT,
     UPDATELOBBY,
     STARTGAMERESULT,
     JOINGAMERESULT,

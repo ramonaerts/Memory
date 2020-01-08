@@ -1,0 +1,13 @@
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IClientHandlerFactory.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IClientMessageHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IGameClient.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IClientMessageProcessor.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IClientWebSocket.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IServerMessageProcessor.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IClientMessageGenerator.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IController.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IServerWebSocket.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IServerMessageHandler.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IServerHandlerFactory.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IServerMessageGenerator.java
+C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\src\main\java\interfaces\IGameLogic.java

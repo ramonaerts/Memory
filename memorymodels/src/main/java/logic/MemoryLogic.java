@@ -11,18 +11,26 @@ public class MemoryLogic implements IGameLogic {
     private List<Game> activeGames = new ArrayList<>();
 
     private IServerMessageGenerator generator;
+    private IRestController restController;
 
-    public MemoryLogic(IServerMessageGenerator generator) {
+    public MemoryLogic(IServerMessageGenerator generator, IRestController restController) {
         this.generator = generator;
+        this.restController = restController;
     }
 
     @Override
     public void loginPlayer(String username, String password, String sessionId)
     {
-        Player player = new Player(username, password, sessionId);
-        onlinePlayers.add(player);
+        Player player = (Player) restController.getUserByCredentials(username, password);
 
-        generator.sendPlayerResult(true, player, player.getSessionID());
+        if(player.getUsername().equals(username)){
+            player.setSessionID(sessionId);
+            generator.sendPlayerResult(true, player, player.getSessionID());
+            onlinePlayers.add(player);
+        }
+
+        else generator.sendPlayerResult(false, player, player.getSessionID());
+
         updateLobby();
     }
 
@@ -31,7 +39,7 @@ public class MemoryLogic implements IGameLogic {
         Player player = getPlayer(sessionId);
         assert player != null;
 
-        Game game = new Game(this.generator);
+        Game game = new Game(this.generator, this.restController);
         game.setGameID(createGameID());
         player.setInGameNr(1);
         game.playerStartsGame(player);

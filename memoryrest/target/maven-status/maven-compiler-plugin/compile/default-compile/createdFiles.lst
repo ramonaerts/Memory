@@ -1,0 +1,4 @@
+rest\repository\UserRepository.class
+restcontrollers\MainController.class
+rest\MemoryRestApplication.class
+rest\entities\User.class

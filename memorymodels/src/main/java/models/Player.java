@@ -9,7 +9,10 @@ public class Player {
     private String username;
     private String password;
     private String sessionID;
-    private Stats stats;
+    private int winAmount;
+    private int drawAmount;
+    private int loseAmount;
+    private int score;
     private int points;
     private int turnAmount;
     private int inGameNr;
@@ -25,6 +28,10 @@ public class Player {
         this.gameState = GameState.LOBBY;
     }
 
+    public Player() {
+        this.gameState = GameState.LOBBY;
+    }
+
     public void setPlayerID(int playerID) {
         this.playerID = playerID;
     }
@@ -37,8 +44,16 @@ public class Player {
         return username;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String getPassword() {
         return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getSessionID() {
@@ -49,12 +64,36 @@ public class Player {
         this.sessionID = sessionID;
     }
 
-    public Stats getStats() {
-        return stats;
+    public int getWinAmount() {
+        return winAmount;
     }
 
-    public void setStats(Stats stats) {
-        this.stats = stats;
+    public void setWinAmount(int winAmount) {
+        this.winAmount = winAmount;
+    }
+
+    public int getDrawAmount() {
+        return drawAmount;
+    }
+
+    public void setDrawAmount(int drawAmount) {
+        this.drawAmount = drawAmount;
+    }
+
+    public int getLoseAmount() {
+        return loseAmount;
+    }
+
+    public void setLoseAmount(int loseAmount) {
+        this.loseAmount = loseAmount;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 
     public int getPoints() {

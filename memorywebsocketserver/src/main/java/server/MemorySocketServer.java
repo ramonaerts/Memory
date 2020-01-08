@@ -7,6 +7,8 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer;
+import interfaces.IRestController;
+import restcontrollers.RestController;
 
 import javax.websocket.server.ServerContainer;
 import javax.websocket.server.ServerEndpoint;
@@ -32,7 +34,9 @@ public class MemorySocketServer {
 
         IServerMessageGenerator messageGenerator = new ServerMessageGenerator(socket);
 
-        IGameLogic game = new MemoryLogic(messageGenerator);
+        IRestController restController = new RestController();
+
+        IGameLogic game = new MemoryLogic(messageGenerator, restController);
         messageProcessor.registerGame(game);
 
 

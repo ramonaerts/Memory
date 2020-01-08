@@ -14,6 +14,7 @@ import serialization.*;
 public class ClientWebSocket implements IClientWebSocket
 {
     private String uri = "ws://localhost:8095/memory";
+    //private String uri = "ws://192.168.2.19:8095/memory";
 
     private Session session;
 
