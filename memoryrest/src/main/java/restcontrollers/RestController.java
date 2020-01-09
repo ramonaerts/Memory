@@ -1,6 +1,5 @@
 package restcontrollers;
 
-import interfaces.IRestController;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,11 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import rest.entities.Player;
-import rest.repository.UserRepository;
 
 @Controller
 @RequestMapping(path="/memory")
-public class RestController implements IRestController {
+public class RestController {
 
     @Autowired
     private RestService service;
@@ -34,9 +32,10 @@ public class RestController implements IRestController {
     }
 
     @GetMapping(path="/user")
-    public @ResponseBody boolean getCheckUser(String username){
+    public @ResponseBody models.Player getUser(String username){
         Player user = service.getUser(username);
-        return user.getUsername().equals("");
+        if (user == null) return null;
+        return modelMapper.map(user, models.Player.class);
     }
 
     @GetMapping(path="/usercred")

@@ -12,6 +12,7 @@
         <module name="memorymodels" />
         <module name="messaging" />
         <module name="memorywebsocketclient" />
+        <module name="memoryrestclient" />
         <module name="memorywebsocketserver" />
       </profile>
     </annotationProcessing>

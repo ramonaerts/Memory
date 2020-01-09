@@ -1,3 +1,4 @@
 
-Fsquid:S1068"(Remove this unused "pool" private field.(Îë‹™8Ù¢ıˆ÷-
-osquid:S3776K"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Ÿ¤È'8ğá¨¯÷-
+osquid:S3776N"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Ÿ¤È'8ğá¨¯÷-
+Psquid:S1068"2Remove this unused "restController" private field.(À–ü8ü°¨ø-
+Fsquid:S1068"(Remove this unused "pool" private field.(Îë‹™8Ù¢ıˆ÷-

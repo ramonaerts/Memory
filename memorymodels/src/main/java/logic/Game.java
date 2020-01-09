@@ -2,7 +2,6 @@ package logic;
 
 import enums.CardState;
 import enums.GameResult;
-import interfaces.IRestController;
 import interfaces.IServerMessageGenerator;
 import models.Card;
 import models.Coordinate;
@@ -21,11 +20,9 @@ public class Game {
     private Random rand = new Random();
 
     private IServerMessageGenerator generator;
-    private IRestController restController;
 
-    public Game (IServerMessageGenerator generator, IRestController restController) {
+    public Game (IServerMessageGenerator generator) {
         this.generator = generator;
-        this.restController = restController;
     }
 
     public int getGameID() {

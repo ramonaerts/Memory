@@ -9,9 +9,9 @@ public class Player {
     private String username;
     private String password;
     private String sessionID;
-    private int winAmount;
-    private int drawAmount;
-    private int loseAmount;
+    private int wins;
+    private int draws;
+    private int losses;
     private int score;
     private int points;
     private int turnAmount;
@@ -64,28 +64,28 @@ public class Player {
         this.sessionID = sessionID;
     }
 
-    public int getWinAmount() {
-        return winAmount;
+    public int getWins() {
+        return wins;
     }
 
-    public void setWinAmount(int winAmount) {
-        this.winAmount = winAmount;
+    public void setWins(int wins) {
+        this.wins = wins;
     }
 
-    public int getDrawAmount() {
-        return drawAmount;
+    public int getDraws() {
+        return draws;
     }
 
-    public void setDrawAmount(int drawAmount) {
-        this.drawAmount = drawAmount;
+    public void setDraws(int draws) {
+        this.draws = draws;
     }
 
-    public int getLoseAmount() {
-        return loseAmount;
+    public int getLosses() {
+        return losses;
     }
 
-    public void setLoseAmount(int loseAmount) {
-        this.loseAmount = loseAmount;
+    public void setLosses(int losses) {
+        this.losses = losses;
     }
 
     public int getScore() {
