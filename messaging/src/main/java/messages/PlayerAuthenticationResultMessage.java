@@ -2,11 +2,11 @@ package messages;
 
 import models.Player;
 
-public class PlayerLoginResultMessage {
+public class PlayerAuthenticationResultMessage {
     private boolean loginresult;
     private Player player;
 
-    public PlayerLoginResultMessage(boolean loginresult, Object player) {
+    public PlayerAuthenticationResultMessage(boolean loginresult, Object player) {
         this.loginresult = loginresult;
         this.player = (Player) player;
     }

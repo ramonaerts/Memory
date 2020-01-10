@@ -3,7 +3,7 @@ package messaging;
 import interfaces.IGameClient;
 import messages.*;
 
-public class LoginResultHandler extends BaseClientMessageHandler<PlayerLoginResultMessage> {
+public class LoginResultHandler extends BaseClientMessageHandler<PlayerAuthenticationResultMessage> {
 
     private IGameClient client;
 
@@ -13,7 +13,7 @@ public class LoginResultHandler extends BaseClientMessageHandler<PlayerLoginResu
     }
 
     @Override
-    public void handleMessageInternal(PlayerLoginResultMessage message, String sessionId) {
+    public void handleMessageInternal(PlayerAuthenticationResultMessage message, String sessionId) {
         client.loginResult(message.getResult(), message.getPlayer());
     }
 }

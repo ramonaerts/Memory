@@ -1,16 +1,16 @@
 package messaging;
 
 import interfaces.IGameLogic;
-import messages.PlayerLoginMessage;
+import messages.PlayerAuthenticationMessage;
 
-public class RegisterHandler extends BaseServerMessageHandler<PlayerLoginMessage> {
+public class RegisterHandler extends BaseServerMessageHandler<PlayerAuthenticationMessage> {
 
     private IGameLogic game;
 
     public RegisterHandler(IGameLogic game) {this.game = game;}
 
     @Override
-    public void handleMessageInternal(PlayerLoginMessage message, String sessionId) {
+    public void handleMessageInternal(PlayerAuthenticationMessage message, String sessionId) {
         game.registerPlayer(message.getUsername(), message.getPassword(), sessionId);
     }
 }

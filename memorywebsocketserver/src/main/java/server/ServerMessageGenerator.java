@@ -13,11 +13,11 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
     }
 
     public void sendPlayerResult(boolean loginResult, Object player, String sessionId){
-        server.sendTo(sessionId, new PlayerLoginResultMessage(loginResult, player), MessageOperation.PLAYERLOGINRESULT);
+        server.sendTo(sessionId, new PlayerAuthenticationResultMessage(loginResult, player), MessageOperation.PLAYERLOGINRESULT);
     }
 
     public void sendRegisterResult(boolean registerResult, Object player, String sessionId){
-        server.sendTo(sessionId, new PlayerLoginResultMessage(registerResult, player), MessageOperation.PLAYERREGISTERRESULT);
+        server.sendTo(sessionId, new PlayerAuthenticationResultMessage(registerResult, player), MessageOperation.PLAYERREGISTERRESULT);
     }
 
     public void updateLobbyList(List<String> players, String sessionId){

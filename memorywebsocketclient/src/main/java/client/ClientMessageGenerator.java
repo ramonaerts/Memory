@@ -11,11 +11,11 @@ public class ClientMessageGenerator implements IClientMessageGenerator {
     }
 
     public void loginPlayer(String username, String password){
-        client.send(new PlayerLoginMessage(username, password), MessageOperation.PLAYERLOGIN);
+        client.send(new PlayerAuthenticationMessage(username, password), MessageOperation.PLAYERLOGIN);
     }
 
     public void registerPlayer(String username, String password){
-        client.send(new PlayerLoginMessage(username, password), MessageOperation.PLAYERREGISTER);
+        client.send(new PlayerAuthenticationMessage(username, password), MessageOperation.PLAYERREGISTER);
     }
 
     public void startGame() {
