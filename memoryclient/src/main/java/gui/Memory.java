@@ -84,7 +84,7 @@ public class Memory extends Application implements IMemoryGui {
         loginButton.setLayoutY(150);
         loginButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
             try {
-                loginPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
+                controller.loginPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
             }
             catch (Exception e){
                 showMessage("No connection to server, try again later");
@@ -99,8 +99,7 @@ public class Memory extends Application implements IMemoryGui {
         registerButton.setLayoutY(200);
         registerButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
             try {
-                //TODO send register info.
-                //loginPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
+                controller.registerPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
             }
             catch (Exception e){
                 showMessage("No connection to server, try again later");
@@ -118,10 +117,6 @@ public class Memory extends Application implements IMemoryGui {
         loginStage.show();
     }
 
-    private void loginPlayer(String username, String password){
-        controller.loginPlayer(username, password);
-    }
-
     public void loginResult(boolean loginresult, Object player)
     {
         Platform.runLater(() ->
@@ -134,6 +129,22 @@ public class Memory extends Application implements IMemoryGui {
             else
             {
                 showMessage("Wrong login credentials");
+                currentPlayer = null;
+            }
+        });
+    }
+
+    public void registerResult(boolean registerResult, Object player){
+        Platform.runLater(() ->
+        {
+            if(registerResult)
+            {
+                currentPlayer = (Player) player;
+                lobby();
+            }
+            else
+            {
+                showMessage("Username already exists, choose another one");
                 currentPlayer = null;
             }
         });

@@ -1,5 +1,7 @@
 package interfaces;
 
 public interface IRestClient {
-    Object getPlayer(String username);
+    boolean checkUsername(String username);
+    Object getPlayerByCredentials(String username, String password);
+    Object registerPlayer(String username, String password);
 }

@@ -15,6 +15,8 @@ public class ClientHandlerFactory implements IClientHandlerFactory {
         switch (messageOperation){
             case PLAYERLOGINRESULT:
                 return new LoginResultHandler(igameClient);
+            case PLAYERREGISTERRESULT:
+                return new RegisterResultHandler(igameClient);
             case UPDATELOBBY:
                 return new UpdateLobbyResultHandler(igameClient);
             case STARTGAMERESULT:

@@ -23,19 +23,26 @@ public class RestController {
         return service.getAllUsers();
     }
 
-    @PostMapping(path="/add")
-    public @ResponseBody void addUser(String username, String password){
-        Player playerDTO = new Player();
-        playerDTO.setUsername(username);
-        playerDTO.setPassword(password);
-        service.addUser(playerDTO);
+    @PostMapping(path="/adduser")
+    public @ResponseBody models.Player addUser(String username, String password){
+        Player dtoPlayer = new Player();
+        dtoPlayer.setUsername(username);
+        dtoPlayer.setPassword(password);
+        service.addUser(dtoPlayer);
+        return getUserByCredentials(username, password);
     }
 
     @GetMapping(path="/user")
     public @ResponseBody models.Player getUser(String username){
-        Player user = service.getUser(username);
-        if (user == null) return null;
-        return modelMapper.map(user, models.Player.class);
+        Player dtoPlayer = service.getUser(username);
+        if (dtoPlayer == null) return null;
+        return modelMapper.map(dtoPlayer, models.Player.class);
+    }
+
+    @GetMapping(path="/checkusername")
+    public @ResponseBody boolean checkUser(String username){
+        Player dtoPlayer = service.getUser(username);
+        return dtoPlayer == null;
     }
 
     @GetMapping(path="/usercred")

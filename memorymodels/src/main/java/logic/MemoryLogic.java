@@ -21,7 +21,7 @@ public class MemoryLogic implements IGameLogic {
     @Override
     public void loginPlayer(String username, String password, String sessionId)
     {
-        Player player = (Player) restClient.getPlayer(username);
+        Player player = (Player) restClient.getPlayerByCredentials(username, password);
 
         if(player != null){
             player.setSessionID(sessionId);
@@ -29,7 +29,22 @@ public class MemoryLogic implements IGameLogic {
             onlinePlayers.add(player);
         }
 
-        else generator.sendPlayerResult(false, player, sessionId);
+        else generator.sendPlayerResult(false, null, sessionId);
+
+        updateLobby();
+    }
+
+    public void registerPlayer(String username, String password, String sessionId) {
+        boolean usernameExists = restClient.checkUsername(username);
+
+        if(usernameExists){
+            Player player = (Player) restClient.registerPlayer(username, password);
+            player.setSessionID(sessionId);
+            generator.sendRegisterResult(true, player, sessionId);
+            onlinePlayers.add(player);
+        }
+
+        else generator.sendRegisterResult(false, null, sessionId);
 
         updateLobby();
     }

@@ -6,8 +6,11 @@ public interface IGameClient {
     void registerController(IController controller);
 
     void sendPlayer(String username, String password);
-
     void loginResult(boolean loginResult, Object player);
+
+    void registerPlayer(String username, String password);
+    void registerResult(boolean registerResult, Object player);
+
     void updateLobby(List<String> players);
 
     void startGame();

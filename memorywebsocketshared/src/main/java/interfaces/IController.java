@@ -4,7 +4,10 @@ import java.util.List;
 
 public interface IController {
     void loginPlayer(String username, String password);
-    void loginResult(boolean loginresult, Object player);
+    void loginResult(boolean loginResult, Object player);
+
+    void registerPlayer(String username, String password);
+    void registerResult(boolean registerResult, Object player);
 
     void updateLobby(List<String> players);
 

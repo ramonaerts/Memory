@@ -28,6 +28,14 @@ public class GameClient implements IGameClient {
         controller.loginResult(loginresult, player);
     }
 
+    public void registerPlayer(String username, String password) {
+        messageGenerator.registerPlayer(username, password);
+    }
+
+    public void registerResult(boolean registerResult, Object player){
+        controller.registerResult(registerResult, player);
+    }
+
     public void updateLobby(List<String> players) {
         controller.updateLobby(players);
     }

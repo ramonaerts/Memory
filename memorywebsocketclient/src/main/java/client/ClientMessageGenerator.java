@@ -14,6 +14,10 @@ public class ClientMessageGenerator implements IClientMessageGenerator {
         client.send(new PlayerLoginMessage(username, password), MessageOperation.PLAYERLOGIN);
     }
 
+    public void registerPlayer(String username, String password){
+        client.send(new PlayerLoginMessage(username, password), MessageOperation.PLAYERREGISTER);
+    }
+
     public void startGame() {
         client.send(new StartGameMessage(), MessageOperation.PLAYERSTARTGAME);
     }
