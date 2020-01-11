@@ -40,7 +40,7 @@ public class ServerMessageGenerator implements IServerMessageGenerator {
         server.sendTo(sessionId, new GameFeedbackMessage(message), MessageOperation.FEEDBACK);
     }
 
-    public void turnCardBack(Object coordinate, String sessionId) {
+    public synchronized void turnCardBack(Object coordinate, String sessionId) {
         server.sendTo(sessionId, new TurnCardBackMessage(coordinate), MessageOperation.TURNCARDBACK);
     }
 

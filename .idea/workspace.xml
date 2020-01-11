@@ -7,14 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/LoginResultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/LoginResultHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/RegisterResultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/RegisterResultHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/LoginHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/RegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/RegisterHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/CardTurner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/client/ClientMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/client/ClientMessageGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/LoginResultHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/LoginResultHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/RegisterResultHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/RegisterResultHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerMessageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/PlayerLoginMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/PlayerAuthenticationMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/PlayerLoginResultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/PlayerAuthenticationResultMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/LoginHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/LoginHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/RegisterHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/RegisterHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerMessageGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/target/classes/messages/PlayerLoginMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/target/classes/messages/PlayerLoginResultMessage.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +55,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fun3_kochfractal-master-les2" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -203,7 +209,7 @@
       <workItem from="1578385185322" duration="14963000" />
       <workItem from="1578420205648" duration="5207000" />
       <workItem from="1578476944723" duration="11978000" />
-      <workItem from="1578573383760" duration="12527000" />
+      <workItem from="1578573383760" duration="19909000" />
     </task>
     <servers />
   </component>

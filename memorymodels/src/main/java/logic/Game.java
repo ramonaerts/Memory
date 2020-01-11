@@ -9,6 +9,7 @@ import models.Player;
 
 import java.util.*;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Game {
     private int gameId;
@@ -23,6 +24,10 @@ public class Game {
 
     public Game (IServerMessageGenerator generator) {
         this.generator = generator;
+    }
+
+    public IServerMessageGenerator getGenerator() {
+        return generator;
     }
 
     public int getGameID() {
@@ -153,15 +158,24 @@ public class Game {
         return cardAmount == cards.size() - amount;
     }
 
+    public List<Card> getWrongCards(Player player){
+        List<Card> wrongCards = new ArrayList<>();
+        for (Card card : cards) {
+            if (card.getTurnedBy() == player.getPlayerID()) wrongCards.add(card);
+        }
+        return wrongCards;
+    }
+
     private void turnCardsBack(Player player){
-        for (Card card : cards)
+        pool = Executors.newFixedThreadPool(4);
+        for (Card card : getWrongCards(player))
         {
-            if (card.getTurnedBy() == player.getPlayerID()){
-                card.setCardState(CardState.HIDDEN);
-                card.setTurnedBy(0);
-                for (Player inGamePlayer : playersInGame) generator.turnCardBack(card.getCoordinate(), inGamePlayer.getSessionID());
+            for (Player inGamePlayer : getPlayersInGame()) {
+                CardTurner cardTurner = new CardTurner(this, card, inGamePlayer);
+                pool.execute(cardTurner);
             }
         }
+        pool.shutdown();
     }
 
     private void sendMessageToPlayers(String message){
