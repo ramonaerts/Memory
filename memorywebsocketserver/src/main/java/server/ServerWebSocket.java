@@ -11,6 +11,8 @@ import javax.inject.Singleton;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Singleton
 @ServerEndpoint(value="/memory")
@@ -43,12 +45,18 @@ public class ServerWebSocket implements IServerWebSocket {
         sessions.add(session);
     }
 
+    private ExecutorService executorService = Executors.newCachedThreadPool();
     @OnMessage
     public void onText(String message, Session session) {
         String sessionId = session.getId();
         Serializer ser = Serializer.getSerializer();
         SocketMessage msg = ser.deserialize(message, SocketMessage.class);
-        getMessageProcessor().processMessage(sessionId, msg.getMessageOperation(), msg.getMessageData());
+        executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+                getMessageProcessor().processMessage(sessionId, msg.getMessageOperation(), msg.getMessageData());
+            }
+        });
     }
 
     @OnClose
