@@ -267,9 +267,8 @@ public class Memory extends Application implements IMemoryGui {
         setVariableLabels(root, statsFont, playerScore, "0", 100, 45);
         setVariableLabels(root, statsFont, opponentName, "Waiting for player", 450, 20);
         setVariableLabels(root, statsFont, opponentScore, "0", 450, 45);
-
-
-        Rectangle memoryField = new Rectangle(25, 90, 700,500);
+        
+        Rectangle memoryField = new Rectangle(25, 90, 685,487);
         memoryField.setFill(Color.SEAGREEN);
         root.getChildren().add(memoryField);
         Font cardFont = new Font(20);

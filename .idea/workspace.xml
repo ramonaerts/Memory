@@ -8,11 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/restserver/RestServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/restserver/RestServer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/CardTurner.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/CardTurner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/CardTurner.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/CardTurner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fun3_kochfractal-master-les2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pokemonfrontend/RatMazeAlgo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -215,7 +215,7 @@
       <workItem from="1578385185322" duration="14963000" />
       <workItem from="1578420205648" duration="5207000" />
       <workItem from="1578476944723" duration="11978000" />
-      <workItem from="1578573383760" duration="25233000" />
+      <workItem from="1578573383760" duration="32045000" />
     </task>
     <servers />
   </component>

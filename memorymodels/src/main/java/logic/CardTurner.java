@@ -18,13 +18,13 @@ public class CardTurner implements Runnable {
 
     @Override
     public void run(){
+        card.setTurnedBy(0);
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.out.println(e);
         }
-        card.setTurnedBy(0);
         card.setCardState(CardState.HIDDEN);
         game.getGenerator().turnCardBack(card.getCoordinate(), player.getSessionID());
 
