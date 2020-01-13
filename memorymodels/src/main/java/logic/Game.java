@@ -115,7 +115,7 @@ public class Game {
                     turnedCard.setTurnedBy(0);
                     card.setCardState(CardState.GUESSED);
                     card.setTurnedBy(0);
-                    player.setPoints(+1);
+                    player.setPoints(player.getPoints()+1);
                     for (Player inGamePlayer : playersInGame) generator.sendPointMessage(player.getInGameNr(), inGamePlayer.getSessionID());
                     checkForEndGame();
                     return;
