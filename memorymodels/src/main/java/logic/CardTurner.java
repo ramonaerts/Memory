@@ -24,8 +24,8 @@ public class CardTurner implements Runnable {
             Thread.currentThread().interrupt();
             System.out.println(e);
         }
-        card.setCardState(CardState.HIDDEN);
         card.setTurnedBy(0);
+        card.setCardState(CardState.HIDDEN);
         game.getGenerator().turnCardBack(card.getCoordinate(), player.getSessionID());
 
     }

@@ -17,7 +17,6 @@ public class Game {
     private List<Player> playersInGame = new ArrayList<>();
     private boolean gamestarted;
 
-    private ExecutorService pool;
     private Random rand = new Random();
 
     private IServerMessageGenerator generator;
@@ -62,7 +61,6 @@ public class Game {
 
     public void playerStartsGame(Player player)
     {
-        player.setPlayerID(1); //hardcoded, remove if login is implemented
         player.setAbleToPlay(true);
         playersInGame.add(player);
         gamestarted = false;
@@ -71,7 +69,6 @@ public class Game {
 
     public void playerJoinsGame(Player player)
     {
-        player.setPlayerID(2); //hardcoded, remove if login is implemented
         player.setAbleToPlay(true);
         playersInGame.add(player);
         gamestarted = true;
@@ -83,13 +80,13 @@ public class Game {
         assert player != null;
         if (gamestarted && player.getIsAbleToPlay()) {
             if (checkIfSpecificCardsTurned(2)) getOpponent(sessionId).setAbleToPlay(false);
-            player.setTurnAmount(player.getTurnAmount() + 1);
             for (Card card : cards) {
                 if (card.getCoordinate().getX() == xPos && card.getCoordinate().getY() == yPos) {
                     if (card.getCardState().equals(CardState.TURNED) || card.getCardState().equals(CardState.GUESSED)) {
                         sendMessageToPlayers("This card has already been turned, choose another one");
                         return;
                     }
+                    player.setTurnAmount(player.getTurnAmount() + 1);
                     card.setTurnedBy(player.getPlayerID());
                     card.setCardState(CardState.TURNED);
 
@@ -167,7 +164,7 @@ public class Game {
     }
 
     private void turnCardsBack(Player player){
-        pool = Executors.newFixedThreadPool(4);
+        ExecutorService pool = Executors.newCachedThreadPool();
         for (Card card : getWrongCards(player))
         {
             for (Player inGamePlayer : getPlayersInGame()) {
