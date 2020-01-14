@@ -13,8 +13,6 @@ import serialization.*;
 @ClientEndpoint
 public class ClientWebSocket implements IClientWebSocket
 {
-    private String uri = "ws://localhost:8095/memory";
-    //private String uri = "ws://192.168.2.19:8095/memory";
 
     private Session session;
 
@@ -51,6 +49,7 @@ public class ClientWebSocket implements IClientWebSocket
         System.out.println("[WebSocket Client start]");
         try {
             WebSocketContainer container = ContainerProvider.getWebSocketContainer();
+            String uri = "ws://localhost:8095/memory";
             container.connectToServer(this, new URI(uri));
 
         } catch (IOException | URISyntaxException | DeploymentException ex) {

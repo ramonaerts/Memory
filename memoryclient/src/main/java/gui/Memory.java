@@ -34,11 +34,11 @@ public class Memory extends Application implements IMemoryGui {
     private final int INPUTWIDTH = 150;
     private final int BORDERSIZE = 10;
 
+    private IClientWebSocket socket;
     private IController controller;
 
     private Player currentPlayer;
 
-    private VBox main;
     private Stage loginStage;
     private Stage lobbyStage;
     private Stage gameStage;
@@ -46,7 +46,7 @@ public class Memory extends Application implements IMemoryGui {
     @Override
     public void start(Stage primaryStage) {
 
-        IClientWebSocket socket = new ClientWebSocket();
+        socket = new ClientWebSocket();
         IClientMessageGenerator generator = new ClientMessageGenerator(socket);
 
         IGameClient gameClient = new GameClient(generator);
@@ -60,10 +60,14 @@ public class Memory extends Application implements IMemoryGui {
 
         controller = new MemoryController(this, gameClient);
 
+        GridPane grid = new GridPane();
+        grid.setHgap(BORDERSIZE);
+        grid.setVgap(BORDERSIZE);
+        grid.setPadding(new Insets(BORDERSIZE,BORDERSIZE,BORDERSIZE,BORDERSIZE));
+
         Group root = new Group();
-        main = new VBox();
-        main.setPrefHeight(300);
-        main.setPrefWidth(300);
+        root.getChildren().add(grid);
+        Scene scene = new Scene(root, 300, 300);
 
         TextField textFieldPlayerName = new TextField();
         textFieldPlayerName.setMinWidth(200);
@@ -107,11 +111,7 @@ public class Memory extends Application implements IMemoryGui {
         });
         root.getChildren().add(registerButton);
 
-        root.getChildren().add(main);
-
-        Scene scene = new Scene(root);
-
-        this.loginStage = primaryStage;
+        this.loginStage = new Stage();
         loginStage.setTitle("Login memory");
         loginStage.setScene(scene);
         loginStage.show();

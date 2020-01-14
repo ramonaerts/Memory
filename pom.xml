@@ -12,6 +12,7 @@
     <properties>
         <jdkVersion>11</jdkVersion>
         <mavenVersion>3.8.0</mavenVersion>
+        <sonar.coverage.exclusions>messaging/**, memorywebsocketshared/**, memorywebsocketserver/**, memorywebsocketclient/**, memoryrestclient/**, memoryrest/**, memoryclient/**</sonar.coverage.exclusions>
     </properties>
     <build>
         <plugins>

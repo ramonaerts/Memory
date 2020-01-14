@@ -1,4 +1,5 @@
+restcontrollers\RestService.class
 rest\repository\UserRepository.class
-restcontrollers\MainController.class
+rest\entities\Player.class
 rest\MemoryRestApplication.class
-rest\entities\User.class
+restcontrollers\RestController.class

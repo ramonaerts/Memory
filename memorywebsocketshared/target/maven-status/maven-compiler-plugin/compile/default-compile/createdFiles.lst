@@ -2,6 +2,7 @@ interfaces\IGameClient.class
 interfaces\IServerMessageProcessor.class
 interfaces\IClientMessageHandler.class
 interfaces\IGameLogic.class
+interfaces\IRestClient.class
 interfaces\IClientMessageProcessor.class
 interfaces\IController.class
 interfaces\IServerHandlerFactory.class

@@ -27,6 +27,7 @@
         <openfxVersion>11.0.2</openfxVersion>
         <junit-jupiter-api.version>5.3.2</junit-jupiter-api.version>
         <logback-classic.version>1.2.3</logback-classic.version>
+        <!--<sonar.skip>true</sonar.skip>-->
     </properties>
 
     <artifactId>memorywebsocketclient</artifactId>
