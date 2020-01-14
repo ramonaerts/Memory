@@ -7,4 +7,5 @@ public interface IGameLogic {
     void startGame(String sessionId);
     void joinGame(String sessionId);
     void turnCard(int x, int y, int gameId, String sessionId);
+    void saveResultsToDatabase(String sessionId);
 }

@@ -6,7 +6,6 @@ public class Card {
     private int cardID;
     private CardState cardState;
     private int value;
-    private int turnAmount;
     private Coordinate coordinate;
     private int turnedBy;
 
@@ -14,7 +13,6 @@ public class Card {
         this.value = value;
         this.cardID = id;
         this.cardState = CardState.HIDDEN;
-        this.turnAmount = 0;
         this.turnedBy = 0;
     }
 

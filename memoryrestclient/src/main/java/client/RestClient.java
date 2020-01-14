@@ -48,4 +48,13 @@ public class RestClient implements IRestClient {
         return response.getBody();
     }
 
+    public void updatePlayer(Object updatedPlayer){
+        Player player = (Player) updatedPlayer;
+        UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(restURL + "user/{id}?")
+            .queryParam("player", player)
+            .queryParam("userid", player.getPlayerID());
+
+        HttpEntity<?> entity = new HttpEntity<>(headers);
+        template.exchange(builder.toUriString(), HttpMethod.PUT, entity, Player.class);
+    }
 }

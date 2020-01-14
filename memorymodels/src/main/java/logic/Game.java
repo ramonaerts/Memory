@@ -2,6 +2,7 @@ package logic;
 
 import enums.CardState;
 import enums.GameResult;
+import interfaces.IGameLogic;
 import interfaces.IServerMessageGenerator;
 import models.Card;
 import models.Coordinate;
@@ -20,9 +21,11 @@ public class Game {
     private Random rand = new Random();
 
     private IServerMessageGenerator generator;
+    private IGameLogic lobby;
 
-    public Game (IServerMessageGenerator generator) {
+    public Game (IServerMessageGenerator generator, IGameLogic lobby) {
         this.generator = generator;
+        this.lobby = lobby;
     }
 
     public IServerMessageGenerator getGenerator() {
@@ -125,26 +128,6 @@ public class Game {
         }
     }
 
-    private void checkForEndGame(){
-        if (!checkIfSpecificCardsTurned(0)) return;
-        if (!checkForDraw()){
-            Player winner = Collections.max(playersInGame, Comparator.comparing(Player::getPoints));
-            for (Player player : playersInGame) {
-                if(player.getPlayerID() == winner.getPlayerID()) player.setGameResult(GameResult.WIN);
-                else player.setGameResult(GameResult.LOSE);
-            }
-        }
-        for (Player inGamePlayer : playersInGame) generator.sendGameResult(inGamePlayer.getGameResult(), inGamePlayer.getSessionID());
-    }
-
-    private boolean checkForDraw(){
-        for (Player player : playersInGame) {
-            if(player.getPoints() == playersInGame.get(0).getPoints()) player.setGameResult(GameResult.DRAW);
-            else return false;
-        }
-        return true;
-    }
-
     private boolean checkIfSpecificCardsTurned(int amount){
         int cardAmount = 0;
 
@@ -173,6 +156,30 @@ public class Game {
             }
         }
         pool.shutdown();
+    }
+
+    private void checkForEndGame(){
+        if (!checkIfSpecificCardsTurned(0)) return;
+        if (!checkForDraw()){
+            Player winner = Collections.max(playersInGame, Comparator.comparing(Player::getPoints));
+            for (Player player : playersInGame) {
+                if(player.getPlayerID() == winner.getPlayerID()) player.setGameResult(GameResult.WIN);
+                else player.setGameResult(GameResult.LOSE);
+                lobby.saveResultsToDatabase(player.getSessionID());
+            }
+        }
+        for (Player inGamePlayer : playersInGame) generator.sendGameResult(inGamePlayer.getGameResult(), inGamePlayer.getSessionID());
+    }
+
+    private boolean checkForDraw(){
+        for (Player player : playersInGame) {
+            if(player.getPoints() == playersInGame.get(0).getPoints()){
+                player.setGameResult(GameResult.DRAW);
+                lobby.saveResultsToDatabase(player.getSessionID());
+            }
+            else return false;
+        }
+        return true;
     }
 
     private void sendMessageToPlayers(String message){

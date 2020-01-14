@@ -19,8 +19,6 @@ a
 1memorymodels/src/main/java/models/Coordinate.java,6\2\62ac5bec02c109ecde659eb978f430ed75bb3c83
 [
 +memorymodels/src/main/java/models/Card.java,c\8\c8533e8538d5e64789da67b7e128d0f213021980
-\
-,memorymodels/src/main/java/models/Stats.java,9\c\9c62823aacd3127c4caf0a8b3bdf6791c0eb0e5c
 ^
 .memoryclient/src/main/java/gui/IMemoryGui.java,1\4\14c47ca12045392f47eeae285cbaf35d5a77756d
 D

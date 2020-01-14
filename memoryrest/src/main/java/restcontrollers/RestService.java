@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import rest.entities.Player;
 import rest.repository.UserRepository;
 
+import java.util.Optional;
+
 @Service
 public class RestService {
 
@@ -25,5 +27,13 @@ public class RestService {
 
     public Player getUserByCredentials(String username, String password){
         return repository.findUserByCredentials(username, password);
+    }
+
+    public void updatePlayer(Player player){
+        repository.updatePlayer(player.getWins(), player.getDraws(), player.getLosses(), player.getScore());
+    }
+
+    public Player getUserById(int id){
+        return repository.findById(id).orElse(null);
     }
 }

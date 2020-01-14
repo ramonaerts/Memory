@@ -1,5 +1,6 @@
 package logic;
 
+import enums.GameResult;
 import enums.GameState;
 import interfaces.*;
 import models.*;
@@ -54,7 +55,7 @@ public class MemoryLogic implements IGameLogic {
         Player player = getPlayer(sessionId);
         assert player != null;
 
-        Game game = new Game(this.generator);
+        Game game = new Game(this.generator, this);
         game.setGameID(createGameID());
         player.setInGameNr(1);
         game.playerStartsGame(player);
@@ -97,6 +98,13 @@ public class MemoryLogic implements IGameLogic {
         return null;
     }
 
+    private Game getGame(int gameId){
+        for (Game game : activeGames) {
+            if (game.getGameID() == gameId) return game;
+        }
+        return null;
+    }
+
     private void updatePlayerGameState(Player player, GameState gameState)
     {
         for (Player onlineplayer : onlinePlayers)
@@ -127,5 +135,14 @@ public class MemoryLogic implements IGameLogic {
         {
             if (game.getGameID() == gameId) game.playerTurnsCard(sessionId, x, y);
         }
+    }
+
+    public void saveResultsToDatabase(String sessionId){
+        Player player = getPlayer(sessionId);
+
+        assert player != null;
+        if (player.getGameResult() == GameResult.WIN) player.setWins(player.getWins()+1);
+        if (player.getGameResult() == GameResult.DRAW) player.setDraws(player.getDraws()+1);
+        if (player.getGameResult() == GameResult.LOSE) player.setLosses(player.getLosses()+1);
     }
 }

@@ -3,11 +3,10 @@ package restcontrollers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import rest.entities.Player;
+
+import java.util.Optional;
 
 @Controller
 @RequestMapping(path="/memory")
@@ -50,5 +49,14 @@ public class RestController {
         Player dtoPlayer = service.getUserByCredentials(username, password);
         if(dtoPlayer == null) return null;
         return modelMapper.map(dtoPlayer, models.Player.class);
+    }
+
+    @PutMapping(path="/user/{id}")
+    public @ResponseBody void updateUserStats(@RequestParam("id") int id, models.Player player){
+        Player currentPlayer = service.getUserById(id);
+        currentPlayer.setWins(player.getWins());
+        currentPlayer.setDraws(player.getDraws());
+        currentPlayer.setLosses(player.getLosses());
+        service.updatePlayer(currentPlayer);
     }
 }
