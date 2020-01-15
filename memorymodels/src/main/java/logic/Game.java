@@ -40,6 +40,14 @@ public class Game {
         this.gameId = gameId;
     }
 
+    public boolean getGamestarted() {
+        return gamestarted;
+    }
+
+    public List<Card> getCards() {
+        return cards;
+    }
+
     public List<Player> getPlayersInGame() {
         return playersInGame;
     }
@@ -165,7 +173,7 @@ public class Game {
             for (Player player : playersInGame) {
                 if(player.getPlayerID() == winner.getPlayerID()) player.setGameResult(GameResult.WIN);
                 else player.setGameResult(GameResult.LOSE);
-                lobby.saveResultsToDatabase(player.getSessionID());
+                lobby.saveResults(player.getSessionID());
             }
         }
         for (Player inGamePlayer : playersInGame) generator.sendGameResult(inGamePlayer.getGameResult(), inGamePlayer.getSessionID());
@@ -175,7 +183,7 @@ public class Game {
         for (Player player : playersInGame) {
             if(player.getPoints() == playersInGame.get(0).getPoints()){
                 player.setGameResult(GameResult.DRAW);
-                lobby.saveResultsToDatabase(player.getSessionID());
+                lobby.saveResults(player.getSessionID());
             }
             else return false;
         }

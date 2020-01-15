@@ -1,5 +1,7 @@
 package memoryunittest;
 
+import enums.CardState;
+import enums.GameResult;
 import enums.GameState;
 import interfaces.IGameLogic;
 import interfaces.IRestClient;
@@ -8,6 +10,7 @@ import logic.Game;
 import logic.MemoryLogic;
 import mocks.MessageGeneratorMock;
 import mocks.RestClientMock;
+import models.Card;
 import models.Player;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -19,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MemoryTests {
 
     private MemoryLogic memorylogic;
+    private Game game;
     private IServerMessageGenerator mockGenerator;
 
     @BeforeEach
@@ -26,6 +30,7 @@ public class MemoryTests {
         mockGenerator = new MessageGeneratorMock();
         IRestClient mockRestClient = new RestClientMock();
         memorylogic = new MemoryLogic(mockGenerator, mockRestClient);
+        game = new Game(mockGenerator, memorylogic);
     }
 
     @Test
@@ -103,6 +108,26 @@ public class MemoryTests {
     }
 
     @Test
+    void getGameTest(){
+        Game game = new Game(mockGenerator, memorylogic);
+        game.setGameID(1);
+
+        memorylogic.getActiveGames().add(game);
+
+        assertEquals(game, memorylogic.getGame(1));
+    }
+
+    @Test
+    void getGameDoesNotExistTest(){
+        Game game = new Game(mockGenerator, memorylogic);
+        game.setGameID(1);
+
+        memorylogic.getActiveGames().add(game);
+
+        assertNull(memorylogic.getGame(4));
+    }
+
+    @Test
     void getPlayerBySessionIdTest(){
         Player expectedPlayer = new Player("Ramon", "Aerts", "1");
         memorylogic.loginPlayer(expectedPlayer.getUsername(), expectedPlayer.getPassword(), "1");
@@ -130,6 +155,8 @@ public class MemoryTests {
         memorylogic.startGame("1");
 
         assertEquals(1, memorylogic.getActiveGames().size());
+        assertEquals(1, memorylogic.getGame(1).getPlayersInGame().size());
+        assertFalse(memorylogic.getGame(1).getGamestarted());
         assertEquals(GameState.PLAYING, memorylogic.getPlayer("1").getGameState());
     }
 
@@ -148,5 +175,101 @@ public class MemoryTests {
         memorylogic.startGame("1");
         memorylogic.loginPlayer("user", "password", "2");
         memorylogic.joinGame("2");
+
+        assertEquals(1, memorylogic.getActiveGames().size());
+        assertEquals(2, memorylogic.getGame(1).getPlayersInGame().size());
+        assertTrue(memorylogic.getGame(1).getGamestarted());
+        assertEquals(GameState.PLAYING, memorylogic.getPlayer("2").getGameState());
+        assertEquals(18, memorylogic.getGame(1).getCards().size());
+    }
+
+    @Test
+    void joinGameFailedTest(){
+        memorylogic.loginPlayer("user", "password", "2");
+        memorylogic.joinGame("2");
+
+        assertEquals(0, memorylogic.getActiveGames().size());
+        assertEquals(GameState.LOBBY, memorylogic.getPlayer("2").getGameState());
+    }
+
+    @Test
+    void joinGamePlayerDoesntExistTest(){
+        memorylogic.loginPlayer("user", "password", "2");
+        memorylogic.joinGame("5");
+
+        assertEquals(0, memorylogic.getActiveGames().size());
+        assertEquals(GameState.LOBBY, memorylogic.getPlayer("2").getGameState());
+    }
+
+    @Test
+    void saveResultAfterDrawTest(){
+        memorylogic.loginPlayer("Ramon", "Aerts", "1");
+        memorylogic.getPlayer("1").setGameResult(GameResult.DRAW);
+
+        memorylogic.saveResults("1");
+
+        assertEquals(10, memorylogic.getPlayer("1").getWins());
+        assertEquals(11, memorylogic.getPlayer("1").getDraws());
+        assertEquals(10, memorylogic.getPlayer("1").getLosses());
+    }
+
+    @Test
+    void saveResultAfterLoseTest(){
+        memorylogic.loginPlayer("Ramon", "Aerts", "1");
+        memorylogic.getPlayer("1").setGameResult(GameResult.LOSE);
+
+        memorylogic.saveResults("1");
+
+        assertEquals(10, memorylogic.getPlayer("1").getWins());
+        assertEquals(10, memorylogic.getPlayer("1").getDraws());
+        assertEquals(11, memorylogic.getPlayer("1").getLosses());
+    }
+
+    @Test
+    void saveResultAfterWinTest(){
+        memorylogic.loginPlayer("Ramon", "Aerts", "1");
+        memorylogic.getPlayer("1").setGameResult(GameResult.WIN);
+
+        memorylogic.saveResults("1");
+
+        assertEquals(11, memorylogic.getPlayer("1").getWins());
+        assertEquals(10, memorylogic.getPlayer("1").getDraws());
+        assertEquals(10, memorylogic.getPlayer("1").getLosses());
+    }
+
+    @Test
+    void turnCardCompleteTest(){
+        memorylogic.loginPlayer("Ramon", "Aerts", "1");
+        memorylogic.startGame("1");
+        memorylogic.loginPlayer("user", "password", "2");
+        memorylogic.joinGame("2");
+
+        memorylogic.turnCard(1,1,1,"1");
+
+        for (Card card : memorylogic.getGame(1).getCards()) {
+            if (card.getCoordinate().getX() == 1 && card.getCoordinate().getY() == 1){
+                assertEquals(CardState.TURNED, card.getCardState());
+            }
+        }
+    }
+
+    @Test
+    void turnCardsOnAllSpacesCompleteTest(){
+        memorylogic.loginPlayer("Ramon", "Aerts", "1");
+        memorylogic.startGame("1");
+        memorylogic.loginPlayer("user", "password", "2");
+        memorylogic.joinGame("2");
+
+        for (int y=0; y < 3; y++) {
+            for (int x=0; x < 6; x++) {
+                memorylogic.turnCard(x,y,1,"1");
+
+                for (Card card : memorylogic.getGame(1).getCards()) {
+                    if (card.getCoordinate().getX() == x && card.getCoordinate().getY() == y){
+                        assertEquals(CardState.TURNED, card.getCardState());
+                    }
+                }
+            }
+        }
     }
 }

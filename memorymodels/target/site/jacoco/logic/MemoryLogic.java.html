@@ -88,8 +88,8 @@ public class MemoryLogic implements IGameLogic {
     {
 <span class="fc" id="L89">        Player player = getPlayer(sessionId);</span>
 
-<span class="pc bpc" id="L91" title="1 of 2 branches missed.">        if(player != null){</span>
-<span class="pc bpc" id="L92" title="1 of 2 branches missed.">            for (Game game : activeGames) {</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">        if(player != null){</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">            for (Game game : activeGames) {</span>
 <span class="pc bpc" id="L93" title="1 of 2 branches missed.">                if (game.getPlayersInGame().size() != 2)</span>
                 {
 <span class="fc" id="L95">                    updatePlayerGameState(player, GameState.PLAYING);</span>
@@ -100,10 +100,10 @@ public class MemoryLogic implements IGameLogic {
 <span class="fc" id="L100">                    return;</span>
                 }
 <span class="nc" id="L102">            }</span>
-<span class="nc" id="L103">            generator.sendGameJoinResult(false, 0, null, sessionId);</span>
+<span class="fc" id="L103">            generator.sendGameJoinResult(false, 0, null, sessionId);</span>
         }
-<span class="nc" id="L105">        else generator.sendGameJoinResult(false, 0, null, sessionId);</span>
-<span class="nc" id="L106">    }</span>
+<span class="fc" id="L105">        else generator.sendGameJoinResult(false, 0, null, sessionId);</span>
+<span class="fc" id="L106">    }</span>
 
     public Player getPlayer(String sessionId) {
 <span class="fc bfc" id="L109" title="All 2 branches covered.">        for (Player player : onlinePlayers) {</span>
@@ -112,11 +112,11 @@ public class MemoryLogic implements IGameLogic {
 <span class="fc" id="L112">        return null;</span>
     }
 
-    private Game getGame(int gameId){
-<span class="nc bnc" id="L116" title="All 2 branches missed.">        for (Game game : activeGames) {</span>
-<span class="nc bnc" id="L117" title="All 2 branches missed.">            if (game.getGameID() == gameId) return game;</span>
-<span class="nc" id="L118">        }</span>
-<span class="nc" id="L119">        return null;</span>
+    public Game getGame(int gameId){
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        for (Game game : activeGames) {</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">            if (game.getGameID() == gameId) return game;</span>
+<span class="fc" id="L118">        }</span>
+<span class="fc" id="L119">        return null;</span>
     }
 
     private void updatePlayerGameState(Player player, GameState gameState) {
@@ -141,20 +141,20 @@ public class MemoryLogic implements IGameLogic {
 
     public void turnCard(int x, int y, int gameId, String sessionId)
     {
-<span class="nc bnc" id="L144" title="All 2 branches missed.">        for (Game game : activeGames) {</span>
-<span class="nc bnc" id="L145" title="All 2 branches missed.">            if (game.getGameID() == gameId) game.playerTurnsCard(sessionId, x, y);</span>
-<span class="nc" id="L146">        }</span>
-<span class="nc" id="L147">    }</span>
+<span class="fc bfc" id="L144" title="All 2 branches covered.">        for (Game game : activeGames) {</span>
+<span class="pc bpc" id="L145" title="1 of 2 branches missed.">            if (game.getGameID() == gameId) game.playerTurnsCard(sessionId, x, y);</span>
+<span class="fc" id="L146">        }</span>
+<span class="fc" id="L147">    }</span>
 
-    public void saveResultsToDatabase(String sessionId){
-<span class="nc" id="L150">        Player player = getPlayer(sessionId);</span>
+    public void saveResults(String sessionId){
+<span class="fc" id="L150">        Player player = getPlayer(sessionId);</span>
 
-<span class="nc bnc" id="L152" title="All 2 branches missed.">        if (player != null){</span>
-<span class="nc bnc" id="L153" title="All 2 branches missed.">            if (player.getGameResult() == GameResult.WIN) player.setWins(player.getWins()+1);</span>
-<span class="nc bnc" id="L154" title="All 2 branches missed.">            if (player.getGameResult() == GameResult.DRAW) player.setDraws(player.getDraws()+1);</span>
-<span class="nc bnc" id="L155" title="All 2 branches missed.">            if (player.getGameResult() == GameResult.LOSE) player.setLosses(player.getLosses()+1);</span>
+<span class="pc bpc" id="L152" title="1 of 2 branches missed.">        if (player != null){</span>
+<span class="fc bfc" id="L153" title="All 2 branches covered.">            if (player.getGameResult() == GameResult.WIN) player.setWins(player.getWins()+1);</span>
+<span class="fc bfc" id="L154" title="All 2 branches covered.">            if (player.getGameResult() == GameResult.DRAW) player.setDraws(player.getDraws()+1);</span>
+<span class="fc bfc" id="L155" title="All 2 branches covered.">            if (player.getGameResult() == GameResult.LOSE) player.setLosses(player.getLosses()+1);</span>
         }
 <span class="nc" id="L157">        else generator.sendGameFeedback(&quot;Something went wrong with saving, stats couldnt be saven&quot;, sessionId);</span>
-<span class="nc" id="L158">    }</span>
+<span class="fc" id="L158">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

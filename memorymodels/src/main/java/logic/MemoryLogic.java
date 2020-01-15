@@ -112,7 +112,7 @@ public class MemoryLogic implements IGameLogic {
         return null;
     }
 
-    private Game getGame(int gameId){
+    public Game getGame(int gameId){
         for (Game game : activeGames) {
             if (game.getGameID() == gameId) return game;
         }
@@ -146,7 +146,7 @@ public class MemoryLogic implements IGameLogic {
         }
     }
 
-    public void saveResultsToDatabase(String sessionId){
+    public void saveResults(String sessionId){
         Player player = getPlayer(sessionId);
 
         if (player != null){
