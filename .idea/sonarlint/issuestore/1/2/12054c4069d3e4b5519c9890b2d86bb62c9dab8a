@@ -1,12 +1,12 @@
 
-dsquid:S2184—"@Cast one of the operands of this integer division to a "double".(¾†Øûÿÿÿÿ8–ùéàö-
-?squid:S1170#"!Make this final field static too.(¼ ú‘8çÊçˆ÷-
-{squid:S1450,"XRemove the "gameStage" field and declare it as a local variable in the relevant methods.(İÄÈ³ıÿÿÿÿ8–ùéàö-
-Œsquid:S1192^"iDefine a constant instead of duplicating this literal "No connection to server, try again later" 4 times.(ˆ×Ş×øÿÿÿÿ8–ùéàö-
-esquid:UselessImportCheck"5Remove this unused import 'javafx.scene.layout.VBox'.(íÆáÂùÿÿÿÿ8ÏµÄ«ú-
-asquid:S2184Ë"BCast one of the operands of this addition operation to a "double".(ğÆ€8’×òäö-
-tsquid:S00116""URename this field "INPUTWIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã—»·8¶ŒÅàö-
-dsquid:S2184˜"@Cast one of the operands of this integer division to a "double".(Óıèşÿÿÿÿ8ô§èäö-
-?squid:S1170""!Make this final field static too.(Ã—»·8¶ŒÅàö-
 tsquid:S00116#"URename this field "BORDERSIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ ú‘8çÊçˆ÷-
+esquid:UselessImportCheck"5Remove this unused import 'javafx.scene.layout.VBox'.(íÆáÂùÿÿÿÿ8ÏµÄ«ú-
+{squid:S1450,"XRemove the "gameStage" field and declare it as a local variable in the relevant methods.(İÄÈ³ıÿÿÿÿ8–ùéàö-
 ssquid:S1450%"URemove the "socket" field and declare it as a local variable in the relevant methods.(Ë±û³8ÿğù«ú-
+asquid:S2184Ë"BCast one of the operands of this addition operation to a "double".(ğÆ€8’×òäö-
+dsquid:S2184˜"@Cast one of the operands of this integer division to a "double".(Óıèşÿÿÿÿ8ô§èäö-
+tsquid:S00116""URename this field "INPUTWIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã—»·8¶ŒÅàö-
+?squid:S1170#"!Make this final field static too.(¼ ú‘8çÊçˆ÷-
+?squid:S1170""!Make this final field static too.(Ã—»·8¶ŒÅàö-
+Œsquid:S1192^"iDefine a constant instead of duplicating this literal "No connection to server, try again later" 4 times.(ˆ×Ş×øÿÿÿÿ8–ùéàö-
+dsquid:S2184—"@Cast one of the operands of this integer division to a "double".(¾†Øûÿÿÿÿ8–ùéàö-

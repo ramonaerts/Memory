@@ -176,3 +176,9 @@ H
 0memorymodels/src/main/java/logic/CardTurner.java,e\3\e31f96309d5beb5f75f168ef2269fdcf6ebaccbc
 e
 5memoryrestclient/src/main/java/client/RestClient.java,a\c\ac892b07803a50b9799fb51d355bebb512df2d63
+j
+:memorymodels/src/test/java/mocks/MessageGeneratorMock.java,0\7\07006e4ce10a0ecb6f28de33e2389043eb4c9dc1
+d
+4memorymodels/src/test/java/mocks/RestClientMock.java,3\8\38bb01269bcecca212504d030516be38aac9d3b3
+j
+:memorymodels/src/test/java/memoryunittest/MemoryTests.java,6\1\61631f1bb4bb019679b61cf66a3a238cef1ac06a

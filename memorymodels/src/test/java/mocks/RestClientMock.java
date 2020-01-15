@@ -31,15 +31,16 @@ public class RestClientMock implements IRestClient {
 
     @Override
     public Object getPlayerByCredentials(String username, String password) {
-        if (username.equals(mockPlayer.getUsername()) && password.equals(mockPlayer.getPassword())) return mockPlayer;
-        else return null;
+        for (Player player : mockPlayers) {
+            if (username.equals(player.getUsername()) && password.equals(player.getPassword())) return player;
+        }
+        return null;
     }
 
     @Override
     public Object registerPlayer(String username, String password) {
         if (checkUsername(username)){
-            Player newPlayer = new Player(username, password, "4");
-            return newPlayer;
+            return new Player(username, password, "4");
         }
         else return null;
     }
