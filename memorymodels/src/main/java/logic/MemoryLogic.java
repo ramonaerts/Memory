@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MemoryLogic implements IGameLogic {
-    public List<Player> onlinePlayers = new ArrayList<>();
+    private List<Player> onlinePlayers = new ArrayList<>();
     private List<Game> activeGames = new ArrayList<>();
 
     private IServerMessageGenerator generator;
@@ -17,6 +17,10 @@ public class MemoryLogic implements IGameLogic {
     public MemoryLogic(IServerMessageGenerator generator, IRestClient restClient) {
         this.generator = generator;
         this.restClient = restClient;
+    }
+
+    public List<Player> getOnlinePlayers() {
+        return onlinePlayers;
     }
 
     @Override

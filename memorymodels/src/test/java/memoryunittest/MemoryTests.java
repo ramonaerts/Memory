@@ -16,19 +16,35 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MemoryTests {
 
     private MemoryLogic memorylogic;
-    private IServerMessageGenerator mockgenerator;
-    private IRestClient mockrestclient;
 
     @BeforeEach
     void setUp(){
-        mockgenerator = new MessageGeneratorMock();
-        mockrestclient = new RestClientMock();
-        memorylogic = new MemoryLogic(mockgenerator, mockrestclient);
+        IServerMessageGenerator mockGenerator = new MessageGeneratorMock();
+        IRestClient mockRestClient = new RestClientMock();
+        memorylogic = new MemoryLogic(mockGenerator, mockRestClient);
     }
 
     @Test
-    void loginPlayerTest(){
+    void loginPlayerCorrectValues(){
         memorylogic.loginPlayer("Ramon", "Aerts", "1");
-        assertEquals(1, memorylogic.onlinePlayers.size());
+        assertEquals(1, memorylogic.getOnlinePlayers().size());
+    }
+
+    @Test
+    void loginPlayerWrongPassword(){
+        memorylogic.loginPlayer("Ramon", "wrongpassword", "1");
+        assertEquals(0, memorylogic.getOnlinePlayers().size());
+    }
+
+    @Test
+    void loginPlayerWrongUsername(){
+        memorylogic.loginPlayer("wrongusername", "Aerts", "1");
+        assertEquals(0, memorylogic.getOnlinePlayers().size());
+    }
+
+    @Test
+    void loginPlayerWrongUsernameAndPassword(){
+        memorylogic.loginPlayer("wrongusername", "wrongpassword", "1");
+        assertEquals(0, memorylogic.getOnlinePlayers().size());
     }
 }

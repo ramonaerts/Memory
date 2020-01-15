@@ -7,38 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorymodels/src/test/java/mocks/MessageGeneratorMock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memorymodels/src/test/java/mocks/RestClientMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95478f80850243e1c98311a2cfa828f8c9fb0c54" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95478f80850243e1c98311a2cfa828f8c9fb0c54" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestclient/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/.sonar_lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/test-classes/memoryunittest/MemoryTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/test-classes/memoryunittest/MemoryTests.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,29 +94,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MemoryTests.loginPlayerTest">
-    <configuration name="Memory" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.Memory" />
-      <module name="memoryclient" />
+  <component name="RunManager" selected="JUnit.MemoryTests.loginPlayerWrongUsernameAndPassword">
+    <configuration name="MemoryTests.loginPlayerFalseValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="memorymodels" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.*" />
+          <option name="PATTERN" value="memoryunittest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemorySocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.MemorySocketServer" />
-      <module name="memorywebsocketserver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="interfaces.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="memoryunittest" />
+      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
+      <option name="METHOD_NAME" value="loginPlayerFalseValues" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,6 +122,54 @@
       <option name="PACKAGE_NAME" value="memoryunittest" />
       <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
       <option name="METHOD_NAME" value="loginPlayerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemoryTests.loginPlayerWrongPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="memorymodels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="memoryunittest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="memoryunittest" />
+      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
+      <option name="METHOD_NAME" value="loginPlayerWrongPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemoryTests.loginPlayerWrongUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="memorymodels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="memoryunittest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="memoryunittest" />
+      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
+      <option name="METHOD_NAME" value="loginPlayerWrongUsername" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemoryTests.loginPlayerWrongUsernameAndPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="memorymodels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="memoryunittest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="memoryunittest" />
+      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
+      <option name="METHOD_NAME" value="loginPlayerWrongUsernameAndPassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -211,31 +222,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemoryRestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="memoryrest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="rest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="rest.MemoryRestApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.Memory" />
-      <item itemvalue="Application.MemorySocketServer" />
-      <item itemvalue="Spring Boot.MemoryRestApplication" />
       <item itemvalue="JUnit.MemoryTests.loginPlayerTest" />
+      <item itemvalue="JUnit.MemoryTests.loginPlayerFalseValues" />
+      <item itemvalue="JUnit.MemoryTests.loginPlayerWrongPassword" />
+      <item itemvalue="JUnit.MemoryTests.loginPlayerWrongUsername" />
+      <item itemvalue="JUnit.MemoryTests.loginPlayerWrongUsernameAndPassword" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MemoryTests.loginPlayerWrongUsernameAndPassword" />
+        <item itemvalue="JUnit.MemoryTests.loginPlayerWrongUsername" />
+        <item itemvalue="JUnit.MemoryTests.loginPlayerWrongPassword" />
+        <item itemvalue="JUnit.MemoryTests.loginPlayerFalseValues" />
         <item itemvalue="JUnit.MemoryTests.loginPlayerTest" />
-        <item itemvalue="Application.Memory" />
-        <item itemvalue="Application.MemorySocketServer" />
-        <item itemvalue="Spring Boot.MemoryRestApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +265,7 @@
       <workItem from="1578931057494" duration="546000" />
       <workItem from="1578990155792" duration="11308000" />
       <workItem from="1579020721640" duration="6700000" />
-      <workItem from="1579076839291" duration="10939000" />
+      <workItem from="1579076839291" duration="13682000" />
     </task>
     <servers />
   </component>
