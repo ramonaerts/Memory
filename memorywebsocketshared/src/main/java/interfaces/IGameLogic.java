@@ -1,5 +1,7 @@
 package interfaces;
 
+import java.util.List;
+
 public interface IGameLogic {
 
     void loginPlayer(String username, String password, String sessionId);

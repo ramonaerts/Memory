@@ -7,58 +7,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorymodels/src/test/java/mocks/MessageGeneratorMock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorymodels/src/test/java/mocks/RestClientMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95478f80850243e1c98311a2cfa828f8c9fb0c54" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95478f80850243e1c98311a2cfa828f8c9fb0c54" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/META-INF/memoryclient.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/META-INF/memorymodels.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/models/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/models/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/models/Stats.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/classes/META-INF/memoryrest.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/classes/restcontrollers/RestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/classes/restcontrollers/RestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestclient/target/classes/client/RestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/classes/client/RestClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/client/ClientWebSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/client/ClientWebSocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryrestclient/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/META-INF/memorywebsocketshared.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/classes/META-INF/messaging.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/messaging/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/sonar/report-task.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/.sonar_lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,9 +87,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zeeslag2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RockPaperScissors-master" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29246345" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -126,6 +106,7 @@
     <option name="myCommands">
       <command value="mvn clean install sonar:sonar" />
       <command value="mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar" />
+      <command value="mvn clean verify" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -140,7 +121,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Memory">
+  <component name="RunManager" selected="JUnit.MemoryTests.loginPlayerTest">
     <configuration name="Memory" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.Memory" />
       <module name="memoryclient" />
@@ -163,6 +144,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemoryTests.loginPlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="memorymodels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="memoryunittest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="memoryunittest" />
+      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
+      <option name="METHOD_NAME" value="loginPlayerTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -231,9 +228,11 @@
       <item itemvalue="Application.Memory" />
       <item itemvalue="Application.MemorySocketServer" />
       <item itemvalue="Spring Boot.MemoryRestApplication" />
+      <item itemvalue="JUnit.MemoryTests.loginPlayerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MemoryTests.loginPlayerTest" />
         <item itemvalue="Application.Memory" />
         <item itemvalue="Application.MemorySocketServer" />
         <item itemvalue="Spring Boot.MemoryRestApplication" />
@@ -265,7 +264,8 @@
       <workItem from="1578573383760" duration="35466000" />
       <workItem from="1578931057494" duration="546000" />
       <workItem from="1578990155792" duration="11308000" />
-      <workItem from="1579020721640" duration="6505000" />
+      <workItem from="1579020721640" duration="6700000" />
+      <workItem from="1579076839291" duration="10939000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <properties>
+        <openfxVersion>11.0.2</openfxVersion>
+        <junit-jupiter-api.version>5.3.2</junit-jupiter-api.version>
+        <logback-classic.version>1.2.3</logback-classic.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -26,6 +32,18 @@
     <artifactId>memorymodels</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit-jupiter-api.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-jupiter-api.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>Memory</groupId>
             <artifactId>memorywebsocketshared</artifactId>

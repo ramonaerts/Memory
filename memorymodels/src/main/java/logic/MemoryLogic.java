@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MemoryLogic implements IGameLogic {
-    private List<Player> onlinePlayers = new ArrayList<>();
+    public List<Player> onlinePlayers = new ArrayList<>();
     private List<Game> activeGames = new ArrayList<>();
 
     private IServerMessageGenerator generator;
@@ -89,7 +89,7 @@ public class MemoryLogic implements IGameLogic {
         generator.sendGameJoinResult(false, 0, null, sessionId);
     }
 
-    private Player getPlayer(String sessionId)
+    public Player getPlayer(String sessionId)
     {
         for (Player player : onlinePlayers)
         {
