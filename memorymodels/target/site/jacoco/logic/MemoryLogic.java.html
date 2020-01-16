@@ -149,12 +149,12 @@ public class MemoryLogic implements IGameLogic {
     public void saveResults(String sessionId){
 <span class="fc" id="L150">        Player player = getPlayer(sessionId);</span>
 
-<span class="pc bpc" id="L152" title="1 of 2 branches missed.">        if (player != null){</span>
+<span class="fc bfc" id="L152" title="All 2 branches covered.">        if (player != null){</span>
 <span class="fc bfc" id="L153" title="All 2 branches covered.">            if (player.getGameResult() == GameResult.WIN) player.setWins(player.getWins()+1);</span>
 <span class="fc bfc" id="L154" title="All 2 branches covered.">            if (player.getGameResult() == GameResult.DRAW) player.setDraws(player.getDraws()+1);</span>
 <span class="fc bfc" id="L155" title="All 2 branches covered.">            if (player.getGameResult() == GameResult.LOSE) player.setLosses(player.getLosses()+1);</span>
         }
-<span class="nc" id="L157">        else generator.sendGameFeedback(&quot;Something went wrong with saving, stats couldnt be saven&quot;, sessionId);</span>
+<span class="fc" id="L157">        else generator.sendGameFeedback(&quot;Something went wrong with saving, stats couldnt be saven&quot;, sessionId);</span>
 <span class="fc" id="L158">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

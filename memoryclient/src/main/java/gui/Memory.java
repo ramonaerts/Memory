@@ -276,8 +276,8 @@ public class Memory extends Application implements IMemoryGui {
         memoryCards = new Button[6][3];
         for (int i = 0; i < 6; i++){
             for (int j = 0; j < 3; j++){
-                double x = memoryField.getX() + i * (700/6) + 2;
-                double y = memoryField.getY() + j * (500/3) + 2;
+                double x = memoryField.getX() + i * (700/(double)6) + 2;
+                double y = memoryField.getY() + j * (500/(double)3) + 2;
                 Button card = new Button();
                 card.setLayoutX(x);
                 card.setLayoutY(y);
@@ -328,7 +328,7 @@ public class Memory extends Application implements IMemoryGui {
 
         Label opponentScoreLabel = new Label("Points: ");
         opponentScoreLabel.setLayoutX(x);
-        opponentScoreLabel.setLayoutY(y + 25);
+        opponentScoreLabel.setLayoutY(y + (double)25);
         opponentScoreLabel.setFont(statsFont);
         root.getChildren().add(opponentScoreLabel);
     }

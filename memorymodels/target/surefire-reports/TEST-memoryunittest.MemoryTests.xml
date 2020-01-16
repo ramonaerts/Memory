@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="memoryunittest.MemoryTests" time="0.193" tests="26" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="memoryunittest.MemoryTests" time="0.15" tests="39" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Gebruiker\IdeaProjects\memory\memorymodels\target\test-classes;C:\Users\Gebruiker\IdeaProjects\memory\memorymodels\target\classes;C:\Users\Gebruiker\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.3.2\junit-jupiter-api-5.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Gebruiker\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Gebruiker\.m2\repository\org\junit\platform\junit-platform-commons\1.3.2\junit-platform-commons-1.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.3.2\junit-jupiter-engine-5.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\junit\platform\junit-platform-engine\1.3.2\junit-platform-engine-1.3.2.jar;C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\target\memorywebsocketshared-1.0-SNAPSHOT.jar;"/>
+    <property name="java.class.path" value="C:\Users\Gebruiker\IdeaProjects\memory\memorymodels\target\test-classes;C:\Users\Gebruiker\IdeaProjects\memory\memorymodels\target\classes;C:\Users\Gebruiker\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.3.2\junit-jupiter-api-5.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Gebruiker\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Gebruiker\.m2\repository\org\junit\platform\junit-platform-commons\1.3.2\junit-platform-commons-1.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.3.2\junit-jupiter-engine-5.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\junit\platform\junit-platform-engine\1.3.2\junit-platform-engine-1.3.2.jar;C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\target\memorywebsocketshared-1.0-SNAPSHOT.jar;C:\Users\Gebruiker\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;"/>
     <property name="java.vm.vendor" value="JetBrains s.r.o"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -17,9 +17,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="NL"/>
     <property name="sun.boot.library.path" value="C:\Users\Gebruiker\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\192.6262.58\jbr\bin"/>
-    <property name="sun.java.command" value="C:\Users\GEBRUI~1\AppData\Local\Temp\surefire16592289928385794000\surefirebooter16036240240769354690.jar C:\Users\Gebruiker\AppData\Local\Temp\surefire16592289928385794000 2020-01-15T18-43-00_727-jvmRun1 surefire5799712831436868946tmp surefire_05086653607114036657tmp"/>
+    <property name="sun.java.command" value="C:\Users\GEBRUI~1\AppData\Local\Temp\surefire17063160608308921508\surefirebooter7485005126901815613.jar C:\Users\Gebruiker\AppData\Local\Temp\surefire17063160608308921508 2020-01-16T14-43-59_845-jvmRun1 surefire9361245839203952497tmp surefire_08260553815571311722tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Gebruiker\IdeaProjects\memory\memorymodels\target\test-classes;C:\Users\Gebruiker\IdeaProjects\memory\memorymodels\target\classes;C:\Users\Gebruiker\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.3.2\junit-jupiter-api-5.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Gebruiker\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Gebruiker\.m2\repository\org\junit\platform\junit-platform-commons\1.3.2\junit-platform-commons-1.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.3.2\junit-jupiter-engine-5.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\junit\platform\junit-platform-engine\1.3.2\junit-platform-engine-1.3.2.jar;C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\target\memorywebsocketshared-1.0-SNAPSHOT.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Gebruiker\IdeaProjects\memory\memorymodels\target\test-classes;C:\Users\Gebruiker\IdeaProjects\memory\memorymodels\target\classes;C:\Users\Gebruiker\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.3.2\junit-jupiter-api-5.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Gebruiker\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Gebruiker\.m2\repository\org\junit\platform\junit-platform-commons\1.3.2\junit-platform-commons-1.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.3.2\junit-jupiter-engine-5.3.2.jar;C:\Users\Gebruiker\.m2\repository\org\junit\platform\junit-platform-engine\1.3.2\junit-platform-engine-1.3.2.jar;C:\Users\Gebruiker\IdeaProjects\memory\memorywebsocketshared\target\memorywebsocketshared-1.0-SNAPSHOT.jar;C:\Users\Gebruiker\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Gebruiker"/>
     <property name="user.language" value="nl"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\GEBRUI~1\AppData\Local\Temp\surefire16592289928385794000\surefirebooter16036240240769354690.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\GEBRUI~1\AppData\Local\Temp\surefire17063160608308921508\surefirebooter7485005126901815613.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.3+12-b304.39"/>
@@ -60,30 +60,43 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="turnCardsOnAllSpacesCompleteTest" classname="memoryunittest.MemoryTests" time="0.078"/>
-  <testcase name="LoginOneWrongOneCorrect" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="saveResultAfterLoseTest" classname="memoryunittest.MemoryTests" time="0.013"/>
-  <testcase name="joinGamePlayerDoesntExistTest" classname="memoryunittest.MemoryTests" time="0.008"/>
-  <testcase name="startGameTest" classname="memoryunittest.MemoryTests" time="0"/>
+  <testcase name="checkForLoseTest" classname="memoryunittest.MemoryTests" time="0.071"/>
+  <testcase name="playerTurnsCardWhichIsTurnedTest" classname="memoryunittest.MemoryTests" time="0"/>
+  <testcase name="turnCardsOnAllSpacesCompleteTest" classname="memoryunittest.MemoryTests" time="0"/>
+  <testcase name="LoginOneWrongOneCorrect" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="getPlayerInGameSecondTest" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="cardsDontMatchTest" classname="memoryunittest.MemoryTests" time="0.008"/>
+  <testcase name="saveResultAfterLoseTest" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="joinGamePlayerDoesntExistTest" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="getPlayerInGameFailedTest" classname="memoryunittest.MemoryTests" time="0.002"/>
+  <testcase name="startGameTest" classname="memoryunittest.MemoryTests" time="0.001"/>
   <testcase name="registerUserUsernameExists" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="loginPlayerWrongPassword" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="getPlayerBySessionIdTestFailed" classname="memoryunittest.MemoryTests" time="0.002"/>
+  <testcase name="cardsMatchTest" classname="memoryunittest.MemoryTests" time="0.002"/>
+  <testcase name="loginPlayerWrongPassword" classname="memoryunittest.MemoryTests" time="0.002"/>
+  <testcase name="getPlayerBySessionIdTestFailed" classname="memoryunittest.MemoryTests" time="0"/>
+  <testcase name="checkForDrawTest" classname="memoryunittest.MemoryTests" time="0"/>
+  <testcase name="playerTurnsCardTest" classname="memoryunittest.MemoryTests" time="0.003"/>
   <testcase name="loginPlayerCorrectValues" classname="memoryunittest.MemoryTests" time="0"/>
   <testcase name="startGameFailedTest" classname="memoryunittest.MemoryTests" time="0"/>
   <testcase name="saveResultAfterDrawTest" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="usernameIsAvailable" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="turnCardCompleteTest" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="getGameTest" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="gameIdTest" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="usernameIsNotAvailable" classname="memoryunittest.MemoryTests" time="0.01"/>
-  <testcase name="saveResultAfterWinTest" classname="memoryunittest.MemoryTests" time="0"/>
+  <testcase name="checkForDrawFalseTest" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="usernameIsAvailable" classname="memoryunittest.MemoryTests" time="0.002"/>
+  <testcase name="checkForWinTest" classname="memoryunittest.MemoryTests" time="0"/>
+  <testcase name="getPlayerInGameTest" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="turnCardCompleteTest" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="getGameTest" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="gameIdTest" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="usernameIsNotAvailable" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="saveResultAfterWinTest" classname="memoryunittest.MemoryTests" time="0.001"/>
   <testcase name="joinGameFailedTest" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="loginPlayerWrongUsernameAndPassword" classname="memoryunittest.MemoryTests" time="0.002"/>
+  <testcase name="loginPlayerWrongUsernameAndPassword" classname="memoryunittest.MemoryTests" time="0"/>
   <testcase name="getGameDoesNotExistTest" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="registerUserSuccess" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="joinGameTest" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="loginPlayerWrongUsername" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="loginTwoPlayersCorrectValues" classname="memoryunittest.MemoryTests" time="0"/>
-  <testcase name="usernameIsNotAvailable2" classname="memoryunittest.MemoryTests" time="0"/>
+  <testcase name="registerUserSuccess" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="joinGameTest" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="getOpponentTest" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="loginPlayerWrongUsername" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="loginTwoPlayersCorrectValues" classname="memoryunittest.MemoryTests" time="0.001"/>
+  <testcase name="usernameIsNotAvailable2" classname="memoryunittest.MemoryTests" time="0.001"/>
   <testcase name="getPlayerBySessionIdTest" classname="memoryunittest.MemoryTests" time="0"/>
+  <testcase name="playerTurnsCardWhileGameNotStartedTest" classname="memoryunittest.MemoryTests" time="0.001"/>
 </testsuite>

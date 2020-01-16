@@ -8,11 +8,13 @@ import java.net.URISyntaxException;
 import interfaces.IClientMessageProcessor;
 import interfaces.IClientWebSocket;
 import messages.*;
+import org.apache.log4j.Logger;
 import serialization.*;
 
 @ClientEndpoint
 public class ClientWebSocket implements IClientWebSocket
 {
+    static Logger log = Logger.getLogger(ClientWebSocket.class.getName());
 
     private Session session;
 
@@ -54,7 +56,7 @@ public class ClientWebSocket implements IClientWebSocket
 
         } catch (IOException | URISyntaxException | DeploymentException ex) {
             // do something useful eventually
-            ex.printStackTrace();
+            log.info(ex);
         }
     }
 
@@ -68,7 +70,7 @@ public class ClientWebSocket implements IClientWebSocket
 
         } catch (IOException ex){
             // do something useful eventually
-            ex.printStackTrace();
+            log.info(ex);
         }
     }
 

@@ -44,6 +44,10 @@ public class Game {
         return gamestarted;
     }
 
+    public void setGamestarted(boolean gamestarted) {
+        this.gamestarted = gamestarted;
+    }
+
     public List<Card> getCards() {
         return cards;
     }
@@ -52,7 +56,7 @@ public class Game {
         return playersInGame;
     }
 
-    private Player getPlayerBySession(String sessionId)
+    public Player getPlayerBySession(String sessionId)
     {
         for (Player player : playersInGame)
         {
@@ -93,29 +97,32 @@ public class Game {
             if (checkIfSpecificCardsTurned(2)) getOpponent(sessionId).setAbleToPlay(false);
             for (Card card : cards) {
                 if (card.getCoordinate().getX() == xPos && card.getCoordinate().getY() == yPos) {
-                    if (card.getCardState().equals(CardState.TURNED) || card.getCardState().equals(CardState.GUESSED)) {
-                        sendMessageToPlayers("This card has already been turned, choose another one");
-                        return;
-                    }
-                    player.setTurnAmount(player.getTurnAmount() + 1);
-                    card.setTurnedBy(player.getPlayerID());
-                    card.setCardState(CardState.TURNED);
-
-                    for (Player inGamePlayer : playersInGame) generator.sendCardInfo(card.getValue(), card.getCoordinate(), player.getInGameNr(), inGamePlayer.getSessionID());
-
-                    if (checkIfTwoCardsTurned(player)) checkIfCardsMatch(card, player);
-                    else return;
+                    handleCards(card, player);
                 }
             }
         }
         else generator.sendGameFeedback("The game will not start until a second player has joined", sessionId);
     }
 
-    private boolean checkIfTwoCardsTurned(Player player) {
+    public void handleCards(Card card, Player player){
+        if (card.getCardState().equals(CardState.TURNED) || card.getCardState().equals(CardState.GUESSED)) {
+            sendMessageToPlayers("This card has already been turned, choose another one");
+            return;
+        }
+        player.setTurnAmount(player.getTurnAmount() + 1);
+        card.setTurnedBy(player.getPlayerID());
+        card.setCardState(CardState.TURNED);
+
+        for (Player inGamePlayer : playersInGame) generator.sendCardInfo(card.getValue(), card.getCoordinate(), player.getInGameNr(), inGamePlayer.getSessionID());
+
+        if (checkIfTwoCardsTurned(player)) checkIfCardsMatch(card, player);
+    }
+
+    public boolean checkIfTwoCardsTurned(Player player) {
         return player.getTurnAmount() == 2;
     }
 
-    private void checkIfCardsMatch(Card turnedCard, Player player) {
+    public void checkIfCardsMatch(Card turnedCard, Player player) {
         player.setTurnAmount(0);
         for (Card card : cards) {
             if (card.getTurnedBy() == 0) continue;
@@ -136,7 +143,7 @@ public class Game {
         }
     }
 
-    private boolean checkIfSpecificCardsTurned(int amount){
+    public boolean checkIfSpecificCardsTurned(int amount){
         int cardAmount = 0;
 
         for (Card card : cards) {
@@ -154,7 +161,7 @@ public class Game {
         return wrongCards;
     }
 
-    private void turnCardsBack(Player player){
+    public void turnCardsBack(Player player){
         ExecutorService pool = Executors.newCachedThreadPool();
         for (Card card : getWrongCards(player))
         {
@@ -166,7 +173,7 @@ public class Game {
         pool.shutdown();
     }
 
-    private void checkForEndGame(){
+    public void checkForEndGame(){
         if (!checkIfSpecificCardsTurned(0)) return;
         if (!checkForDraw()){
             Player winner = Collections.max(playersInGame, Comparator.comparing(Player::getPoints));
@@ -179,9 +186,9 @@ public class Game {
         for (Player inGamePlayer : playersInGame) generator.sendGameResult(inGamePlayer.getGameResult(), inGamePlayer.getSessionID());
     }
 
-    private boolean checkForDraw(){
+    public boolean checkForDraw(){
         for (Player player : playersInGame) {
-            if(player.getPoints() == playersInGame.get(0).getPoints()){
+            if(player.getPoints() == getOpponent(player.getSessionID()).getPoints()){
                 player.setGameResult(GameResult.DRAW);
                 lobby.saveResults(player.getSessionID());
             }

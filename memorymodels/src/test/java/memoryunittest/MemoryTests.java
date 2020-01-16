@@ -6,16 +6,21 @@ import enums.GameState;
 import interfaces.IGameLogic;
 import interfaces.IRestClient;
 import interfaces.IServerMessageGenerator;
+import javafx.scene.shape.DrawMode;
 import logic.Game;
 import logic.MemoryLogic;
 import mocks.MessageGeneratorMock;
 import mocks.RestClientMock;
 import models.Card;
+import models.Coordinate;
 import models.Player;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -271,5 +276,202 @@ public class MemoryTests {
                 }
             }
         }
+    }
+
+    @BeforeEach
+    void setUpGame(){
+        Player playerOne = new Player("Ramon", "Aerts", "1");
+        playerOne.setAbleToPlay(true);
+        playerOne.setGameState(GameState.PLAYING);
+        playerOne.setInGameNr(1);
+        Player playerTwo = new Player("user", "password", "2");
+        playerTwo.setAbleToPlay(true);
+        playerOne.setInGameNr(2);
+        playerTwo.setGameState(GameState.PLAYING);
+        game.getPlayersInGame().add(playerOne); game.getPlayersInGame().add(playerTwo);
+        setMockCards();
+    }
+
+    private void setMockCards(){
+        int id = 1;
+
+        List<Card> emptyCards = new ArrayList<>();
+        for (int i=0; i <= 1; i++) {
+            for (int j=1; j <= 9; j++) {
+                Card card = new Card(j, id);
+                emptyCards.add(card);
+                id++;
+            }
+        }
+
+        for (int y=0; y < 3; y++) {
+            for (int x=0; x < 6; x++) {
+                Card card = emptyCards.get(0);
+                card.setCoordinate(new Coordinate(x, y));
+                emptyCards.remove(card);
+                game.getCards().add(card);
+            }
+        }
+    }
+
+    @Test
+    void getOpponentTest(){
+        Player actualPlayer = game.getOpponent("1");
+
+        assertEquals("user", actualPlayer.getUsername());
+        assertEquals("password", actualPlayer.getPassword());
+        assertEquals("2", actualPlayer.getSessionID());
+    }
+
+    @Test
+    void getPlayerInGameTest(){
+        Player actualPlayer = game.getPlayerBySession("1");
+
+        assertEquals("Ramon", actualPlayer.getUsername());
+        assertEquals("Aerts", actualPlayer.getPassword());
+        assertEquals("1", actualPlayer.getSessionID());
+    }
+
+    @Test
+    void getPlayerInGameSecondTest(){
+        Player actualPlayer = game.getPlayerBySession("2");
+
+        assertEquals("user", actualPlayer.getUsername());
+        assertEquals("password", actualPlayer.getPassword());
+        assertEquals("2", actualPlayer.getSessionID());
+    }
+
+    @Test
+    void getPlayerInGameFailedTest(){
+        Player emptyPlayer = game.getPlayerBySession("3");
+
+        assertNull(emptyPlayer);
+    }
+
+    @Test
+    void playerTurnsCardTest(){
+        game.setGamestarted(true);
+
+        game.playerTurnsCard("1", 0,0);
+
+        for (Card card : game.getCards()) {
+            if(card.getCoordinate().getX() == 0 && card.getCoordinate().getY() == 0) assertEquals(CardState.TURNED, card.getCardState());
+        }
+        assertEquals(1, game.getPlayerBySession("1").getTurnAmount());
+    }
+
+    @Test
+    void playerTurnsCardWhileGameNotStartedTest(){
+        game.playerTurnsCard("1", 0,0);
+
+        for (Card card : game.getCards()) {
+            if(card.getCoordinate().getX() == 0 && card.getCoordinate().getY() == 0) assertEquals(CardState.HIDDEN, card.getCardState());
+        }
+        assertEquals(0, game.getPlayerBySession("1").getTurnAmount());
+    }
+
+    @Test
+    void playerTurnsCardWhichIsTurnedTest(){
+        game.setGamestarted(true);
+
+        for (Card card : game.getCards()) {
+            if(card.getCoordinate().getX() == 0 && card.getCoordinate().getY() == 0) card.setCardState(CardState.TURNED);
+        }
+
+        game.playerTurnsCard("1", 0,0);
+
+        assertEquals(0, game.getPlayerBySession("1").getTurnAmount());
+    }
+
+    @Test
+    void cardsMatchTest(){
+        game.setGamestarted(true);
+
+        Card turnedCard = null;
+        for (Card card : game.getCards()) {
+            if(card.getCoordinate().getX() == 0 && card.getCoordinate().getY() == 0){
+                card.setCardState(CardState.TURNED);
+                card.setTurnedBy(1);
+            }
+            if(card.getCoordinate().getX() == 3 && card.getCoordinate().getY() == 1) {
+                card.setTurnedBy(1);
+                turnedCard = card;
+            }
+
+        }
+
+        game.checkIfCardsMatch(turnedCard, game.getPlayerBySession("1"));
+
+        assertEquals(1, game.getPlayerBySession("1").getPoints());
+    }
+
+    @Test
+    void cardsDontMatchTest(){
+        game.setGamestarted(true);
+
+        Card turnedCard = null;
+        for (Card card : game.getCards()) {
+            if(card.getCoordinate().getX() == 0 && card.getCoordinate().getY() == 0){
+                card.setCardState(CardState.TURNED);
+                card.setTurnedBy(1);
+            }
+            if(card.getCoordinate().getX() == 4 && card.getCoordinate().getY() == 1) {
+                card.setTurnedBy(1);
+                turnedCard = card;
+            }
+
+        }
+
+        game.checkIfCardsMatch(turnedCard, game.getPlayerBySession("1"));
+
+        assertEquals(0, game.getPlayerBySession("1").getPoints());
+    }
+
+    @Test
+    void checkForDrawTest(){
+        for (Player player : game.getPlayersInGame()) player.setPoints(4);
+
+        game.checkForDraw();
+
+        assertEquals(GameResult.DRAW, game.getPlayerBySession("1").getGameResult());
+    }
+
+    @Test
+    void checkForDrawFalseTest(){
+        game.getPlayerBySession("1").setPoints(5);
+
+        game.checkForDraw();
+
+        assertNotEquals(GameResult.DRAW, game.getPlayerBySession("1").getGameResult());
+    }
+
+    @Test
+    void checkForWinTest(){
+        game.getPlayerBySession("1").setPoints(5);
+        game.getPlayerBySession("2").setPoints(4);
+
+        for (Card card : game.getCards()) {
+            card.setCardState(CardState.GUESSED);
+        }
+
+        game.checkForEndGame();
+
+        assertEquals(GameResult.WIN, game.getPlayerBySession("1").getGameResult());
+    }
+
+    @Test
+    void checkForLoseTest(){
+        game.getPlayerBySession("1").setPoints(5);
+        game.getPlayerBySession("2").setPoints(4);
+        game.getPlayerBySession("1").setPlayerID(1);
+        game.getPlayerBySession("2").setPlayerID(2);
+
+        for (Card card : game.getCards()) {
+            card.setCardState(CardState.GUESSED);
+        }
+
+        game.checkForEndGame();
+
+        assertEquals(GameResult.LOSE, game.getPlayerBySession("2").getGameResult());
     }
 }
