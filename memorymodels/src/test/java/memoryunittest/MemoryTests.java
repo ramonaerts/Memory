@@ -2,6 +2,7 @@ package memoryunittest;
 
 import enums.CardState;
 import enums.GameResult;
+import enums.GameState;
 import interfaces.IRestClient;
 import interfaces.IServerMessageGenerator;
 import logic.Game;
