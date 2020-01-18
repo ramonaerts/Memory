@@ -2,11 +2,8 @@ package memoryunittest;
 
 import enums.CardState;
 import enums.GameResult;
-import enums.GameState;
-import interfaces.IGameLogic;
 import interfaces.IRestClient;
 import interfaces.IServerMessageGenerator;
-import javafx.scene.shape.DrawMode;
 import logic.Game;
 import logic.MemoryLogic;
 import mocks.MessageGeneratorMock;
@@ -14,8 +11,6 @@ import mocks.RestClientMock;
 import models.Card;
 import models.Coordinate;
 import models.Player;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -278,8 +273,8 @@ public class MemoryTests {
         }
     }
 
-    //@BeforeEach
-    private void setUpGame(){
+    @BeforeEach
+    void setUpGame(){
         Player playerOne = new Player("Ramon", "Aerts", "1");
         playerOne.setAbleToPlay(true);
         playerOne.setGameState(GameState.PLAYING);
