@@ -8,50 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f89f85a3995c11addeb67824414088340eb170d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac892b07803a50b9799fb51d355bebb512df2d63" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac892b07803a50b9799fb51d355bebb512df2d63" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/acd7106acd6fe913e9cd178fd79415cff38df272" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/acd7106acd6fe913e9cd178fd79415cff38df272" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f1a10ac7bd5ebb57235ca90ad026d9b4b69ff4db" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f1a10ac7bd5ebb57235ca90ad026d9b4b69ff4db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/CardTurner.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/CardTurner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/CardTurner.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/CardTurner.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/Game.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/Game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/Game.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/Game.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/MemoryLogic.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/MemoryLogic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/MemoryLogic.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/MemoryLogic.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Card.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Card.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Card.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Player.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Player.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Player.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Player.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/test-classes/memoryunittest/MemoryTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/test-classes/memoryunittest/MemoryTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryrest/src/main/java/restcontrollers/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/src/main/java/restcontrollers/RestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryrest/target/classes/restcontrollers/RestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/classes/restcontrollers/RestController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/sonar/report-task.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +69,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../RockPaperScissors-master" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29246345" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -137,40 +101,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MemoryTests.checkForLoseTest">
-    <configuration name="MemoryTests.cardsDontMatchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="memorymodels" />
+  <component name="RunManager" selected="Application.Memory">
+    <configuration name="Memory" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.Memory" />
+      <module name="memoryclient" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="memoryunittest.*" />
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="memoryunittest" />
-      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
-      <option name="METHOD_NAME" value="cardsDontMatchTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemoryTests.checkForDrawFalseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="memorymodels" />
+    <configuration name="MemorySocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="server.MemorySocketServer" />
+      <module name="memorywebsocketserver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="memoryunittest.*" />
+          <option name="PATTERN" value="server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="memoryunittest" />
-      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
-      <option name="METHOD_NAME" value="checkForDrawFalseTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemoryTests.checkForDrawTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MemoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="memorymodels" />
       <extension name="coverage">
         <pattern>
@@ -180,8 +138,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="memoryunittest" />
       <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
-      <option name="METHOD_NAME" value="checkForDrawTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -273,20 +230,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.MemoryRestApplication" />
-      <item itemvalue="JUnit.MemoryTests.cardsDontMatchTest" />
-      <item itemvalue="JUnit.MemoryTests.checkForDrawTest" />
-      <item itemvalue="JUnit.MemoryTests.checkForDrawFalseTest" />
+      <item itemvalue="Application.MemorySocketServer" />
+      <item itemvalue="Application.Memory" />
       <item itemvalue="JUnit.MemoryTests.checkForWinTest" />
       <item itemvalue="JUnit.MemoryTests.checkForLoseTest" />
+      <item itemvalue="JUnit.MemoryTests" />
+      <item itemvalue="Spring Boot.MemoryRestApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Memory" />
+        <item itemvalue="Application.MemorySocketServer" />
+        <item itemvalue="JUnit.MemoryTests" />
         <item itemvalue="JUnit.MemoryTests.checkForLoseTest" />
         <item itemvalue="JUnit.MemoryTests.checkForWinTest" />
-        <item itemvalue="JUnit.MemoryTests.checkForDrawTest" />
-        <item itemvalue="JUnit.MemoryTests.checkForDrawFalseTest" />
-        <item itemvalue="JUnit.MemoryTests.cardsDontMatchTest" />
       </list>
     </recent_temporary>
   </component>
@@ -319,7 +276,8 @@
       <workItem from="1579076839291" duration="21704000" />
       <workItem from="1579103855271" duration="6812000" />
       <workItem from="1579119074573" duration="440000" />
-      <workItem from="1579168602868" duration="10273000" />
+      <workItem from="1579168602868" duration="11087000" />
+      <workItem from="1579283835133" duration="8030000" />
     </task>
     <servers />
   </component>
@@ -338,22 +296,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java</url>
-          <line>140</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/CardTurner.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../IdeaProjects/memory/memorymodels/target/jacoco.exec" NAME="jacoco.exec" MODIFIED="1579091831690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

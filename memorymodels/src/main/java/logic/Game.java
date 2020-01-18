@@ -104,7 +104,7 @@ public class Game {
         else generator.sendGameFeedback("The game will not start until a second player has joined", sessionId);
     }
 
-    public void handleCards(Card card, Player player){
+    private void handleCards(Card card, Player player){
         if (card.getCardState().equals(CardState.TURNED) || card.getCardState().equals(CardState.GUESSED)) {
             sendMessageToPlayers("This card has already been turned, choose another one");
             return;
@@ -118,7 +118,7 @@ public class Game {
         if (checkIfTwoCardsTurned(player)) checkIfCardsMatch(card, player);
     }
 
-    public boolean checkIfTwoCardsTurned(Player player) {
+    private boolean checkIfTwoCardsTurned(Player player) {
         return player.getTurnAmount() == 2;
     }
 
@@ -143,7 +143,7 @@ public class Game {
         }
     }
 
-    public boolean checkIfSpecificCardsTurned(int amount){
+    private boolean checkIfSpecificCardsTurned(int amount){
         int cardAmount = 0;
 
         for (Card card : cards) {
@@ -153,7 +153,7 @@ public class Game {
         return cardAmount == cards.size() - amount;
     }
 
-    public List<Card> getWrongCards(Player player){
+    private List<Card> getWrongCards(Player player){
         List<Card> wrongCards = new ArrayList<>();
         for (Card card : cards) {
             if (card.getTurnedBy() == player.getPlayerID()) wrongCards.add(card);
@@ -161,7 +161,7 @@ public class Game {
         return wrongCards;
     }
 
-    public void turnCardsBack(Player player){
+    private void turnCardsBack(Player player){
         ExecutorService pool = Executors.newCachedThreadPool();
         for (Card card : getWrongCards(player))
         {

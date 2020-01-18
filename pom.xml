@@ -78,17 +78,6 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
-                <configuration>
-                    <excludes>
-                        <exclude>messaging/**</exclude>
-                        <exclude>memorywebsocketshared/**</exclude>
-                        <exclude>memorywebsocketserver/**</exclude>
-                        <exclude>memorywebsocketclient/**</exclude>
-                        <exclude>memoryrestclient/**</exclude>
-                        <exclude>memoryrest/**</exclude>
-                        <exclude>memoryclient/**</exclude>
-                    </excludes>
-                </configuration>
                 <executions>
                     <execution>
                         <goals>

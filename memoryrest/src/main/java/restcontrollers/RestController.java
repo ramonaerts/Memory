@@ -6,8 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import rest.entities.Player;
 
-import java.util.Optional;
-
 @Controller
 @RequestMapping(path="/memory")
 public class RestController {
