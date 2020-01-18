@@ -5,6 +5,6 @@ memorymodels,enums,CardState,0,34,0,0,0,4,0,1,0,1
 memorymodels,models,Player,17,102,0,0,8,43,4,26,4,26
 memorymodels,models,Card,0,42,0,0,0,17,0,9,0,9
 memorymodels,models,Coordinate,8,15,0,0,4,6,2,3,2,3
-memorymodels,logic,MemoryLogic,45,400,8,42,11,84,7,35,2,15
+memorymodels,logic,MemoryLogic,45,403,9,43,11,84,8,35,2,15
 memorymodels,logic,CardTurner,24,21,0,0,8,7,0,3,0,3
-memorymodels,logic,Game,65,611,15,79,10,127,14,59,2,24
+memorymodels,logic,Game,72,611,15,79,12,127,14,59,2,24

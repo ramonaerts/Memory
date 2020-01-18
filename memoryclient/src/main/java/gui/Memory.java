@@ -332,7 +332,7 @@ public class Memory extends Application implements IMemoryGui {
         sendMessageField.setLayoutY(740);
         sendMessageField.setOnKeyPressed(key -> {
             if (key.getCode().equals(KeyCode.ENTER)){
-
+                controller.sendChatMessage(sendMessageField.getText(), gameId);
             }
         });
         root.getChildren().add(sendMessageField);

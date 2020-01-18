@@ -27,6 +27,8 @@ public class ServerHandlerFactory implements IServerHandlerFactory {
                 return new LogOutHandler(igame);
             case PLAYERLEAVESGAME:
                 return new LeaveGameHandler(igame);
+            case SENDCHATMESSAGE:
+                return new ChatMessageHandler(igame);
             default:
                 return null;
         }

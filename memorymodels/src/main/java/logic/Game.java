@@ -18,6 +18,7 @@ public class Game {
     private List<Card> cards = new ArrayList<>();
     private List<Player> playersInGame = new ArrayList<>();
     private boolean gamestarted;
+    private boolean gameEnded;
 
     private Random rand = new Random();
 
@@ -27,6 +28,7 @@ public class Game {
     public Game (IServerMessageGenerator generator, IGameLogic lobby) {
         this.generator = generator;
         this.lobby = lobby;
+        this.gameEnded = false;
     }
 
     public IServerMessageGenerator getGenerator() {
@@ -93,9 +95,13 @@ public class Game {
     public void playerLeavesGame(String sessionId){
         Player player = getPlayerBySession(sessionId);
         player.setGameState(GameState.LOBBY);
-        player.setGameResult(GameResult.LOSE);
+
+        if(!gameEnded){
+            player.setGameResult(GameResult.LOSE);
+            lobby.saveResults(sessionId);
+        }
+
         playersInGame.remove(player);
-        lobby.saveResults(sessionId);
 
         for (Player opponent : playersInGame) generator.sendGameFeedback(player.getUsername() + " has left the game, you can continue player of leave also", opponent.getSessionID());
     }
@@ -190,6 +196,7 @@ public class Game {
 
     public void checkForEndGame(Player player){
         if (!checkIfSpecificCardsTurned(0)) return;
+        gameEnded = true;
         if (!checkForDraw(player)){
             Player winner = Collections.max(playersInGame, Comparator.comparing(Player::getPoints));
             for (Player memoryPlayer : playersInGame) {
@@ -203,6 +210,7 @@ public class Game {
 
     public boolean checkForDraw(Player player){
         int counter = 0;
+        if(playersInGame.size() == 1) return false;
         for (Player opponent : playersInGame) {
             if(player.getPoints() == opponent.getPoints()){
                 counter++;
@@ -218,6 +226,11 @@ public class Game {
 
     private void sendMessageToPlayers(String message){
         for (Player player : playersInGame) generator.sendGameFeedback(message, player.getSessionID());
+    }
+
+    public void receiveChatMessage(String message, String sessionId){
+        Player player = getPlayerBySession(sessionId);
+        sendMessageToPlayers(player.getUsername() + ": " + message);
     }
 
     private void generateCards()

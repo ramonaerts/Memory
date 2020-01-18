@@ -97,7 +97,7 @@ public class MemoryLogic implements IGameLogic {
 
 <span class="fc bfc" id="L98" title="All 2 branches covered.">        if(player != null){</span>
 <span class="fc bfc" id="L99" title="All 2 branches covered.">            for (Game game : activeGames) {</span>
-<span class="pc bpc" id="L100" title="1 of 2 branches missed.">                if (game.getPlayersInGame().size() != 2)</span>
+<span class="pc bpc" id="L100" title="2 of 4 branches missed.">                if (game.getPlayersInGame().size() != 2 &amp;&amp; !game.getGamestarted())</span>
                 {
 <span class="fc" id="L102">                    updatePlayerGameState(player, GameState.PLAYING);</span>
 <span class="fc" id="L103">                    player.setInGameNr(game.getPlayersInGame().size() + 1);</span>

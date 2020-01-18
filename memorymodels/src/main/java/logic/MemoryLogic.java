@@ -162,6 +162,13 @@ public class MemoryLogic implements IGameLogic {
         }
     }
 
+    @Override
+    public void chatMessage(String message, int gameId, String sessionId) {
+        for (Game game : activeGames) {
+            if (game.getGameID() == gameId) game.receiveChatMessage(message, sessionId);
+        }
+    }
+
     public void saveResults(String sessionId){
         Player player = getPlayer(sessionId);
 

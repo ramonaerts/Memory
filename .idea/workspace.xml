@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/LeaveGameHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/LeaveGameMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ChatMessageHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/ChatMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
@@ -19,7 +19,6 @@
       <change beforePath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" afterDir="false" />
@@ -36,7 +35,6 @@
       <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/test-classes/memoryunittest/MemoryTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/test-classes/memoryunittest/MemoryTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" afterDir="false" />
@@ -46,8 +44,6 @@
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" afterDir="false" />
@@ -58,10 +54,6 @@
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameLogic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/classes/messages/MessageOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/classes/messages/MessageOperation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/sonar/report-task.txt" afterDir="false" />
     </list>
@@ -132,10 +124,10 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn clean install sonar:sonar" />
       <command value="mvn clean verify" />
       <command value="mvn clean install:install" />
       <command value="mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar" />
+      <command value="mvn clean install sonar:sonar" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -326,7 +318,7 @@
       <workItem from="1579103855271" duration="6812000" />
       <workItem from="1579119074573" duration="440000" />
       <workItem from="1579168602868" duration="11087000" />
-      <workItem from="1579283835133" duration="19264000" />
+      <workItem from="1579283835133" duration="21752000" />
     </task>
     <servers />
   </component>

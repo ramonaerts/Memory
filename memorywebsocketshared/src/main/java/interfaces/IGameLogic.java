@@ -9,5 +9,6 @@ public interface IGameLogic {
     void joinGame(String sessionId);
     void leaveGame(int gameId, String sessionId);
     void turnCard(int x, int y, int gameId, String sessionId);
+    void chatMessage(String message, int gameId, String sessionId);
     void saveResults(String sessionId);
 }

@@ -66,6 +66,10 @@ public class MemoryController implements IController {
         client.leaveGame(gameId);
     }
 
+    public void sendChatMessage(String message, int gameId) {
+        client.sendChatMessage(message, gameId);
+    }
+
     public void turnCard(int x, int y, int gameId){
         client.turnCard(x, y, gameId);
     }

@@ -72,6 +72,10 @@ public class GameClient implements IGameClient {
         messageGenerator.turnCard(x, y, gameId);
     }
 
+    public void sendChatMessage(String message, int gameId) {
+        messageGenerator.sendChatMessage(message, gameId);
+    }
+
     public void showCardInfo(int cardValue, Object coordinate, int playerNr){
         controller.showCardInfo(cardValue, coordinate, playerNr);
     }

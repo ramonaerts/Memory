@@ -34,6 +34,10 @@ public class ClientMessageGenerator implements IClientMessageGenerator {
         client.send(new LeaveGameMessage(gameId), MessageOperation.PLAYERLEAVESGAME);
     }
 
+    public void sendChatMessage(String message, int gameId) {
+        client.send(new ChatMessage(message, gameId), MessageOperation.SENDCHATMESSAGE);
+    }
+
     public void turnCard(int x, int y, int gameId){
         client.send(new TurnCardMessage(x, y, gameId),MessageOperation.TURNCARD);
     }

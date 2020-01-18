@@ -93,162 +93,164 @@ import java.util.concurrent.Executors;
     public void playerLeavesGame(String sessionId){
 <span class="nc" id="L94">        Player player = getPlayerBySession(sessionId);</span>
 <span class="nc" id="L95">        player.setGameState(GameState.LOBBY);</span>
-<span class="nc" id="L96">        playersInGame.remove(player);</span>
+<span class="nc" id="L96">        player.setGameResult(GameResult.LOSE);</span>
+<span class="nc" id="L97">        playersInGame.remove(player);</span>
+<span class="nc" id="L98">        lobby.saveResults(sessionId);</span>
 
-<span class="nc bnc" id="L98" title="All 2 branches missed.">        for (Player opponent : playersInGame) generator.sendGameFeedback(player.getUsername() + &quot; has left the game, you can continue player of leave also&quot;, opponent.getSessionID());</span>
-<span class="nc" id="L99">    }</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">        for (Player opponent : playersInGame) generator.sendGameFeedback(player.getUsername() + &quot; has left the game, you can continue player of leave also&quot;, opponent.getSessionID());</span>
+<span class="nc" id="L101">    }</span>
 
     public void playerTurnsCard(String sessionId, int xPos, int yPos)
     {
-<span class="fc" id="L103">        Player player = getPlayerBySession(sessionId);</span>
-<span class="pc bpc" id="L104" title="2 of 4 branches missed.">        assert player != null;</span>
-<span class="pc bpc" id="L105" title="1 of 4 branches missed.">        if (gamestarted &amp;&amp; player.getIsAbleToPlay()) {</span>
-<span class="pc bpc" id="L106" title="1 of 2 branches missed.">            if (checkIfSpecificCardsTurned(2)){</span>
-<span class="nc bnc" id="L107" title="All 2 branches missed.">                for (Player opponent : playersInGame) {</span>
-<span class="nc bnc" id="L108" title="All 2 branches missed.">                    if(!opponent.getSessionID().equals(player.getSessionID())) opponent.setAbleToPlay(false);</span>
-<span class="nc" id="L109">                }</span>
+<span class="fc" id="L105">        Player player = getPlayerBySession(sessionId);</span>
+<span class="pc bpc" id="L106" title="2 of 4 branches missed.">        assert player != null;</span>
+<span class="pc bpc" id="L107" title="1 of 4 branches missed.">        if (gamestarted &amp;&amp; player.getIsAbleToPlay()) {</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">            if (checkIfSpecificCardsTurned(2)){</span>
+<span class="nc bnc" id="L109" title="All 2 branches missed.">                for (Player opponent : playersInGame) {</span>
+<span class="nc bnc" id="L110" title="All 2 branches missed.">                    if(!opponent.getSessionID().equals(player.getSessionID())) opponent.setAbleToPlay(false);</span>
+<span class="nc" id="L111">                }</span>
             }
-<span class="fc bfc" id="L111" title="All 2 branches covered.">            for (Card card : cards) {</span>
-<span class="fc bfc" id="L112" title="All 4 branches covered.">                if (card.getCoordinate().getX() == xPos &amp;&amp; card.getCoordinate().getY() == yPos) {</span>
-<span class="fc" id="L113">                    handleCards(card, player);</span>
+<span class="fc bfc" id="L113" title="All 2 branches covered.">            for (Card card : cards) {</span>
+<span class="fc bfc" id="L114" title="All 4 branches covered.">                if (card.getCoordinate().getX() == xPos &amp;&amp; card.getCoordinate().getY() == yPos) {</span>
+<span class="fc" id="L115">                    handleCards(card, player);</span>
                 }
-<span class="fc" id="L115">            }</span>
+<span class="fc" id="L117">            }</span>
         }
-<span class="fc" id="L117">        else generator.sendGameFeedback(&quot;The game will not start until a second player has joined&quot;, sessionId);</span>
-<span class="fc" id="L118">    }</span>
+<span class="fc" id="L119">        else generator.sendGameFeedback(&quot;The game will not start until a second player has joined&quot;, sessionId);</span>
+<span class="fc" id="L120">    }</span>
 
     private void handleCards(Card card, Player player){
-<span class="pc bpc" id="L121" title="1 of 4 branches missed.">        if (card.getCardState().equals(CardState.TURNED) || card.getCardState().equals(CardState.GUESSED)) {</span>
-<span class="fc" id="L122">            sendMessageToPlayers(&quot;This card has already been turned, choose another one&quot;);</span>
-<span class="fc" id="L123">            return;</span>
+<span class="pc bpc" id="L123" title="1 of 4 branches missed.">        if (card.getCardState().equals(CardState.TURNED) || card.getCardState().equals(CardState.GUESSED)) {</span>
+<span class="fc" id="L124">            sendMessageToPlayers(&quot;This card has already been turned, choose another one&quot;);</span>
+<span class="fc" id="L125">            return;</span>
         }
-<span class="fc" id="L125">        player.setTurnAmount(player.getTurnAmount() + 1);</span>
-<span class="fc" id="L126">        card.setTurnedBy(player.getPlayerID());</span>
-<span class="fc" id="L127">        card.setCardState(CardState.TURNED);</span>
+<span class="fc" id="L127">        player.setTurnAmount(player.getTurnAmount() + 1);</span>
+<span class="fc" id="L128">        card.setTurnedBy(player.getPlayerID());</span>
+<span class="fc" id="L129">        card.setCardState(CardState.TURNED);</span>
 
-<span class="fc bfc" id="L129" title="All 2 branches covered.">        for (Player inGamePlayer : playersInGame) generator.sendCardInfo(card.getValue(), card.getCoordinate(), player.getInGameNr(), inGamePlayer.getSessionID());</span>
+<span class="fc bfc" id="L131" title="All 2 branches covered.">        for (Player inGamePlayer : playersInGame) generator.sendCardInfo(card.getValue(), card.getCoordinate(), player.getInGameNr(), inGamePlayer.getSessionID());</span>
 
-<span class="fc bfc" id="L131" title="All 2 branches covered.">        if (checkIfTwoCardsTurned(player)) checkIfCardsMatch(card, player);</span>
-<span class="fc" id="L132">    }</span>
+<span class="fc bfc" id="L133" title="All 2 branches covered.">        if (checkIfTwoCardsTurned(player)) checkIfCardsMatch(card, player);</span>
+<span class="fc" id="L134">    }</span>
 
     private boolean checkIfTwoCardsTurned(Player player) {
-<span class="fc bfc" id="L135" title="All 2 branches covered.">        return player.getTurnAmount() == 2;</span>
+<span class="fc bfc" id="L137" title="All 2 branches covered.">        return player.getTurnAmount() == 2;</span>
     }
 
     public void checkIfCardsMatch(Card turnedCard, Player player) {
-<span class="fc" id="L139">        player.setTurnAmount(0);</span>
-<span class="fc bfc" id="L140" title="All 2 branches covered.">        for (Card card : cards) {</span>
-<span class="fc bfc" id="L141" title="All 2 branches covered.">            if (card.getTurnedBy() == 0) continue;</span>
-<span class="pc bpc" id="L142" title="1 of 4 branches missed.">            if (card.getTurnedBy() == turnedCard.getTurnedBy() &amp;&amp; card.getCardID() != turnedCard.getCardID()) {</span>
-<span class="fc bfc" id="L143" title="All 2 branches covered.">                if(card.getValue() == turnedCard.getValue())</span>
+<span class="fc" id="L141">        player.setTurnAmount(0);</span>
+<span class="fc bfc" id="L142" title="All 2 branches covered.">        for (Card card : cards) {</span>
+<span class="fc bfc" id="L143" title="All 2 branches covered.">            if (card.getTurnedBy() == 0) continue;</span>
+<span class="pc bpc" id="L144" title="1 of 4 branches missed.">            if (card.getTurnedBy() == turnedCard.getTurnedBy() &amp;&amp; card.getCardID() != turnedCard.getCardID()) {</span>
+<span class="fc bfc" id="L145" title="All 2 branches covered.">                if(card.getValue() == turnedCard.getValue())</span>
                 {
-<span class="fc" id="L145">                    turnedCard.setCardState(CardState.GUESSED);</span>
-<span class="fc" id="L146">                    turnedCard.setTurnedBy(0);</span>
-<span class="fc" id="L147">                    card.setCardState(CardState.GUESSED);</span>
-<span class="fc" id="L148">                    card.setTurnedBy(0);</span>
-<span class="fc" id="L149">                    player.setPoints(player.getPoints()+1);</span>
-<span class="fc bfc" id="L150" title="All 2 branches covered.">                    for (Player inGamePlayer : playersInGame) generator.sendPointMessage(player.getInGameNr(), inGamePlayer.getSessionID());</span>
-<span class="fc" id="L151">                    checkForEndGame(player);</span>
-<span class="fc" id="L152">                    return;</span>
+<span class="fc" id="L147">                    turnedCard.setCardState(CardState.GUESSED);</span>
+<span class="fc" id="L148">                    turnedCard.setTurnedBy(0);</span>
+<span class="fc" id="L149">                    card.setCardState(CardState.GUESSED);</span>
+<span class="fc" id="L150">                    card.setTurnedBy(0);</span>
+<span class="fc" id="L151">                    player.setPoints(player.getPoints()+1);</span>
+<span class="fc bfc" id="L152" title="All 2 branches covered.">                    for (Player inGamePlayer : playersInGame) generator.sendPointMessage(player.getInGameNr(), inGamePlayer.getSessionID());</span>
+<span class="fc" id="L153">                    checkForEndGame(player);</span>
+<span class="fc" id="L154">                    return;</span>
                 }
-<span class="fc" id="L154">                else turnCardsBack(player);</span>
+<span class="fc" id="L156">                else turnCardsBack(player);</span>
             }
-<span class="fc" id="L156">        }</span>
-<span class="fc" id="L157">    }</span>
+<span class="fc" id="L158">        }</span>
+<span class="fc" id="L159">    }</span>
 
     private boolean checkIfSpecificCardsTurned(int cardsLeft){
-<span class="fc" id="L160">        int cardAmount = 0;</span>
+<span class="fc" id="L162">        int cardAmount = 0;</span>
 
-<span class="fc bfc" id="L162" title="All 2 branches covered.">        for (Card card : cards) {</span>
-<span class="fc bfc" id="L163" title="All 2 branches covered.">            if(card.getCardState() == CardState.GUESSED) cardAmount++;</span>
-<span class="fc" id="L164">        }</span>
+<span class="fc bfc" id="L164" title="All 2 branches covered.">        for (Card card : cards) {</span>
+<span class="fc bfc" id="L165" title="All 2 branches covered.">            if(card.getCardState() == CardState.GUESSED) cardAmount++;</span>
+<span class="fc" id="L166">        }</span>
 
-<span class="fc bfc" id="L166" title="All 2 branches covered.">        return cardAmount == cards.size() - cardsLeft;</span>
+<span class="fc bfc" id="L168" title="All 2 branches covered.">        return cardAmount == cards.size() - cardsLeft;</span>
     }
 
     private List&lt;Card&gt; getWrongCards(Player player){
-<span class="fc" id="L170">        List&lt;Card&gt; wrongCards = new ArrayList&lt;&gt;();</span>
-<span class="fc bfc" id="L171" title="All 2 branches covered.">        for (Card card : cards) {</span>
-<span class="fc bfc" id="L172" title="All 2 branches covered.">            if (card.getTurnedBy() == player.getPlayerID()) wrongCards.add(card);</span>
-<span class="fc" id="L173">        }</span>
-<span class="fc" id="L174">        return wrongCards;</span>
+<span class="fc" id="L172">        List&lt;Card&gt; wrongCards = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L173" title="All 2 branches covered.">        for (Card card : cards) {</span>
+<span class="fc bfc" id="L174" title="All 2 branches covered.">            if (card.getTurnedBy() == player.getPlayerID()) wrongCards.add(card);</span>
+<span class="fc" id="L175">        }</span>
+<span class="fc" id="L176">        return wrongCards;</span>
     }
 
     private void turnCardsBack(Player player){
-<span class="fc" id="L178">        ExecutorService pool = Executors.newCachedThreadPool();</span>
-<span class="fc bfc" id="L179" title="All 2 branches covered.">        for (Card card : getWrongCards(player))</span>
+<span class="fc" id="L180">        ExecutorService pool = Executors.newCachedThreadPool();</span>
+<span class="fc bfc" id="L181" title="All 2 branches covered.">        for (Card card : getWrongCards(player))</span>
         {
-<span class="fc bfc" id="L181" title="All 2 branches covered.">            for (Player inGamePlayer : getPlayersInGame()) {</span>
-<span class="fc" id="L182">                CardTurner cardTurner = new CardTurner(this, card, inGamePlayer);</span>
-<span class="fc" id="L183">                pool.execute(cardTurner);</span>
-<span class="fc" id="L184">            }</span>
-<span class="fc" id="L185">        }</span>
-<span class="fc" id="L186">        pool.shutdown();</span>
-<span class="fc" id="L187">    }</span>
+<span class="fc bfc" id="L183" title="All 2 branches covered.">            for (Player inGamePlayer : getPlayersInGame()) {</span>
+<span class="fc" id="L184">                CardTurner cardTurner = new CardTurner(this, card, inGamePlayer);</span>
+<span class="fc" id="L185">                pool.execute(cardTurner);</span>
+<span class="fc" id="L186">            }</span>
+<span class="fc" id="L187">        }</span>
+<span class="fc" id="L188">        pool.shutdown();</span>
+<span class="fc" id="L189">    }</span>
 
     public void checkForEndGame(Player player){
-<span class="fc bfc" id="L190" title="All 2 branches covered.">        if (!checkIfSpecificCardsTurned(0)) return;</span>
-<span class="pc bpc" id="L191" title="1 of 2 branches missed.">        if (!checkForDraw(player)){</span>
-<span class="fc" id="L192">            Player winner = Collections.max(playersInGame, Comparator.comparing(Player::getPoints));</span>
-<span class="fc bfc" id="L193" title="All 2 branches covered.">            for (Player memoryPlayer : playersInGame) {</span>
-<span class="fc bfc" id="L194" title="All 2 branches covered.">                if(memoryPlayer.getPlayerID() == winner.getPlayerID()) memoryPlayer.setGameResult(GameResult.WIN);</span>
-<span class="fc" id="L195">                else memoryPlayer.setGameResult(GameResult.LOSE);</span>
-<span class="fc" id="L196">                lobby.saveResults(memoryPlayer.getSessionID());</span>
-<span class="fc" id="L197">            }</span>
+<span class="fc bfc" id="L192" title="All 2 branches covered.">        if (!checkIfSpecificCardsTurned(0)) return;</span>
+<span class="pc bpc" id="L193" title="1 of 2 branches missed.">        if (!checkForDraw(player)){</span>
+<span class="fc" id="L194">            Player winner = Collections.max(playersInGame, Comparator.comparing(Player::getPoints));</span>
+<span class="fc bfc" id="L195" title="All 2 branches covered.">            for (Player memoryPlayer : playersInGame) {</span>
+<span class="fc bfc" id="L196" title="All 2 branches covered.">                if(memoryPlayer.getPlayerID() == winner.getPlayerID()) memoryPlayer.setGameResult(GameResult.WIN);</span>
+<span class="fc" id="L197">                else memoryPlayer.setGameResult(GameResult.LOSE);</span>
+<span class="fc" id="L198">                lobby.saveResults(memoryPlayer.getSessionID());</span>
+<span class="fc" id="L199">            }</span>
         }
-<span class="fc bfc" id="L199" title="All 2 branches covered.">        for (Player inGamePlayer : playersInGame) generator.sendGameResult(inGamePlayer.getGameResult(), inGamePlayer.getSessionID());</span>
-<span class="fc" id="L200">    }</span>
+<span class="fc bfc" id="L201" title="All 2 branches covered.">        for (Player inGamePlayer : playersInGame) generator.sendGameResult(inGamePlayer.getGameResult(), inGamePlayer.getSessionID());</span>
+<span class="fc" id="L202">    }</span>
 
     public boolean checkForDraw(Player player){
-<span class="fc" id="L203">        int counter = 0;</span>
-<span class="fc bfc" id="L204" title="All 2 branches covered.">        for (Player opponent : playersInGame) {</span>
-<span class="fc bfc" id="L205" title="All 2 branches covered.">            if(player.getPoints() == opponent.getPoints()){</span>
-<span class="fc" id="L206">                counter++;</span>
-<span class="fc bfc" id="L207" title="All 2 branches covered.">                if(counter == playersInGame.size()){</span>
-<span class="fc" id="L208">                    player.setGameResult(GameResult.DRAW);</span>
-<span class="fc" id="L209">                    lobby.saveResults(player.getSessionID());</span>
+<span class="fc" id="L205">        int counter = 0;</span>
+<span class="fc bfc" id="L206" title="All 2 branches covered.">        for (Player opponent : playersInGame) {</span>
+<span class="fc bfc" id="L207" title="All 2 branches covered.">            if(player.getPoints() == opponent.getPoints()){</span>
+<span class="fc" id="L208">                counter++;</span>
+<span class="fc bfc" id="L209" title="All 2 branches covered.">                if(counter == playersInGame.size()){</span>
+<span class="fc" id="L210">                    player.setGameResult(GameResult.DRAW);</span>
+<span class="fc" id="L211">                    lobby.saveResults(player.getSessionID());</span>
                 }
             }
-<span class="fc" id="L212">            else return false;</span>
-<span class="fc" id="L213">        }</span>
-<span class="fc" id="L214">        return true;</span>
+<span class="fc" id="L214">            else return false;</span>
+<span class="fc" id="L215">        }</span>
+<span class="fc" id="L216">        return true;</span>
     }
 
     private void sendMessageToPlayers(String message){
-<span class="fc bfc" id="L218" title="All 2 branches covered.">        for (Player player : playersInGame) generator.sendGameFeedback(message, player.getSessionID());</span>
-<span class="fc" id="L219">    }</span>
+<span class="fc bfc" id="L220" title="All 2 branches covered.">        for (Player player : playersInGame) generator.sendGameFeedback(message, player.getSessionID());</span>
+<span class="fc" id="L221">    }</span>
 
     private void generateCards()
     {
-<span class="fc" id="L223">        List&lt;Card&gt; unsortedCards = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L224">        int id = 1;</span>
+<span class="fc" id="L225">        List&lt;Card&gt; unsortedCards = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L226">        int id = 1;</span>
 
-<span class="fc bfc" id="L226" title="All 2 branches covered.">        for (int i=0; i &lt;= 1; i++)</span>
+<span class="fc bfc" id="L228" title="All 2 branches covered.">        for (int i=0; i &lt;= 1; i++)</span>
         {
-<span class="fc bfc" id="L228" title="All 2 branches covered.">            for (int j=1; j &lt;= 9; j++)</span>
+<span class="fc bfc" id="L230" title="All 2 branches covered.">            for (int j=1; j &lt;= 9; j++)</span>
             {
-<span class="fc" id="L230">                Card card = new Card(j, id);</span>
-<span class="fc" id="L231">                unsortedCards.add(card);</span>
-<span class="fc" id="L232">                id++;</span>
+<span class="fc" id="L232">                Card card = new Card(j, id);</span>
+<span class="fc" id="L233">                unsortedCards.add(card);</span>
+<span class="fc" id="L234">                id++;</span>
             }
         }
-<span class="fc" id="L235">        shuffleCards(unsortedCards);</span>
-<span class="fc" id="L236">    }</span>
+<span class="fc" id="L237">        shuffleCards(unsortedCards);</span>
+<span class="fc" id="L238">    }</span>
 
     private void shuffleCards(List&lt;Card&gt; unsortedCards)
     {
-<span class="fc" id="L240">        Collections.shuffle(unsortedCards);</span>
+<span class="fc" id="L242">        Collections.shuffle(unsortedCards);</span>
 
-<span class="fc bfc" id="L242" title="All 2 branches covered.">        for (int y=0; y &lt; 3; y++) {</span>
-<span class="fc bfc" id="L243" title="All 2 branches covered.">            for (int x=0; x &lt; 6; x++) {</span>
+<span class="fc bfc" id="L244" title="All 2 branches covered.">        for (int y=0; y &lt; 3; y++) {</span>
+<span class="fc bfc" id="L245" title="All 2 branches covered.">            for (int x=0; x &lt; 6; x++) {</span>
 
-<span class="fc" id="L245">                int randomIndex = rand.nextInt(unsortedCards.size());</span>
-<span class="fc" id="L246">                Card randomCard = unsortedCards.get(randomIndex);</span>
-<span class="fc" id="L247">                randomCard.setCoordinate(new Coordinate(x, y));</span>
-<span class="fc" id="L248">                unsortedCards.remove(randomCard);</span>
-<span class="fc" id="L249">                cards.add(randomCard);</span>
+<span class="fc" id="L247">                int randomIndex = rand.nextInt(unsortedCards.size());</span>
+<span class="fc" id="L248">                Card randomCard = unsortedCards.get(randomIndex);</span>
+<span class="fc" id="L249">                randomCard.setCoordinate(new Coordinate(x, y));</span>
+<span class="fc" id="L250">                unsortedCards.remove(randomCard);</span>
+<span class="fc" id="L251">                cards.add(randomCard);</span>
             }
         }
-<span class="fc" id="L252">    }</span>
+<span class="fc" id="L254">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

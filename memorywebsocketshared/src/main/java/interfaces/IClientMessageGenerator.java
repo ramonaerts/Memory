@@ -7,5 +7,6 @@ public interface IClientMessageGenerator {
     void startGame();
     void joinGame();
     void leaveGame(int gameId);
+    void sendChatMessage(String message, int gameId);
     void turnCard(int x, int y, int gameId);
 }
