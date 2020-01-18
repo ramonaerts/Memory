@@ -5,6 +5,7 @@ import java.util.List;
 public interface IController {
     void loginPlayer(String username, String password);
     void loginResult(boolean loginResult, Object player);
+    void logOutPlayer();
 
     void registerPlayer(String username, String password);
     void registerResult(boolean registerResult, Object player);

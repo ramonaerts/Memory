@@ -7,63 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/LogOutHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/LogOutMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/CardTurner.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/CardTurner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/CardTurner.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/CardTurner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/CardTurner.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/CardTurner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/CardTurner.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/CardTurner.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/src/main/java/restcontrollers/RestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/src/main/java/restcontrollers/RestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/classes/restcontrollers/RestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/classes/restcontrollers/RestService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestclient/src/main/java/client/RestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/src/main/java/client/RestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestclient/target/classes/client/RestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/classes/client/RestClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientWebSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/CardInfoHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/CardInfoHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/FeedbackMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/FeedbackMessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/GameResultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/GameResultHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/PlayerJoinsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/PlayerJoinsHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/TurnCardBackHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/messaging/TurnCardBackHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/client/ClientWebSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/client/ClientWebSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/CardInfoHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/CardInfoHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/FeedbackMessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/FeedbackMessageHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/GameResultHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/GameResultHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/PlayerJoinsHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/PlayerJoinsHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/TurnCardBackHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/messaging/TurnCardBackHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/JoinGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/JoinGameHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/MemorySocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/MemorySocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/JoinGameHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/JoinGameHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/MemorySocketServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/MemorySocketServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/MemorySocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/MemorySocketServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerWebSocket$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerWebSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerWebSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/MessageOperation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MemoryTests">
+  <component name="RunManager" selected="Application.Memory">
     <configuration name="Memory" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.Memory" />
       <module name="memoryclient" />
@@ -288,9 +246,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MemoryTests" />
         <item itemvalue="Application.Memory" />
         <item itemvalue="Application.MemorySocketServer" />
+        <item itemvalue="JUnit.MemoryTests" />
         <item itemvalue="JUnit.MemoryTests.checkForLoseTest" />
         <item itemvalue="JUnit.MemoryTests.checkForWinTest" />
       </list>
@@ -326,7 +284,7 @@
       <workItem from="1579103855271" duration="6812000" />
       <workItem from="1579119074573" duration="440000" />
       <workItem from="1579168602868" duration="11087000" />
-      <workItem from="1579283835133" duration="11234000" />
+      <workItem from="1579283835133" duration="14980000" />
     </task>
     <servers />
   </component>

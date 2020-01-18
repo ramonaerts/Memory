@@ -23,6 +23,8 @@ public class ServerHandlerFactory implements IServerHandlerFactory {
                 return new TurnCardHandler(igame);
             case PLAYERREGISTER:
                 return new RegisterHandler(igame);
+            case LOGOUT:
+                return new LogOutHandler(igame);
             default:
                 return null;
         }

@@ -26,6 +26,10 @@ public class MemoryController implements IController {
         gui.loginResult(loginresult, player);
     }
 
+    public void logOutPlayer() {
+        client.logOutPlayer();
+    }
+
     public void registerPlayer(String username, String password) {
         client.registerPlayer(username, password);
     }

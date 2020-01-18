@@ -8,6 +8,8 @@ public interface IGameClient {
     void sendPlayer(String username, String password);
     void loginResult(boolean loginResult, Object player);
 
+    void logOutPlayer();
+
     void registerPlayer(String username, String password);
     void registerResult(boolean registerResult, Object player);
 

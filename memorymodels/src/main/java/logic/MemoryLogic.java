@@ -56,6 +56,13 @@ public class MemoryLogic implements IGameLogic {
         updateLobby();
     }
 
+    public void logOutPlayer(String sessionId) {
+        for (Player player : onlinePlayers) {
+            if(player.getSessionID().equals(sessionId)) onlinePlayers.remove(player);
+        }
+        updateLobby();
+    }
+
     public boolean checkIfUsernameExists(String username){
         return restClient.checkUsername(username);
     }

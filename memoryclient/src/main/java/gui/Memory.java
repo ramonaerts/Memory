@@ -60,6 +60,10 @@ public class Memory extends Application implements IMemoryGui {
 
         controller = new MemoryController(this, gameClient);
 
+        login();
+    }
+
+    private void login(){
         GridPane grid = new GridPane();
         grid.setHgap(BORDERSIZE);
         grid.setVgap(BORDERSIZE);
@@ -208,8 +212,25 @@ public class Memory extends Application implements IMemoryGui {
         });
         grid.add(searchGameButton, 6, 7, 1, 1);
 
-        loginStage.close();
+        Button logOutButton = new Button();
+        logOutButton.setText("Log out");
+        logOutButton.setFont(lobbyFont);
+        logOutButton.setPrefWidth(INPUTWIDTH);
+        logOutButton.setPrefHeight(50);
+        logOutButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
+            try {
+                controller.logOutPlayer();
+                login();
+                lobbyStage.close();
+            }
+            catch (Exception e){
+                showMessage(connectionError);
+            }
+        });
+        grid.add(logOutButton, 6, 12, 1, 1);
+
         this.lobbyStage = new Stage();
+        loginStage.close();
         lobbyStage.setTitle("Lobby");
         lobbyStage.setScene(scene1);
         lobbyStage.show();

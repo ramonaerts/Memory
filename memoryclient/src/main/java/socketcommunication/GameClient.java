@@ -28,6 +28,10 @@ public class GameClient implements IGameClient {
         controller.loginResult(loginresult, player);
     }
 
+    public void logOutPlayer() {
+        messageGenerator.logOutPlayer();
+    }
+
     public void registerPlayer(String username, String password) {
         messageGenerator.registerPlayer(username, password);
     }
