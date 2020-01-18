@@ -12,7 +12,9 @@ messages\UpdateLobbyPlayersMessage.class
 messages\JoinGameMessage.class
 messages\TurnCardBackMessage.class
 messages\CardInfoMessage.class
+messages\LogOutMessage.class
 messages\SocketMessageGenerator.class
+messages\LeaveGameMessage.class
 messages\SendPointMessage.class
 messages\PlayerJoinsMessage.class
 messages\StartGameResultMessage.class

@@ -2,5 +2,5 @@ projectKey=Memory:Memory
 serverUrl=http://localhost:9000
 serverVersion=8.0.0.29455
 dashboardUrl=http://localhost:9000/dashboard?id=Memory%3AMemory
-ceTaskId=AW-5EHgBgvBahxN93xXV
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AW-5EHgBgvBahxN93xXV
+ceTaskId=AW-5-ghigvBahxN93xXW
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AW-5-ghigvBahxN93xXW

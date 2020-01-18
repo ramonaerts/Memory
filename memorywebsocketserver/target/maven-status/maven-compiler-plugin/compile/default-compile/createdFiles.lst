@@ -1,3 +1,4 @@
+messaging\LeaveGameHandler.class
 messaging\ServerHandlerFactory$1.class
 messaging\ServerHandlerFactory.class
 messaging\BaseServerMessageHandler.class
@@ -10,4 +11,5 @@ messaging\LoginHandler.class
 server\ServerWebSocket.class
 messaging\RegisterHandler.class
 messaging\TurnCardHandler.class
+messaging\LogOutHandler.class
 messaging\StartGameHandler.class

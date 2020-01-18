@@ -64,6 +64,10 @@ public class GameClient implements IGameClient {
         controller.playerJoinsGame(opponent);
     }
 
+    public void leaveGame(int gameId) {
+        messageGenerator.leaveGame(gameId);
+    }
+
     public void turnCard(int x, int y, int gameId){
         messageGenerator.turnCard(x, y, gameId);
     }

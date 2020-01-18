@@ -10,10 +10,13 @@ import interfaces.*;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -27,6 +30,7 @@ import socketcommunication.GameClient;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Memory extends Application implements IMemoryGui {
 
@@ -268,7 +272,7 @@ public class Memory extends Application implements IMemoryGui {
         grid.setPadding(new Insets(BORDERSIZE,BORDERSIZE,BORDERSIZE,BORDERSIZE));
 
         Group root = new Group();
-        Scene scene1 = new Scene(root, 750, 750);
+        Scene scene1 = new Scene(root, 750, 800);
         root.getChildren().add(grid);
 
         Font statsFont = new Font(15);
@@ -289,7 +293,7 @@ public class Memory extends Application implements IMemoryGui {
         setVariableLabels(root, statsFont, opponentName, "Waiting for player", 450, 20);
         setVariableLabels(root, statsFont, opponentScore, "0", 450, 45);
         
-        Rectangle memoryField = new Rectangle(25, 90, 685,487);
+        Rectangle memoryField = new Rectangle(25, 90, 688,488);
         memoryField.setFill(Color.SEAGREEN);
         root.getChildren().add(memoryField);
         Font cardFont = new Font(20);
@@ -321,6 +325,38 @@ public class Memory extends Application implements IMemoryGui {
         gameChat.setLayoutX(25);
         gameChat.setLayoutY(600);
         root.getChildren().add(gameChat);
+
+        TextField sendMessageField = new TextField();
+        sendMessageField.setMinWidth(700);
+        sendMessageField.setLayoutX(25);
+        sendMessageField.setLayoutY(740);
+        sendMessageField.setOnKeyPressed(key -> {
+            if (key.getCode().equals(KeyCode.ENTER)){
+
+            }
+        });
+        root.getChildren().add(sendMessageField);
+
+        Button returnToLobbyButton = new Button();
+        returnToLobbyButton.setText("Return to lobby");
+        returnToLobbyButton.setPrefWidth(200);
+        returnToLobbyButton.setLayoutX(525);
+        returnToLobbyButton.setLayoutY(775);
+        returnToLobbyButton.addEventHandler(ActionEvent.ACTION,actionEvent -> {
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Leave game");
+            alert.setContentText("Are you sure you want to leave this game?");
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if(result.isPresent() && result.get() == ButtonType.OK) {
+                controller.leaveGame(gameId);
+                lobby();
+                gameStage.close();
+            }
+
+        });
+        root.getChildren().add(returnToLobbyButton);
 
         this.gameStage = new Stage();
         gameStage.setTitle("Memory game");

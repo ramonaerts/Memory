@@ -2,6 +2,7 @@ package logic;
 
 import enums.CardState;
 import enums.GameResult;
+import enums.GameState;
 import interfaces.IGameLogic;
 import interfaces.IServerMessageGenerator;
 import models.Card;
@@ -89,12 +90,26 @@ public class Game {
         gamestarted = true;
     }
 
+    public void playerLeavesGame(String sessionId){
+        Player player = getPlayerBySession(sessionId);
+        player.setGameState(GameState.LOBBY);
+        player.setGameResult(GameResult.LOSE);
+        playersInGame.remove(player);
+        lobby.saveResults(sessionId);
+
+        for (Player opponent : playersInGame) generator.sendGameFeedback(player.getUsername() + " has left the game, you can continue player of leave also", opponent.getSessionID());
+    }
+
     public void playerTurnsCard(String sessionId, int xPos, int yPos)
     {
         Player player = getPlayerBySession(sessionId);
         assert player != null;
         if (gamestarted && player.getIsAbleToPlay()) {
-            if (checkIfSpecificCardsTurned(2)) getOpponent(sessionId).setAbleToPlay(false);
+            if (checkIfSpecificCardsTurned(2)){
+                for (Player opponent : playersInGame) {
+                    if(!opponent.getSessionID().equals(player.getSessionID())) opponent.setAbleToPlay(false);
+                }
+            }
             for (Card card : cards) {
                 if (card.getCoordinate().getX() == xPos && card.getCoordinate().getY() == yPos) {
                     handleCards(card, player);
@@ -135,7 +150,7 @@ public class Game {
                     card.setTurnedBy(0);
                     player.setPoints(player.getPoints()+1);
                     for (Player inGamePlayer : playersInGame) generator.sendPointMessage(player.getInGameNr(), inGamePlayer.getSessionID());
-                    checkForEndGame();
+                    checkForEndGame(player);
                     return;
                 }
                 else turnCardsBack(player);
@@ -143,14 +158,14 @@ public class Game {
         }
     }
 
-    private boolean checkIfSpecificCardsTurned(int amount){
+    private boolean checkIfSpecificCardsTurned(int cardsLeft){
         int cardAmount = 0;
 
         for (Card card : cards) {
             if(card.getCardState() == CardState.GUESSED) cardAmount++;
         }
 
-        return cardAmount == cards.size() - amount;
+        return cardAmount == cards.size() - cardsLeft;
     }
 
     private List<Card> getWrongCards(Player player){
@@ -173,24 +188,28 @@ public class Game {
         pool.shutdown();
     }
 
-    public void checkForEndGame(){
+    public void checkForEndGame(Player player){
         if (!checkIfSpecificCardsTurned(0)) return;
-        if (!checkForDraw()){
+        if (!checkForDraw(player)){
             Player winner = Collections.max(playersInGame, Comparator.comparing(Player::getPoints));
-            for (Player player : playersInGame) {
-                if(player.getPlayerID() == winner.getPlayerID()) player.setGameResult(GameResult.WIN);
-                else player.setGameResult(GameResult.LOSE);
-                lobby.saveResults(player.getSessionID());
+            for (Player memoryPlayer : playersInGame) {
+                if(memoryPlayer.getPlayerID() == winner.getPlayerID()) memoryPlayer.setGameResult(GameResult.WIN);
+                else memoryPlayer.setGameResult(GameResult.LOSE);
+                lobby.saveResults(memoryPlayer.getSessionID());
             }
         }
         for (Player inGamePlayer : playersInGame) generator.sendGameResult(inGamePlayer.getGameResult(), inGamePlayer.getSessionID());
     }
 
-    public boolean checkForDraw(){
-        for (Player player : playersInGame) {
-            if(player.getPoints() == getOpponent(player.getSessionID()).getPoints()){
-                player.setGameResult(GameResult.DRAW);
-                lobby.saveResults(player.getSessionID());
+    public boolean checkForDraw(Player player){
+        int counter = 0;
+        for (Player opponent : playersInGame) {
+            if(player.getPoints() == opponent.getPoints()){
+                counter++;
+                if(counter == playersInGame.size()){
+                    player.setGameResult(GameResult.DRAW);
+                    lobby.saveResults(player.getSessionID());
+                }
             }
             else return false;
         }

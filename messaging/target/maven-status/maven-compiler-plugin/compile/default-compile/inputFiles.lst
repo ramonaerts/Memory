@@ -8,9 +8,11 @@ C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\JoinGame
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\StartGameMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\StartGameResultMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\GameResultMessage.java
+C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\LeaveGameMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\UpdateLobbyPlayersMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\TurnCardBackMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\PlayerAuthenticationResultMessage.java
+C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\LogOutMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\SendPointMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\CardInfoMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\PlayerAuthenticationMessage.java

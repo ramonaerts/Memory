@@ -427,7 +427,7 @@ public class MemoryTests {
     void checkForDrawTest(){
         for (Player player : game.getPlayersInGame()) player.setPoints(4);
 
-        game.checkForDraw();
+        game.checkForDraw(game.getPlayerBySession("1"));
 
         assertEquals(GameResult.DRAW, game.getPlayerBySession("1").getGameResult());
     }
@@ -436,7 +436,7 @@ public class MemoryTests {
     void checkForDrawFalseTest(){
         game.getPlayerBySession("1").setPoints(5);
 
-        game.checkForDraw();
+        game.checkForDraw(game.getPlayerBySession("1"));
 
         assertNotEquals(GameResult.DRAW, game.getPlayerBySession("1").getGameResult());
     }
@@ -450,7 +450,7 @@ public class MemoryTests {
             card.setCardState(CardState.GUESSED);
         }
 
-        game.checkForEndGame();
+        game.checkForEndGame(game.getPlayerBySession("1"));
 
         assertEquals(GameResult.WIN, game.getPlayerBySession("1").getGameResult());
     }
@@ -466,7 +466,7 @@ public class MemoryTests {
             card.setCardState(CardState.GUESSED);
         }
 
-        game.checkForEndGame();
+        game.checkForEndGame(game.getPlayerBySession("1"));
 
         assertEquals(GameResult.LOSE, game.getPlayerBySession("2").getGameResult());
     }

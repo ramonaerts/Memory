@@ -25,6 +25,8 @@ public class ServerHandlerFactory implements IServerHandlerFactory {
                 return new RegisterHandler(igame);
             case LOGOUT:
                 return new LogOutHandler(igame);
+            case PLAYERLEAVESGAME:
+                return new LeaveGameHandler(igame);
             default:
                 return null;
         }

@@ -18,6 +18,7 @@ public interface IController {
     void joinGame();
     void joinGameResult(boolean joinResult, int gameId, Object opponent);
     void playerJoinsGame(Object opponent);
+    void leaveGame(int gameId);
 
     void turnCard(int x, int y, int gameId);
     void showCardInfo(int cardValue, Object coordinate, int playerNr);

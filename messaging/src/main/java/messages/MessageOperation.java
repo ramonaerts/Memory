@@ -9,6 +9,7 @@ public enum MessageOperation {
     PLAYERJOINGAME,
     TURNCARD,
     LOGOUT,
+    PLAYERLEAVESGAME,
     SENDCHATMESSAGE,
 
     //to client

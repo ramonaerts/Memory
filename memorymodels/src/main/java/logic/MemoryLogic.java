@@ -97,7 +97,7 @@ public class MemoryLogic implements IGameLogic {
 
         if(player != null){
             for (Game game : activeGames) {
-                if (game.getPlayersInGame().size() != 2)
+                if (game.getPlayersInGame().size() != 2 && !game.getGamestarted())
                 {
                     updatePlayerGameState(player, GameState.PLAYING);
                     player.setInGameNr(game.getPlayersInGame().size() + 1);
@@ -110,6 +110,15 @@ public class MemoryLogic implements IGameLogic {
             generator.sendGameJoinResult(false, 0, null, sessionId);
         }
         else generator.sendGameJoinResult(false, 0, null, sessionId);
+    }
+
+    public void leaveGame(int gameId, String sessionId) {
+        Game game = getGame(gameId);
+        game.playerLeavesGame(sessionId);
+
+        updateLobby();
+
+        if (game.getPlayersInGame().size() == 0) activeGames.remove(game);
     }
 
     public Player getPlayer(String sessionId) {

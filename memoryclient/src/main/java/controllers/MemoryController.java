@@ -62,6 +62,10 @@ public class MemoryController implements IController {
         gui.playerJoinsGame(opponent);
     }
 
+    public void leaveGame(int gameId) {
+        client.leaveGame(gameId);
+    }
+
     public void turnCard(int x, int y, int gameId){
         client.turnCard(x, y, gameId);
     }
