@@ -278,8 +278,8 @@ public class MemoryTests {
         }
     }
 
-    @BeforeEach
-    void setUpGame(){
+    //@BeforeEach
+    private void setUpGame(){
         Player playerOne = new Player("Ramon", "Aerts", "1");
         playerOne.setAbleToPlay(true);
         playerOne.setGameState(GameState.PLAYING);

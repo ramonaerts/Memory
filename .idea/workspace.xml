@@ -7,15 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12054c4069d3e4b5519c9890b2d86bb62c9dab8a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9556320fbb3dd37bb596d8828a99894f6db4dcfa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/aff0099e0f756d926fb352ed02182d89f368622b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/src/main/java/restcontrollers/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/src/main/java/restcontrollers/RestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryrest/target/classes/restcontrollers/RestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/classes/restcontrollers/RestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco-sessions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/Game.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/Game.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Coordinate.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Player.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Player.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/Player.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/models/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/.sonar_lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -277,7 +291,7 @@
       <workItem from="1579103855271" duration="6812000" />
       <workItem from="1579119074573" duration="440000" />
       <workItem from="1579168602868" duration="11087000" />
-      <workItem from="1579283835133" duration="8030000" />
+      <workItem from="1579283835133" duration="8312000" />
     </task>
     <servers />
   </component>
