@@ -2,7 +2,6 @@ package messaging;
 
 import interfaces.IGameClient;
 import messages.GameFeedbackMessage;
-import messages.JoinGameResultMessage;
 
 public class FeedbackMessageHandler extends BaseClientMessageHandler<GameFeedbackMessage> {
 

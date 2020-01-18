@@ -14,13 +14,13 @@ import serialization.*;
 @ClientEndpoint
 public class ClientWebSocket implements IClientWebSocket
 {
-    static Logger log = Logger.getLogger(ClientWebSocket.class.getName());
+    private static Logger log = Logger.getLogger(ClientWebSocket.class.getName());
 
     private Session session;
 
     private static ClientWebSocket instance = null;
 
-    boolean isRunning = false;
+    private boolean isRunning = false;
 
     public static ClientWebSocket getInstance() {
         if (instance == null) {
@@ -31,7 +31,7 @@ public class ClientWebSocket implements IClientWebSocket
 
     @Override
     public void start() {
-        System.out.println("[WebSocket Client start connection]");
+        log.info("[WebSocket Client start connection]");
         if (!isRunning) {
             startClient();
             isRunning = true;
@@ -40,7 +40,7 @@ public class ClientWebSocket implements IClientWebSocket
 
     @Override
     public void stop() {
-        System.out.println("[WebSocket Client stop]");
+        log.info("[WebSocket Client stop]");
         if (isRunning) {
             stopClient();
             isRunning = false;
@@ -48,7 +48,7 @@ public class ClientWebSocket implements IClientWebSocket
     }
 
     private void startClient() {
-        System.out.println("[WebSocket Client start]");
+        log.info("[WebSocket Client start]");
         try {
             WebSocketContainer container = ContainerProvider.getWebSocketContainer();
             String uri = "ws://localhost:8095/memory";
@@ -64,7 +64,7 @@ public class ClientWebSocket implements IClientWebSocket
      * Stop the client when it is running.
      */
     private void stopClient(){
-        System.out.println("[WebSocket Client stop]");
+        log.info("[WebSocket Client stop]");
         try {
             if(session != null) session.close();
 
@@ -100,13 +100,13 @@ public class ClientWebSocket implements IClientWebSocket
 
     @OnError
     public void onWebSocketError(Session session, Throwable cause) {
-        System.out.println("[WebSocket Client connection error] " + cause.toString());
+        log.info("[WebSocket Client connection error] " + cause.toString());
     }
 
     @OnClose
     public void onWebSocketClose(CloseReason reason){
-        System.out.print("[WebSocket Client close session] " + session.getRequestURI());
-        System.out.println(" for reason " + reason);
+        log.info("[WebSocket Client close session] " + session.getRequestURI());
+        log.info(" for reason " + reason);
         session = null;
     }
 
@@ -115,7 +115,7 @@ public class ClientWebSocket implements IClientWebSocket
         try {
             session.getBasicRemote().sendText(message);
         } catch (IOException ex) {
-            System.out.print("[WebSocket Client couldn't send to server] " + session.getRequestURI());
+            log.info("[WebSocket Client couldn't send to server] " + session.getRequestURI());
         }
     }
 

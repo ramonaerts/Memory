@@ -4,6 +4,7 @@ import interfaces.IServerMessageProcessor;
 import interfaces.IServerWebSocket;
 import messages.SocketMessage;
 import messages.SocketMessageGenerator;
+import org.apache.log4j.Logger;
 import serialization.Serializer;
 
 import javax.websocket.*;
@@ -17,6 +18,8 @@ import java.util.concurrent.Executors;
 @Singleton
 @ServerEndpoint(value="/memory")
 public class ServerWebSocket implements IServerWebSocket {
+
+    private static Logger log = Logger.getLogger(ServerWebSocket.class.getName());
 
     private IServerMessageProcessor messageProcessor;
 
@@ -46,28 +49,23 @@ public class ServerWebSocket implements IServerWebSocket {
     }
 
     private ExecutorService executorService = Executors.newCachedThreadPool();
+
     @OnMessage
     public void onText(String message, Session session) {
         String sessionId = session.getId();
         Serializer ser = Serializer.getSerializer();
         SocketMessage msg = ser.deserialize(message, SocketMessage.class);
-        executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                getMessageProcessor().processMessage(sessionId, msg.getMessageOperation(), msg.getMessageData());
-            }
-        });
+        executorService.execute(() -> getMessageProcessor().processMessage(sessionId, msg.getMessageOperation(), msg.getMessageData()));
     }
 
     @OnClose
     public void onClose(CloseReason reason, Session session) {
-        //getMessageProcessor().handleDisconnect(session.getId());
         sessions.remove(session);
     }
 
     @OnError
     public void onError(Throwable cause, Session session) {
-        System.out.println(cause.getMessage());
+        log.info(cause.getMessage());
     }
 
     public void sendTo(String sessionId, Object object, Object operation)
@@ -108,7 +106,7 @@ public class ServerWebSocket implements IServerWebSocket {
         try {
             session.getBasicRemote().sendText(message);
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            log.info(e.getMessage());
         }
     }
 }

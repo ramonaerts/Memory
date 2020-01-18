@@ -4,6 +4,7 @@ import client.RestClient;
 import interfaces.*;
 import logic.MemoryLogic;
 import messaging.ServerHandlerFactory;
+import org.apache.log4j.Logger;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -15,6 +16,7 @@ import javax.websocket.server.ServerEndpointConfig;
 
 public class MemorySocketServer {
     private static final int PORT = 8095;
+    private static Logger log = Logger.getLogger(MemorySocketServer.class.getName());
 
     /**
      * @param args the command line arguments
@@ -68,11 +70,10 @@ public class MemorySocketServer {
             wscontainer.addEndpoint(config);
 
             webSocketServer.start();
-            //server.dump(System.err);
 
             webSocketServer.join();
-        } catch (Throwable t) {
-            t.printStackTrace(System.err);
+        } catch (Exception t) {
+            log.info(t);
         }
     }
 }

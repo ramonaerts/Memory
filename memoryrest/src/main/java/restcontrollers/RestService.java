@@ -5,8 +5,6 @@ import org.springframework.stereotype.Service;
 import rest.entities.Player;
 import rest.repository.UserRepository;
 
-import java.util.Optional;
-
 @Service
 public class RestService {
 

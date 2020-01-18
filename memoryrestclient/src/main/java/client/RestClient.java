@@ -1,6 +1,5 @@
 package client;
 
-import com.google.gson.Gson;
 import interfaces.IRestClient;
 import models.Player;
 import org.springframework.http.*;
@@ -10,6 +9,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class RestClient implements IRestClient {
     private String restURL = "http://localhost:8096/memory/";
 
+    private String usernameHeader = "username";
     private RestTemplate template;
     private HttpHeaders headers;
 
@@ -21,7 +21,7 @@ public class RestClient implements IRestClient {
 
     public Object getPlayerByCredentials(String username, String password){
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(restURL + "usercred?")
-            .queryParam("username", username)
+            .queryParam(usernameHeader, username)
             .queryParam("password", password);
 
         HttpEntity<?> entity = new HttpEntity<>(headers);
@@ -31,7 +31,7 @@ public class RestClient implements IRestClient {
 
     public boolean checkUsername(String username){
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(restURL + "checkusername?")
-            .queryParam("username", username);
+            .queryParam(usernameHeader, username);
 
         HttpEntity<?> entity = new HttpEntity<>(headers);
         ResponseEntity<Boolean> response = template.exchange(builder.toUriString(), HttpMethod.GET, entity, Boolean.class);
@@ -40,7 +40,7 @@ public class RestClient implements IRestClient {
 
     public Object registerPlayer(String username, String password){
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(restURL + "adduser?")
-            .queryParam("username", username)
+            .queryParam(usernameHeader, username)
             .queryParam("password", password);
 
         HttpEntity<?> entity = new HttpEntity<>(headers);

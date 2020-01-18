@@ -2,7 +2,6 @@ package messaging;
 
 import interfaces.IGameLogic;
 import messages.JoinGameMessage;
-import messages.StartGameMessage;
 
 public class JoinGameHandler extends BaseServerMessageHandler<JoinGameMessage> {
 

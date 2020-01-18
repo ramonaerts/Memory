@@ -2,7 +2,6 @@ package messaging;
 
 import interfaces.IGameClient;
 import messages.PlayerJoinsMessage;
-import messages.StartGameResultMessage;
 
 public class PlayerJoinsHandler extends BaseClientMessageHandler<PlayerJoinsMessage> {
 

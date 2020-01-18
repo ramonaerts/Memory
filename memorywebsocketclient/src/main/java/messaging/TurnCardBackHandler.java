@@ -2,7 +2,6 @@ package messaging;
 
 import interfaces.IGameClient;
 import messages.TurnCardBackMessage;
-import messages.UpdateLobbyPlayersMessage;
 
 public class TurnCardBackHandler extends BaseClientMessageHandler<TurnCardBackMessage> {
 

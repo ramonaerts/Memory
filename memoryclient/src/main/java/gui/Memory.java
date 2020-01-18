@@ -16,7 +16,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -31,10 +30,9 @@ import java.util.List;
 
 public class Memory extends Application implements IMemoryGui {
 
-    private final int INPUTWIDTH = 150;
-    private final int BORDERSIZE = 10;
+    private static final int INPUTWIDTH = 150;
+    private static final int BORDERSIZE = 10;
 
-    private IClientWebSocket socket;
     private IController controller;
 
     private Player currentPlayer;
@@ -43,10 +41,12 @@ public class Memory extends Application implements IMemoryGui {
     private Stage lobbyStage;
     private Stage gameStage;
 
+    private String connectionError = "No connection to server, try again later";
+
     @Override
     public void start(Stage primaryStage) {
 
-        socket = new ClientWebSocket();
+        IClientWebSocket socket = new ClientWebSocket();
         IClientMessageGenerator generator = new ClientMessageGenerator(socket);
 
         IGameClient gameClient = new GameClient(generator);
@@ -91,7 +91,7 @@ public class Memory extends Application implements IMemoryGui {
                 controller.loginPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
             }
             catch (Exception e){
-                showMessage("No connection to server, try again later");
+                showMessage(connectionError);
             }
         });
         root.getChildren().add(loginButton);
@@ -106,7 +106,7 @@ public class Memory extends Application implements IMemoryGui {
                 controller.registerPlayer(textFieldPlayerName.getText(), passwordFieldPlayerPassword.getText());
             }
             catch (Exception e){
-                showMessage("No connection to server, try again later");
+                showMessage(connectionError);
             }
         });
         root.getChildren().add(registerButton);
@@ -188,7 +188,7 @@ public class Memory extends Application implements IMemoryGui {
                 controller.startGame();
             }
             catch (Exception e){
-                showMessage("No connection to server, try again later");
+                showMessage(connectionError);
             }
         });
         grid.add(startGameButton, 6, 2, 1, 1);
@@ -203,7 +203,7 @@ public class Memory extends Application implements IMemoryGui {
                 controller.joinGame();
             }
             catch (Exception e){
-                showMessage("No connection to server, try again later");
+                showMessage(connectionError);
             }
         });
         grid.add(searchGameButton, 6, 7, 1, 1);
@@ -260,8 +260,8 @@ public class Memory extends Application implements IMemoryGui {
         opponentRectangle.setStrokeWidth(5);
         opponentRectangle.setStroke(Color.SALMON);
 
-        setStandardLabels(root, statsFont, playerRectangle, 50, 20);
-        setStandardLabels(root, statsFont, opponentRectangle, 400, 20);
+        setStandardLabels(root, statsFont, playerRectangle, 50);
+        setStandardLabels(root, statsFont, opponentRectangle, 400);
 
         setVariableLabels(root, statsFont, playerName, "null", 100, 20);
         setVariableLabels(root, statsFont, playerScore, "0", 100, 45);
@@ -316,19 +316,19 @@ public class Memory extends Application implements IMemoryGui {
         root.getChildren().add(label);
     }
 
-    private void setStandardLabels(Group root, Font statsFont, Rectangle opponentRectangle, int x, int y) {
+    private void setStandardLabels(Group root, Font statsFont, Rectangle opponentRectangle, int x) {
         opponentRectangle.setFill(Color.WHITE);
         root.getChildren().add(opponentRectangle);
 
         Label opponentLabel = new Label("Player: ");
         opponentLabel.setLayoutX(x);
-        opponentLabel.setLayoutY(y);
+        opponentLabel.setLayoutY(20);
         opponentLabel.setFont(statsFont);
         root.getChildren().add(opponentLabel);
 
         Label opponentScoreLabel = new Label("Points: ");
         opponentScoreLabel.setLayoutX(x);
-        opponentScoreLabel.setLayoutY(y + (double)25);
+        opponentScoreLabel.setLayoutY(20 + (double)25);
         opponentScoreLabel.setFont(statsFont);
         root.getChildren().add(opponentScoreLabel);
     }

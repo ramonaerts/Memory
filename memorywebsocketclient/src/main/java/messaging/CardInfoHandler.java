@@ -2,7 +2,6 @@ package messaging;
 
 import interfaces.IGameClient;
 import messages.CardInfoMessage;
-import messages.GameFeedbackMessage;
 
 public class CardInfoHandler extends BaseClientMessageHandler<CardInfoMessage> {
 

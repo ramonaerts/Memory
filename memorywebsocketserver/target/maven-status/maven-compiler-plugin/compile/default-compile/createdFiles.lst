@@ -10,5 +10,4 @@ messaging\LoginHandler.class
 server\ServerWebSocket.class
 messaging\RegisterHandler.class
 messaging\TurnCardHandler.class
-server\ServerWebSocket$1.class
 messaging\StartGameHandler.class

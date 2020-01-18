@@ -3,31 +3,33 @@
 import enums.CardState;
 import models.Card;
 import models.Player;
+import org.apache.log4j.Logger;
 
 public class CardTurner implements Runnable {
 
     private Game game;
     private Card card;
     private Player player;
+<span class="fc" id="L13">    private static Logger log = Logger.getLogger(CardTurner.class.getName());</span>
 
-<span class="fc" id="L13">    public CardTurner(Game game, Card card, Player player) {</span>
-<span class="fc" id="L14">        this.game = game;</span>
-<span class="fc" id="L15">        this.card = card;</span>
-<span class="fc" id="L16">        this.player = player;</span>
-<span class="fc" id="L17">    }</span>
+<span class="fc" id="L15">    public CardTurner(Game game, Card card, Player player) {</span>
+<span class="fc" id="L16">        this.game = game;</span>
+<span class="fc" id="L17">        this.card = card;</span>
+<span class="fc" id="L18">        this.player = player;</span>
+<span class="fc" id="L19">    }</span>
 
     @Override
     public void run(){
-<span class="fc" id="L21">        card.setTurnedBy(0);</span>
+<span class="fc" id="L23">        card.setTurnedBy(0);</span>
         try {
-<span class="nc" id="L23">            Thread.sleep(3000);</span>
-<span class="nc" id="L24">        } catch (InterruptedException e) {</span>
-<span class="nc" id="L25">            Thread.currentThread().interrupt();</span>
-<span class="nc" id="L26">            System.out.println(e);</span>
-<span class="nc" id="L27">        }</span>
-<span class="nc" id="L28">        card.setCardState(CardState.HIDDEN);</span>
-<span class="nc" id="L29">        game.getGenerator().turnCardBack(card.getCoordinate(), player.getSessionID());</span>
+<span class="nc" id="L25">            Thread.sleep(3000);</span>
+<span class="nc" id="L26">        } catch (InterruptedException e) {</span>
+<span class="nc" id="L27">            Thread.currentThread().interrupt();</span>
+<span class="nc" id="L28">            log.info(e);</span>
+<span class="nc" id="L29">        }</span>
+<span class="nc" id="L30">        card.setCardState(CardState.HIDDEN);</span>
+<span class="nc" id="L31">        game.getGenerator().turnCardBack(card.getCoordinate(), player.getSessionID());</span>
 
-<span class="nc" id="L31">    }</span>
+<span class="nc" id="L33">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
