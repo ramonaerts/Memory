@@ -8,37 +8,25 @@
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/memorymodels-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/Game.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/Game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/Game.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/Game.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/MemoryLogic.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/MemoryLogic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/MemoryLogic.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/MemoryLogic.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorymodels/target/test-classes/memoryunittest/MemoryTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/test-classes/memoryunittest/MemoryTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerWebSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/server/ServerWebSocket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/sonar/report-task.txt" afterDir="false" />
     </list>
@@ -92,7 +80,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pokemonfrontend/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AnimalShelter2" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -127,13 +115,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MemoryTests.sendMultipleChatMessageTest">
+  <component name="RunManager" selected="Application.Memory">
     <configuration name="Memory" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.Memory" />
       <module name="memoryclient" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemorySocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="server.MemorySocketServer" />
+      <module name="memorywebsocketserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,22 +153,6 @@
       <option name="PACKAGE_NAME" value="memoryunittest" />
       <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
       <option name="METHOD_NAME" value="playerLeavesGameAfterStartTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemoryTests.playerLeavesGameBeforeStartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="memorymodels" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="memoryunittest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="memoryunittest" />
-      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
-      <option name="METHOD_NAME" value="playerLeavesGameBeforeStartTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -260,20 +245,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.MemorySocketServer" />
       <item itemvalue="Application.Memory" />
-      <item itemvalue="Spring Boot.MemoryRestApplication" />
-      <item itemvalue="JUnit.MemoryTests.playerLeavesGameBeforeStartTest" />
       <item itemvalue="JUnit.MemoryTests.playerLeavesGameAfterStartTest" />
       <item itemvalue="JUnit.MemoryTests.sendChatMessageTest" />
       <item itemvalue="JUnit.MemoryTests.sendMultipleChatMessageTest" />
+      <item itemvalue="Spring Boot.MemoryRestApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Memory" />
+        <item itemvalue="Application.MemorySocketServer" />
         <item itemvalue="JUnit.MemoryTests.sendMultipleChatMessageTest" />
         <item itemvalue="JUnit.MemoryTests.sendChatMessageTest" />
         <item itemvalue="JUnit.MemoryTests.playerLeavesGameAfterStartTest" />
-        <item itemvalue="JUnit.MemoryTests.playerLeavesGameBeforeStartTest" />
-        <item itemvalue="Application.Memory" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +292,7 @@
       <workItem from="1579103855271" duration="6812000" />
       <workItem from="1579119074573" duration="440000" />
       <workItem from="1579168602868" duration="11087000" />
-      <workItem from="1579283835133" duration="24099000" />
+      <workItem from="1579283835133" duration="26405000" />
     </task>
     <servers />
   </component>
@@ -331,9 +316,44 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="70" />
+          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/memorywebsocketserver/src/main/java/server/ServerWebSocket.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="90" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

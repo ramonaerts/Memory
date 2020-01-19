@@ -127,7 +127,7 @@ public class Game {
                 }
             }
         }
-        else generator.sendGameFeedback("The game will not start until a second player has joined", sessionId);
+        else generator.sendGameFeedback("You cant turn a card right now", sessionId);
     }
 
     private void handleCards(Card card, Player player){
