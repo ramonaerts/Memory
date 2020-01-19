@@ -7,18 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c5668e-d570-445b-9c19-863e6e352ecb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ChatMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messaging/src/main/java/messages/ChatMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/controllers/MemoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/gui/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/src/main/java/socketcommunication/GameClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/controllers/MemoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/controllers/MemoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/gui/Memory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoryclient/target/classes/socketcommunication/GameClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/classes/socketcommunication/GameClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryclient/target/client-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/src/test/java/memoryunittest/MemoryTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/classes/logic/MemoryLogic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/jacoco.exec" afterDir="false" />
@@ -35,25 +28,17 @@
       <change beforePath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/site/jacoco/logic/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/TEST-memoryunittest.MemoryTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/surefire-reports/memoryunittest.MemoryTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorymodels/target/test-classes/memoryunittest/MemoryTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorymodels/target/test-classes/memoryunittest/MemoryTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrest/target/memoryrest-2.2.2.RELEASE.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoryrestclient/target/memoryrestclient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/src/main/java/client/ClientMessageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/classes/client/ClientMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/classes/client/ClientMessageGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketclient/target/memorywebsocketclient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/src/main/java/messaging/ServerHandlerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/classes/messaging/ServerHandlerFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketserver/target/memorywebsocketserver-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IClientMessageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/src/main/java/interfaces/IGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IClientMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IClientMessageGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IController.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/classes/interfaces/IGameLogic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memorywebsocketshared/target/memorywebsocketshared-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/messaging-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/sonar/report-task.txt" afterDir="false" />
     </list>
@@ -126,8 +111,8 @@
     <option name="myCommands">
       <command value="mvn clean verify" />
       <command value="mvn clean install:install" />
-      <command value="mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar" />
       <command value="mvn clean install sonar:sonar" />
+      <command value="mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -142,7 +127,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Memory">
+  <component name="RunManager" selected="JUnit.MemoryTests.sendMultipleChatMessageTest">
     <configuration name="Memory" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.Memory" />
       <module name="memoryclient" />
@@ -156,20 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemorySocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.MemorySocketServer" />
-      <module name="memorywebsocketserver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MemoryTests.playerLeavesGameAfterStartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="memorymodels" />
       <extension name="coverage">
         <pattern>
@@ -179,28 +151,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="memoryunittest" />
       <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemoryTests.checkForLoseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="memorymodels" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="memoryunittest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="memoryunittest" />
-      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
-      <option name="METHOD_NAME" value="checkForLoseTest" />
+      <option name="METHOD_NAME" value="playerLeavesGameAfterStartTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemoryTests.checkForWinTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MemoryTests.playerLeavesGameBeforeStartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="memorymodels" />
       <extension name="coverage">
         <pattern>
@@ -210,7 +167,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="memoryunittest" />
       <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
-      <option name="METHOD_NAME" value="checkForWinTest" />
+      <option name="METHOD_NAME" value="playerLeavesGameBeforeStartTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemoryTests.sendChatMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="memorymodels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="memoryunittest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="memoryunittest" />
+      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
+      <option name="METHOD_NAME" value="sendChatMessageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemoryTests.sendMultipleChatMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="memorymodels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="memoryunittest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="memoryunittest" />
+      <option name="MAIN_CLASS_NAME" value="memoryunittest.MemoryTests" />
+      <option name="METHOD_NAME" value="sendMultipleChatMessageTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -271,20 +260,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MemorySocketServer" />
       <item itemvalue="Application.Memory" />
-      <item itemvalue="JUnit.MemoryTests.checkForWinTest" />
-      <item itemvalue="JUnit.MemoryTests.checkForLoseTest" />
-      <item itemvalue="JUnit.MemoryTests" />
       <item itemvalue="Spring Boot.MemoryRestApplication" />
+      <item itemvalue="JUnit.MemoryTests.playerLeavesGameBeforeStartTest" />
+      <item itemvalue="JUnit.MemoryTests.playerLeavesGameAfterStartTest" />
+      <item itemvalue="JUnit.MemoryTests.sendChatMessageTest" />
+      <item itemvalue="JUnit.MemoryTests.sendMultipleChatMessageTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MemoryTests.sendMultipleChatMessageTest" />
+        <item itemvalue="JUnit.MemoryTests.sendChatMessageTest" />
+        <item itemvalue="JUnit.MemoryTests.playerLeavesGameAfterStartTest" />
+        <item itemvalue="JUnit.MemoryTests.playerLeavesGameBeforeStartTest" />
         <item itemvalue="Application.Memory" />
-        <item itemvalue="Application.MemorySocketServer" />
-        <item itemvalue="JUnit.MemoryTests" />
-        <item itemvalue="JUnit.MemoryTests.checkForLoseTest" />
-        <item itemvalue="JUnit.MemoryTests.checkForWinTest" />
       </list>
     </recent_temporary>
   </component>
@@ -318,7 +307,7 @@
       <workItem from="1579103855271" duration="6812000" />
       <workItem from="1579119074573" duration="440000" />
       <workItem from="1579168602868" duration="11087000" />
-      <workItem from="1579283835133" duration="21752000" />
+      <workItem from="1579283835133" duration="24099000" />
     </task>
     <servers />
   </component>
@@ -337,6 +326,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/memorymodels/src/main/java/logic/MemoryLogic.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../IdeaProjects/memory/memorymodels/target/jacoco.exec" NAME="jacoco.exec" MODIFIED="1579091831690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

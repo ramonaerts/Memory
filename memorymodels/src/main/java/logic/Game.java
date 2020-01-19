@@ -17,6 +17,7 @@ public class Game {
     private int gameId;
     private List<Card> cards = new ArrayList<>();
     private List<Player> playersInGame = new ArrayList<>();
+    private List<String> chatHistory = new ArrayList<>();
     private boolean gamestarted;
     private boolean gameEnded;
 
@@ -57,6 +58,10 @@ public class Game {
 
     public List<Player> getPlayersInGame() {
         return playersInGame;
+    }
+
+    public List<String> getChatHistory() {
+        return chatHistory;
     }
 
     public Player getPlayerBySession(String sessionId)
@@ -230,7 +235,9 @@ public class Game {
 
     public void receiveChatMessage(String message, String sessionId){
         Player player = getPlayerBySession(sessionId);
-        sendMessageToPlayers(player.getUsername() + ": " + message);
+        String messageToPlayer = player.getUsername() + ": " + message;
+        chatHistory.add(messageToPlayer);
+        sendMessageToPlayers(messageToPlayer);
     }
 
     private void generateCards()

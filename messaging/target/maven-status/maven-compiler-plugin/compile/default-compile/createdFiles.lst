@@ -1,5 +1,6 @@
 messages\SocketMessage.class
 serialization\Serializer.class
+messages\ChatMessage.class
 messages\MessageOperation.class
 messages\GameResultMessage.class
 messages\PlayerAuthenticationMessage.class

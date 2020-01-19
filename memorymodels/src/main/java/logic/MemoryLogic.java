@@ -57,9 +57,11 @@ public class MemoryLogic implements IGameLogic {
     }
 
     public void logOutPlayer(String sessionId) {
+        Player logOutPlayer = null;
         for (Player player : onlinePlayers) {
-            if(player.getSessionID().equals(sessionId)) onlinePlayers.remove(player);
+            if(player.getSessionID().equals(sessionId)) logOutPlayer = player;
         }
+        onlinePlayers.remove(logOutPlayer);
         updateLobby();
     }
 
@@ -162,7 +164,6 @@ public class MemoryLogic implements IGameLogic {
         }
     }
 
-    @Override
     public void chatMessage(String message, int gameId, String sessionId) {
         for (Game game : activeGames) {
             if (game.getGameID() == gameId) game.receiveChatMessage(message, sessionId);

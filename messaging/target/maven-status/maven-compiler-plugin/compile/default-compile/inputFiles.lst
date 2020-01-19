@@ -1,6 +1,7 @@
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\PlayerJoinsMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\JoinGameResultMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\SocketMessageGenerator.java
+C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\ChatMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\TurnCardMessage.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\messages\MessageOperation.java
 C:\Users\Gebruiker\IdeaProjects\memory\messaging\src\main\java\serialization\Serializer.java

@@ -9,6 +9,7 @@ messaging\JoinGameHandler.class
 server\MemorySocketServer.class
 messaging\LoginHandler.class
 server\ServerWebSocket.class
+messaging\ChatMessageHandler.class
 messaging\RegisterHandler.class
 messaging\TurnCardHandler.class
 messaging\LogOutHandler.class

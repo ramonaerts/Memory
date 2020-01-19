@@ -94,6 +94,15 @@ public class MemoryTests {
     }
 
     @Test
+    void logOutPlayerTest(){
+        memorylogic.loginPlayer("Ramon", "Aerts", "1");
+        assertEquals(1, memorylogic.getOnlinePlayers().size());
+
+        memorylogic.logOutPlayer("1");
+        assertEquals(0, memorylogic.getOnlinePlayers().size());
+    }
+
+    @Test
     void registerUserUsernameExists(){
         memorylogic.registerPlayer("Ramon", "newpassword", "1");
         assertEquals(0, memorylogic.getOnlinePlayers().size());
@@ -200,6 +209,28 @@ public class MemoryTests {
 
         assertEquals(0, memorylogic.getActiveGames().size());
         assertEquals(GameState.LOBBY, memorylogic.getPlayer("2").getGameState());
+    }
+
+    @Test
+    void sendChatMessageTest(){
+        memorylogic.loginPlayer("Ramon", "Aerts", "1");
+        memorylogic.startGame("1");
+
+        memorylogic.chatMessage("test message", 1, "1");
+        assertEquals("Ramon: test message", memorylogic.getGame(1).getChatHistory().get(0));
+    }
+
+    @Test
+    void sendMultipleChatMessageTest(){
+        memorylogic.loginPlayer("Ramon", "Aerts", "1");
+        memorylogic.startGame("1");
+        memorylogic.loginPlayer("user", "password", "2");
+        memorylogic.joinGame("2");
+
+        memorylogic.chatMessage("test message", 1, "1");
+        memorylogic.chatMessage("another message, to test if all is saved", 1, "2");
+        assertEquals("Ramon: test message", memorylogic.getGame(1).getChatHistory().get(0));
+        assertEquals("user: another message, to test if all is saved", memorylogic.getGame(1).getChatHistory().get(1));
     }
 
     @Test
@@ -326,6 +357,31 @@ public class MemoryTests {
         assertEquals("Ramon", actualPlayer.getUsername());
         assertEquals("Aerts", actualPlayer.getPassword());
         assertEquals("1", actualPlayer.getSessionID());
+    }
+
+    @Test
+    void playerLeavesGameBeforeStartTest(){
+        memorylogic.loginPlayer("Ramon", "Aerts", "1");
+        memorylogic.startGame("1");
+        assertEquals(1, memorylogic.getGame(1).getPlayersInGame().size());
+
+        memorylogic.leaveGame(1, "1");
+        assertEquals(0, memorylogic.getActiveGames().size());
+
+    }
+
+    @Test
+    void playerLeavesGameAfterStartTest(){
+        memorylogic.loginPlayer("Ramon", "Aerts", "1");
+        memorylogic.startGame("1");
+        memorylogic.loginPlayer("user", "password", "2");
+        memorylogic.joinGame("2");
+        assertEquals(2, memorylogic.getGame(1).getPlayersInGame().size());
+
+        memorylogic.leaveGame(1, "2");
+        assertEquals(1, memorylogic.getActiveGames().size());
+        assertEquals(1, memorylogic.getGame(1).getPlayersInGame().size());
+        assertEquals(GameResult.LOSE, memorylogic.getPlayer("2").getGameResult());
     }
 
     @Test
