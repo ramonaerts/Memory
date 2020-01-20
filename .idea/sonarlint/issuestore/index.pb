@@ -182,3 +182,15 @@ d
 4memorymodels/src/test/java/mocks/RestClientMock.java,3\8\38bb01269bcecca212504d030516be38aac9d3b3
 j
 :memorymodels/src/test/java/memoryunittest/MemoryTests.java,6\1\61631f1bb4bb019679b61cf66a3a238cef1ac06a
+c
+3messaging/src/main/java/messages/LogOutMessage.java,b\6\b6f3268b6515bdb77e69d3ec2d6e1f43399eb39a
+p
+@memorywebsocketserver/src/main/java/messaging/LogOutHandler.java,c\f\cf1d268ebf8179a3d2e2bece06a69e1de57ba7d7
+f
+6messaging/src/main/java/messages/LeaveGameMessage.java,9\6\9648c52ebdecc1132032e66fd7217c3784411ae6
+a
+1messaging/src/main/java/messages/ChatMessage.java,6\a\6aef6f87731f98dcdf19ae0636d292565be52740
+s
+Cmemorywebsocketserver/src/main/java/messaging/LeaveGameHandler.java,c\d\cd6ea372191986babd5b26b04cb8b8dfb88e269a
+u
+Ememorywebsocketserver/src/main/java/messaging/ChatMessageHandler.java,6\5\658b4b7ef05b7b6a85afa65652e18b25a4970460

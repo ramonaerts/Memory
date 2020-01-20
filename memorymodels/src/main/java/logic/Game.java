@@ -85,6 +85,7 @@ public class Game {
     public void playerStartsGame(Player player)
     {
         player.setAbleToPlay(true);
+        player.setPoints(0);
         playersInGame.add(player);
         gamestarted = false;
         generateCards();
@@ -93,6 +94,7 @@ public class Game {
     public void playerJoinsGame(Player player)
     {
         player.setAbleToPlay(true);
+        player.setPoints(0);
         playersInGame.add(player);
         gamestarted = true;
     }

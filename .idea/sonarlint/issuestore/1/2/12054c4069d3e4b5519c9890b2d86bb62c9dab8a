@@ -1,9 +1,0 @@
-
-?squid:S1170""!Make this final field static too.(Ã—»·8¶ŒÅàö-
-tsquid:S00116""URename this field "INPUTWIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã—»·8¶ŒÅàö-
-tsquid:S00116#"URename this field "BORDERSIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ ú‘8çÊçˆ÷-
-Œsquid:S1192^"iDefine a constant instead of duplicating this literal "No connection to server, try again later" 4 times.(ˆ×Ş×øÿÿÿÿ8–ùéàö-
-?squid:S1170#"!Make this final field static too.(¼ ú‘8çÊçˆ÷-
-esquid:UselessImportCheck"5Remove this unused import 'javafx.scene.layout.VBox'.(íÆáÂùÿÿÿÿ8ÏµÄ«ú-
-ssquid:S1450%"URemove the "socket" field and declare it as a local variable in the relevant methods.(Ë±û³8ÿğù«ú-
-{squid:S1450,"XRemove the "gameStage" field and declare it as a local variable in the relevant methods.(İÄÈ³ıÿÿÿÿ8–ùéàö-

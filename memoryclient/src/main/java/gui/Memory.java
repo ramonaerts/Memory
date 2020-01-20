@@ -331,6 +331,7 @@ public class Memory extends Application implements IMemoryGui {
         sendMessageField.setOnKeyPressed(key -> {
             if (key.getCode().equals(KeyCode.ENTER)){
                 controller.sendChatMessage(sendMessageField.getText(), gameId);
+                sendMessageField.clear();
             }
         });
         root.getChildren().add(sendMessageField);
