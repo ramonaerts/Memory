@@ -1,0 +1,4 @@
+gui\Memory.class
+controllers\MemoryController.class
+gui\IMemoryGui.class
+socketcommunication\GameClient.class

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="nl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Player.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">memorymodels</a> &gt; <a href="index.source.html" class="el_package">models</a> &gt; <span class="el_source">Player.java</span></div><h1>Player.java</h1><pre class="source lang-java linenums">package models;
+
+import enums.GameResult;
+import enums.GameState;
+
+public class Player {
+
+    private int playerID;
+    private String username;
+    private String password;
+    private String sessionID;
+    private int wins;
+    private int draws;
+    private int losses;
+    private int score;
+    private int points;
+    private int turnAmount;
+    private int inGameNr;
+    private GameState gameState;
+    private GameResult gameResult;
+    private boolean isAbleToPlay;
+
+    public Player(String username, String password, String sessionid)
+<span class="fc" id="L24">    {</span>
+<span class="fc" id="L25">        this.username = username;</span>
+<span class="fc" id="L26">        this.password = password;</span>
+<span class="fc" id="L27">        this.sessionID = sessionid;</span>
+<span class="fc" id="L28">        this.gameState = GameState.LOBBY;</span>
+<span class="fc" id="L29">    }</span>
+
+<span class="nc" id="L31">    public Player() {</span>
+<span class="nc" id="L32">        this.gameState = GameState.LOBBY;</span>
+<span class="nc" id="L33">    }</span>
+
+    public void setPlayerID(int playerID) {
+<span class="fc" id="L36">        this.playerID = playerID;</span>
+<span class="fc" id="L37">    }</span>
+
+    public int getPlayerID() {
+<span class="fc" id="L40">        return playerID;</span>
+    }
+
+    public String getUsername() {
+<span class="fc" id="L44">        return username;</span>
+    }
+
+    public void setUsername(String username) {
+<span class="nc" id="L48">        this.username = username;</span>
+<span class="nc" id="L49">    }</span>
+
+    public String getPassword() {
+<span class="fc" id="L52">        return password;</span>
+    }
+
+    public void setPassword(String password) {
+<span class="nc" id="L56">        this.password = password;</span>
+<span class="nc" id="L57">    }</span>
+
+    public String getSessionID() {
+<span class="fc" id="L60">        return sessionID;</span>
+    }
+
+    public void setSessionID(String sessionID) {
+<span class="fc" id="L64">        this.sessionID = sessionID;</span>
+<span class="fc" id="L65">    }</span>
+
+    public int getWins() {
+<span class="fc" id="L68">        return wins;</span>
+    }
+
+    public void setWins(int wins) {
+<span class="fc" id="L72">        this.wins = wins;</span>
+<span class="fc" id="L73">    }</span>
+
+    public int getDraws() {
+<span class="fc" id="L76">        return draws;</span>
+    }
+
+    public void setDraws(int draws) {
+<span class="fc" id="L80">        this.draws = draws;</span>
+<span class="fc" id="L81">    }</span>
+
+    public int getLosses() {
+<span class="fc" id="L84">        return losses;</span>
+    }
+
+    public void setLosses(int losses) {
+<span class="fc" id="L88">        this.losses = losses;</span>
+<span class="fc" id="L89">    }</span>
+
+    public int getScore() {
+<span class="nc" id="L92">        return score;</span>
+    }
+
+    public void setScore(int score) {
+<span class="fc" id="L96">        this.score = score;</span>
+<span class="fc" id="L97">    }</span>
+
+    public int getPoints() {
+<span class="fc" id="L100">        return points;</span>
+    }
+
+    public void setPoints(int points) {
+<span class="fc" id="L104">        this.points = points;</span>
+<span class="fc" id="L105">    }</span>
+
+    public int getTurnAmount() {
+<span class="fc" id="L108">        return turnAmount;</span>
+    }
+
+    public void setTurnAmount(int turnAmount) {
+<span class="fc" id="L112">        this.turnAmount = turnAmount;</span>
+<span class="fc" id="L113">    }</span>
+
+    public int getInGameNr()
+    {
+<span class="fc" id="L117">        return inGameNr;</span>
+    }
+
+    public void setInGameNr(int inGameNr)
+    {
+<span class="fc" id="L122">        this.inGameNr = inGameNr;</span>
+<span class="fc" id="L123">    }</span>
+
+    public GameState getGameState() {
+<span class="fc" id="L126">        return gameState;</span>
+    }
+
+    public void setGameState(GameState gameState) {
+<span class="fc" id="L130">        this.gameState = gameState;</span>
+<span class="fc" id="L131">    }</span>
+
+    public GameResult getGameResult() {
+<span class="fc" id="L134">        return gameResult;</span>
+    }
+
+    public void setGameResult(GameResult gameResult) {
+<span class="fc" id="L138">        this.gameResult = gameResult;</span>
+<span class="fc" id="L139">    }</span>
+
+    public boolean getIsAbleToPlay() {
+<span class="fc" id="L142">        return isAbleToPlay;</span>
+    }
+
+    public void setAbleToPlay(boolean ableToPlay) {
+<span class="fc" id="L146">        isAbleToPlay = ableToPlay;</span>
+<span class="fc" id="L147">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+memorymodels,enums,GameState,0,34,0,0,0,4,0,1,0,1
+memorymodels,enums,GameResult,0,34,0,0,0,4,0,1,0,1
+memorymodels,enums,CardState,0,34,0,0,0,4,0,1,0,1
+memorymodels,models,Player,17,102,0,0,8,43,4,26,4,26
+memorymodels,models,Card,0,42,0,0,0,17,0,9,0,9
+memorymodels,models,Coordinate,8,15,0,0,4,6,2,3,2,3
+memorymodels,logic,MemoryLogic,1,472,5,51,1,100,5,41,0,18
+memorymodels,logic,CardTurner,24,21,0,0,8,7,0,3,0,3
+memorymodels,logic,Game,34,691,15,83,5,145,14,63,1,27

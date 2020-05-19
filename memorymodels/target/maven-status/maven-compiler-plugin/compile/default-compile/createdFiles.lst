@@ -1,0 +1,9 @@
+logic\CardTurner.class
+models\Card.class
+enums\GameResult.class
+models\Player.class
+enums\GameState.class
+logic\MemoryLogic.class
+models\Coordinate.class
+logic\Game.class
+enums\CardState.class

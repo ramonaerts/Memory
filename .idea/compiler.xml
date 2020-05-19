@@ -6,11 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="memorywebsocketserver" />
-        <module name="memorymodels" />
         <module name="memoryclient" />
+        <module name="memoryrest" />
+        <module name="memorywebsocketshared" />
+        <module name="memorymodels" />
+        <module name="messaging" />
         <module name="memorywebsocketclient" />
+        <module name="memoryrestclient" />
+        <module name="memorywebsocketserver" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="memoryfactory" target="11" />
+      <module name="memoryrestserver" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="memoryrest" options="-parameters" />
+    </option>
   </component>
 </project>

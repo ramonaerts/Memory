@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="nl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Card.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">memorymodels</a> &gt; <a href="index.source.html" class="el_package">models</a> &gt; <span class="el_source">Card.java</span></div><h1>Card.java</h1><pre class="source lang-java linenums">package models;
+
+import enums.CardState;
+
+public class Card {
+    private int cardID;
+    private CardState cardState;
+    private int value;
+    private Coordinate coordinate;
+    private int turnedBy;
+
+<span class="fc" id="L12">    public Card(int value, int id){</span>
+<span class="fc" id="L13">        this.value = value;</span>
+<span class="fc" id="L14">        this.cardID = id;</span>
+<span class="fc" id="L15">        this.cardState = CardState.HIDDEN;</span>
+<span class="fc" id="L16">        this.turnedBy = 0;</span>
+<span class="fc" id="L17">    }</span>
+
+    public int getCardID() {
+<span class="fc" id="L20">        return cardID;</span>
+    }
+
+    public int getValue() {
+<span class="fc" id="L24">        return value;</span>
+    }
+
+    public CardState getCardState() {
+<span class="fc" id="L28">        return cardState;</span>
+    }
+
+    public void setCardState(CardState cardState) {
+<span class="fc" id="L32">        this.cardState = cardState;</span>
+<span class="fc" id="L33">    }</span>
+
+    public int getTurnedBy() {
+<span class="fc" id="L36">        return turnedBy;</span>
+    }
+
+    public void setTurnedBy(int turnedBy) {
+<span class="fc" id="L40">        this.turnedBy = turnedBy;</span>
+<span class="fc" id="L41">    }</span>
+
+    public Coordinate getCoordinate() {
+<span class="fc" id="L44">        return coordinate;</span>
+    }
+
+    public void setCoordinate(Coordinate coordinate) {
+<span class="fc" id="L48">        this.coordinate = coordinate;</span>
+<span class="fc" id="L49">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
